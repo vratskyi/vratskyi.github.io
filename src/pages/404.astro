@@ -1,0 +1,17 @@
+---
+import logo from '/src/assets/img/logo.svg'
+import Title from '../components/Title.astro';
+import { Picture } from 'astro:assets';
+import blur from '/src/assets/img/bg.svg';
+---
+    <section class="min-h-screen grid gap-5 place-content-center place-items-center content-center tracking-wide text-white bg-[#040404]">
+      <Picture
+      src={blur}
+      class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+      alt='blur background'
+      formats={['avif', 'webp']}
+    />
+      <a href="/"><img src={logo.src} width="100" height="100" alt="logo"></a>
+        <h3 class="text-9xl font-black bg-clip-text text-transparent bg-gradient-to-t from-primary-0 to-accent-0">404</h3>
+		<Title text="Wooops..">Something was wrong..</Title>
+    </section>

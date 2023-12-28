@@ -5,6 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://vratskyi.github.io/ov',
-  base: '.',
+  site: 'https://vratskyi.github.io'
 });

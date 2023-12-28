@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Head from '../components/Head.astro';
+import Title from '../components/Title.astro';
+import Header from '../components/Header.astro';
+import { Picture } from 'astro:assets';
+import blur from '/src/assets/img/bg.svg';
+---
+
+<Head title='Services' />
+<Layout class="relative" title="Services">
+<Header />
+<div class='grid mt-[11.1111%] content-center'>
+		<Title text="Services"></Title>
+	</div>
+			<!-- ABOUT ME -->
+	<section class='grid content-start text-white'>
+		<Picture
+		src={blur}
+		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+		alt='blur background'
+		formats={['avif', 'webp']}
+	/>
+		<div class='grid grid-flow-col auto-cols-auto content-center gap-5 mt-[11.1111%]'>
+			<div>
+				<h3 class="inline-block text-3xl font-light">Services.</h3>
+			</div>
+		</div>
+	</section>
+</Layout>
+

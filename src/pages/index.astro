@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import { Picture } from 'astro:assets';
+import blur from '/src/assets/img/bg.svg';
+import cover from '/src/assets/img/dev.jpg';
+---
+
+<html lang='en'>
+	<Head title='OV - Web Dev and Design' />
+	<Layout>
+		<Header />
+		<!-- HERO -->
+		<section
+			class='grid gap-10 h-full place-content-center lg:grid-flow-col text-white'>
+			<Picture
+				src={blur}
+				class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+				alt='blur background'
+				formats={['avif', 'webp']}
+			/>
+
+			<div
+				class='bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-10 mt-[35rem] md:mt-0 w-full max-w-[600px]'>
+				<div>
+					<h1
+						class='text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0'>
+						Happy to see you here!
+					</h1>
+				</div>
+
+				<div class='text-xl font-light lg:max-w-6xl mt-5'>
+					<blockquote
+						class='pl-3 border-l-2 border-primary-0 inline-block text-xl font-light tracking-wide'>
+						I enjoy creating effective business solutions for my valued clients,
+						facilitating their growth and helping them to achieve desired
+						outcomes.
+					</blockquote>
+				</div>
+			</div>
+
+			<div
+				class='bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-10 w-full max-w-[400px]'>
+				<Picture
+					src={cover}
+					class='mx-auto object-cover rounded-xl'
+					alt='cover'
+					formats={['avif', 'webp']}
+				/>
+				<p class='text-xl font-light tracking-wide mt-5'>
+					You can find this site on GitHub, I'm developing it for my portfolio,
+					as well as for blogging.
+				</p>
+				<div class='mt-5'>
+					<button
+						onclick="
+						window.open('https://github.com/vratskyi/OV', '_blank');
+						"
+						class='justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
+						>Check out
+						<svg
+							class='inline-block pl-2'
+							width='24'
+							height='24'
+							viewBox='0 0 24 24'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+							><path
+								d='M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z'
+								fill='currentColor'
+							></path><path
+								d='M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z'
+								fill='currentColor'
+							></path></svg
+						>
+					</button>
+				</div>
+			</div>
+		</section>
+	</Layout>
+</html>

@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import logo from '/src/assets/img/logo.svg';
+---
+
+<!-- HEADER -->
+<nav
+	class='container fixed top-1 md:left-5 md:right-5 xl:max-w-7xl mx-auto font-sans bg-background-0/10 backdrop-blur-3xl border-b-[1px] border-white/10 rounded-xl p-5 flex justify-between items-center z-50'>
+	<div class='w-20 z-50'>
+		<a href='/'>
+			<Image
+				src={logo}
+				width='80'
+				height='34'
+				alt='OV logo'
+			/>
+		</a>
+	</div>
+
+	<button
+		transition:persist
+		id='menu-image'
+		class='z-50 p-2 rounded-lg transition-colors duration-150 hover:bg-zinc-800'>
+		<Image
+			id='menu-icon'
+			src='/src/assets/img/menu.svg'
+			width='34'
+			height='34'
+			alt='menu'
+		/>
+
+		<div
+			id='main-menu'
+			class='menu hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-20 h-full w-full min-h-[700px] min-w-full mx-auto rounded-xl bg-gradient-to-r from-primary-0 to-accent-0'>
+			<ul
+				class='text-8xl font-black grid gap-y-10 my-auto content-center h-full max-h-[680px] text-zinc-800'>
+				<li>
+					<a
+						href='/'
+						class='hover-link active'>
+						Home
+					</a>
+				</li>
+				<li>
+					<a
+						href='/about'
+						class='hover-link'
+						>About</a
+					>
+				</li>
+				<li>
+					<a
+						href='/portfolio'
+						class='hover-link'
+						>Portfolio</a
+					>
+				</li>
+				<li>
+					<a
+						href='/services'
+						class='hover-link'
+						>Services</a
+					>
+				</li>
+				<li>
+					<a
+						href='/blog'
+						class='hover-link'
+						>Blog</a
+					>
+				</li>
+			</ul>
+		</div>
+	</button>
+</nav>

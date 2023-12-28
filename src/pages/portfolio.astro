@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Head from '../components/Head.astro';
+import Title from '../components/Title.astro';
+import Header from '../components/Header.astro';
+import { Picture } from 'astro:assets';
+import water from '/src/assets/img/water-website.png';
+import byshikat from '/src/assets/img/online-store-byshikat.png';
+import lmd from '/src/assets/img/online-store-lmd.png';
+import blur from '/src/assets/img/bg.svg';
+---
+
+<Head title='Portfolio' />
+<Layout
+	class='relative'
+	title='Portfolio'>
+	<Header />
+	<div class='grid mt-[11.1111%] content-center'>
+		<Title text='Portfolio' />
+	</div>
+	<!-- ABOUT ME -->
+	<section class='grid px-2 md:px-0 content-start text-white'>
+		<Picture
+		src={blur}
+		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+		alt='blur background'
+		formats={['avif', 'webp']}
+	/>
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+			<div
+				class='grid bg-background-0 backdrop-blur-lg backdrop-opacity-50 p-5 lg:p-10 rounded-xl'>
+				<div class='grid lg:grid-cols-2'>
+					<div class='grid self-start'>
+						<Picture
+							class='object-cover object-center min-h-full rounded-2xl'
+							src={water}
+							width='500'
+							height='350'
+							alt='water delivery website'
+							formats={['avif', 'webp']}
+						/>
+					</div>
+
+					<div class='lg:ml-10'>
+						<h3 class='font-black text-3xl mb-5 mt-3 lg:mt-0'>H2O Water Company</h3>
+						<p class='inline-flex text-xl font-light'>
+							The website I developed offers water delivery in Belogorodka and
+							surrounding areas. It has an attractive design, intuitive layout
+							and integration with analytical tools to attract more customers.
+							Visitors can easily leave a request for water delivery through the
+							order form and get access to bottled drinking water.
+						</p>
+						<div class='py-5'>
+							<h4 class='font-bold text-lg mb-5'>Technologies i used:</h4>
+							<ul class='flex justify-between flex-wrap'>
+								<a
+									href='https://astro.build/'
+									target='_blank'>
+									<li class='flex self-start bg-zinc-700 hover:bg-primary-0 duration-150  rounded-2xl px-2 py-1'>
+										<img
+											width='70'
+											height='30'
+											src='/src/assets/img/astro-logo-light.svg'
+											alt='astro-logo'
+										/>
+									</li>
+								</a>
+								<a
+									href='https://tailwindcss.com/'
+									target='_blank'>
+									<li class='flex self-start bg-zinc-700 hover:bg-primary-0 duration-150 rounded-2xl px-3 py-2'>
+										<img
+											width='110'
+											height='30'
+											src='/src/assets/img/tailwindcss-logotype-white.svg'
+											alt='tailwindcss-logotype-white'
+										/>
+									</li>
+								</a>
+								<li class='flex self-start bg-zinc-700 rounded-2xl px-2 py-1'>JavaScript</li>
+								<li class='flex self-start bg-zinc-700 rounded-2xl px-2 py-1 mt-3 xs:mt-0'>HTML/CSS</li>
+							</ul>
+						</div>
+						<div class='mt-5'>
+							<button
+								onclick="
+								window.open('https://h2ovoda.com.ua/', '_blank');
+								"
+								class='justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
+								>Check out
+								<svg
+									class='inline-block pl-2'
+									width='24'
+									height='24'
+									viewBox='0 0 24 24'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+									><path
+										d='M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z'
+										fill='currentColor'
+									></path><path
+										d='M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z'
+										fill='currentColor'
+									></path></svg
+								>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class='grid bg-background-0 backdrop-blur-lg backdrop-opacity-50 p-10 rounded-xl'>
+				<div class='grid lg:grid-cols-2'>
+					<div class='grid self-start'>
+						<Picture
+							class='object-cover object-center min-h-full rounded-2xl'
+							src={byshikat}
+							width='500'
+							height='350'
+							alt='water delivery website'
+							formats={['avif', 'webp']}
+						/>
+					</div>
+
+					<div class='lg:ml-10'>
+						<h3 class='font-black text-3xl mb-5 mt-3 lg:mt-0'>
+							Byshikat online shoes store
+						</h3>
+						<p class='inline-block text-xl font-light'>
+							Analyzed the target audience, I realized that it is necessary to
+							make something similar to the model of behavior in Instagram, as
+							well as similar at least remotely similar design, thanks to a set
+							of solutions sales from their instagram store went to online store
+							and increased by 1000%
+						</p>
+						<div class='py-5'>
+							<h4 class='font-bold text-lg mb-5'>Technologies i used:</h4>
+							<ul class='flex justify-between flex-wrap'>
+								<a
+									href='https://wordpress.com/'
+									target='_blank'>
+									<li class='flex self-start bg-zinc-700 hover:bg-primary-0 duration-150  rounded-2xl px-2 py-1'>
+										<img
+											width='30'
+											height='30'
+											src='/src/assets/img/wordpress.svg'
+											alt='wordpress'
+										/>
+									<span class="flex self-center">WordPress</span>	
+									</li>
+								</a>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-3 py-2 uppercase'>php</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-3 py-2 uppercase'>acf</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-2 py-1'>JavaScript</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-2 py-1 mt-3 xs:mt-0'>HTML/CSS</li>
+							</ul>
+						</div>
+						<div class='mt-5'>
+							<button
+								onclick="
+								window.open('https://byshikat.com/', '_blank');
+								"
+								class='justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
+								>Check out
+								<svg
+									class='inline-block pl-2'
+									width='24'
+									height='24'
+									viewBox='0 0 24 24'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+									><path
+										d='M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z'
+										fill='currentColor'
+									></path><path
+										d='M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z'
+										fill='currentColor'
+									></path></svg
+								>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class='grid bg-background-0 backdrop-blur-lg backdrop-opacity-50 p-10 rounded-xl'>
+				<div class='grid lg:grid-cols-2'>
+					<div class='grid self-start'>
+						<Picture
+							class='object-cover object-center min-h-full rounded-2xl'
+							src={lmd}
+							width='500'
+							height='350'
+							alt='water delivery website'
+							formats={['avif', 'webp']}
+						/>
+					</div>
+
+					<div class='lg:ml-10'>
+						<h3 class='font-black text-3xl mb-5 mt-3 lg:mt-0'>Paper gift bags service</h3>
+						<p class='inline-block text-xl font-light'>
+							This online store is based on WordPress CMS and WooCommerce, I
+							redesigned the old site to a modern design and optimized the
+							loading time, thanks to a comprehensive approach, the number of
+							visitors and sales increased. Now the site is at the top of google
+							in Ukraine.
+						</p>
+						<div class='py-5'>
+							<h4 class='font-bold text-lg mb-5'>Technologies i used:</h4>
+							<ul class='flex justify-between flex-wrap'>
+								<a
+									href='https://wordpress.com/'
+									target='_blank'>
+									<li class='flex self-start bg-zinc-700 hover:bg-primary-0 duration-150 rounded-2xl px-2 py-1'>
+										<img
+											width='30'
+											height='30'
+											src='/src/assets/img/wordpress.svg'
+											alt='wordpress'
+										/>
+									<span class="flex self-center">WordPress</span>	
+									</li>
+								</a>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-3 py-2 uppercase'>php</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-3 py-2 uppercase'>acf</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-2 py-1'>JavaScript</li>
+								<li class='flex self-start bg-zinc-700  rounded-2xl px-2 py-1 mt-3 xs:mt-0'>HTML/CSS</li>
+							</ul>
+						</div>
+						<div class='mt-5'>
+							<button
+								onclick="
+								window.open('https://lmd.lviv.ua/', '_blank');
+								"
+								class='justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
+								>Check out
+								<svg
+									class='inline-block pl-2'
+									width='24'
+									height='24'
+									viewBox='0 0 24 24'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+									><path
+										d='M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z'
+										fill='currentColor'
+									></path><path
+										d='M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z'
+										fill='currentColor'
+									></path></svg
+								>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
