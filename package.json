@@ -1,0 +1,26 @@
+{
+  "name": "ov-template",
+  "type": "module",
+  "version": "0.5.4",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "css": "tailwindcss -c ./tailwind.config.cjs -i ./src/assets/styles/input.css -o ./public/styles/global.css  --minify --watch"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.0.6",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1"
+  },
+  "description": "``` npm create astro@latest -- --template minimal ```",
+  "main": "index.js",
+  "author": "Oleksii Vratskyi",
+  "license": "MIT"
+}
