@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import logo from '/src/assets/img/logo.svg';
+import blur from '/src/assets/img/bg.svg';
 ---
 
 <!-- HEADER -->
@@ -28,18 +29,31 @@ import logo from '/src/assets/img/logo.svg';
 			height='34'
 			alt='menu'
 		/>
-
+		<div class="relative">
 		<div
 			id='main-menu'
-			class='menu hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-20 h-full w-full min-h-screen lg:min-h-[700px] min-w-full mx-auto rounded-xl bg-gradient-to-r from-primary-0 to-accent-0'>
+			class='menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-20 h-full w-full min-h-screen lg:min-h-[700px] min-w-full mx-auto rounded-xl'>
+			<Picture
+			src={blur}
+			class='absolute blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+			alt='blur background'
+			formats={['avif', 'webp']}
+			/>
 			<ul
-				class='text-7xl lg:text-8xl font-black grid gap-y-5 lg:gap-y-10 my-auto mt-10 lg:mt-0 content-start lg:content-center h-full max-h-[680px] text-zinc-800'>
+				class='text-7xl lg:text-8xl font-black grid gap-y-5 lg:gap-y-10 my-auto mt-10 lg:mt-0 content-start lg:content-center h-full max-h-[680px] text-white'>
 				<li>
 					<a
 						href='/'
 						class='hover-link active'>
 						Home
 					</a>
+				</li>
+				<li>
+					<a
+						href='/blog'
+						class='hover-link'
+						>Blog</a
+					>
 				</li>
 				<li>
 					<a
@@ -55,21 +69,8 @@ import logo from '/src/assets/img/logo.svg';
 						>Portfolio</a
 					>
 				</li>
-				<li>
-					<a
-						href='/services'
-						class='hover-link'
-						>Services</a
-					>
-				</li>
-				<li>
-					<a
-						href='/blog'
-						class='hover-link'
-						>Blog</a
-					>
-				</li>
 			</ul>
 		</div>
+		<div/>
 	</button>
 </nav>

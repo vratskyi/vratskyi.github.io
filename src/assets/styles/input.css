@@ -25,9 +25,10 @@ h2 {
 	scroll-margin-top: 76px;
 }
 
-.hover-link.active {
-	color: white;
-  }
+.blur-menu {
+	backdrop-filter: blur(100px) !important;
+	-webkit-backdrop-filter: blur(100px) !important;
+}
 
 /** Анимация меню */
 #main-menu.animation {
@@ -67,14 +68,18 @@ h2 {
 
 @layer utilities {
 	.hover-link:hover {
-		color: white;
+		color: var(--primary);
 		transition-duration: 150ms;
 	}
 }
 
+.hover-link.active {
+	color: var(--primary);
+  }
+
 @layer utilities {
 	.home-icon.active {
-		stroke: white;
+		stroke: var(--primary);
 		transition-duration: 150ms;
 	}
 }
