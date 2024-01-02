@@ -78,3 +78,11 @@ h2 {
 		transition-duration: 150ms;
 	}
 }
+
+@layer utilities {
+	@media (min-width: 424px) {
+		.xs\:mt-\[10rem\] {
+			margin-top: 10rem/* 160px */;
+		}
+	}
+}
