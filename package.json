@@ -1,7 +1,11 @@
 {
   "name": "ov-template",
   "type": "module",
-  "version": "0.5.4",
+  "version": "0.5.8",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vratskyi/vratskyi.github.io"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,7 +16,8 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.0.6",
+    "astro": "^4.1.0",
+    "sharp": "^0.33.1",
     "tailwindcss": "^3.4.0"
   },
   "devDependencies": {
