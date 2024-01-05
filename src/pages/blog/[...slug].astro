@@ -30,7 +30,7 @@ const { Content } = await post.render();
 <PostLayout>
 	<Header />
 	<article
-		class='p-5 bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl'>
+		class='p-5 blur-bg rounded-2xl'>
 		<Picture
 			src={post.data.image}
 			alt={post.data.title}
@@ -40,7 +40,7 @@ const { Content } = await post.render();
 			class='rounded-2xl mb-10 mx-auto object-cover'
 		/>
 		<h3
-			class='mb-4 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+			class='mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 			<svg
 				class='w-6 inline-block mr-1 my-auto'
 				fill='none'
@@ -58,7 +58,7 @@ const { Content } = await post.render();
 			{post.data.author}
 		</h3>
 		<date
-			class='ml-2 mb-4 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+			class='ml-2 mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 			<svg
 				class='w-6 inline-block mr-1 my-auto'
 				fill='none'
@@ -76,7 +76,7 @@ const { Content } = await post.render();
 			{post.data.publishDate}
 		</date>
 		<h3
-			class='mb-4 ml-2 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+			class='mb-4 ml-2 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 			<svg
 				class='w-6 inline-block mr-1 my-auto'
 				fill='none'
@@ -94,7 +94,7 @@ const { Content } = await post.render();
 			{post.data.categories}
 		</h3>
 			<h3
-			class='mb-4 ml-2 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+			class='mb-4 ml-2 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 			<svg
 				class='w-6 inline-block mr-1 my-auto'
 				fill='none'

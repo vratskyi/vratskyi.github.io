@@ -16,7 +16,7 @@ import blur from '/src/assets/img/bg.svg';
 		<Title text="About"></Title>
 	</div>
 			<!-- ABOUT ME -->
-	<section class='grid content-start px-3 lg:px-0  text-white'>
+	<section class='grid content-start px-3 lg:px-0 mb-[5rem] text-white'>
 		<Picture
 		src={blur}
 		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
@@ -24,13 +24,13 @@ import blur from '/src/assets/img/bg.svg';
 		formats={['avif', 'webp']}
 	/>
 		<div class='grid grid-flow-col auto-cols-auto content-center mt-20'>
-			<div class="grid lg:grid-cols-2 bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-5">
-				<div class="grid justify-center content-center">
-					<Picture class="object-cover rounded-full" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
+			<div class="grid lg:grid-cols-2 blur-bg rounded-xl p-5">
+				<div class="grid justify-center content-center mb-5 lg:mb-0">
+					<Picture class="object-cover rounded-full w-full h-full max-w-[250px] max-h-[250px] lg:max-w-[300px] lg:max-h-[300px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
 				</div>
 
 				<div class="grid justify-center content-center">
-					<h3 class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0">Oleksii Vratskyi</h3>
+					<h3 class="text-4xl lg:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0">Oleksii Vratskyi</h3>
 					<div class="text-xl font-light text-zinc-200 max-w-xl mt-5">
 						<p>I am a freelancer from Ukraine, I am engaged in website development in different directions for several years, in this time I have managed to work with online stores, landing pages, blogs, etc.</p>
 						<p class="mt-5">I will be glad to work with you to create together a good product that will allow you to attract more customers, as well as increase the attractiveness of your company on the Internet.</p>	
@@ -40,7 +40,7 @@ import blur from '/src/assets/img/bg.svg';
 		</div>
 
 		<div class='mt-5'>
-			<div class="grid grid-cols-1 lg:grid-cols-2 content-center justify-center text-zinc-200 bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-5 min-h-[200px]">
+			<div class="grid grid-cols-1 lg:grid-cols-2 content-center justify-center text-zinc-200 blur-bg rounded-xl p-5 min-h-[200px]">
 				<div class="grid content-center ">
 					<h2 class="!text-6xl font-black text-center">Social links</h2>
 				</div>

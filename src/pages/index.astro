@@ -13,7 +13,7 @@ import cover from '/src/assets/img/dev.jpg';
 		<Header />
 		<!-- HERO -->
 		<section
-			class='grid gap-10 px-3 lg:px-0  h-full place-content-center lg:grid-flow-col text-white'>
+			class='grid gap-x-10 gap-y-10 lg:gap-y-0 place-content-center content-center lg:grid-flow-col lg:auto-cols-max lg:mt-[10rem] 2xl:mt-[15rem] mb-[5rem] px-3 lg:px-0 h-full text-white'>
 			<Picture
 				src={blur}
 				class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
@@ -22,7 +22,7 @@ import cover from '/src/assets/img/dev.jpg';
 			/>
 
 			<div
-				class='bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-4 lg:p-10 mt-[20rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]'>
+				class='blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]'>
 				<div>
 					<h1
 						class='text-7xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0'>
@@ -32,15 +32,17 @@ import cover from '/src/assets/img/dev.jpg';
 
 				<div class='text-xl font-light lg:max-w-6xl mt-5'>
 					<blockquote>
-						I enjoy creating effective business solutions for my valued clients,
-						facilitating their growth and helping them to achieve desired
-						outcomes.
+						Here, you can learn about me, read my blog, and familiarize yourself
+						with my portfolio. Currently, I am studying JavaScript and the Astro
+						Framework, and I plan to study the React library. I am also
+						interested in Qwik and enjoy learning new things. Most importantly,
+						I am passionate about my work.
 					</blockquote>
 				</div>
 			</div>
 
 			<div
-				class='bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
+				class='self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
 				<Picture
 					src={cover}
 					class='mx-auto object-cover rounded-xl'

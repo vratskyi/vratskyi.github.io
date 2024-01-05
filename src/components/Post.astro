@@ -2,7 +2,6 @@
 import { getEntryBySlug, type CollectionEntry } from 'astro:content';
 import TitlePost from './TitlePost.astro';
 import { Picture } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
 
 type Props = {
 	post: CollectionEntry<'posts'>;
@@ -11,9 +10,8 @@ type Props = {
 const { post } = Astro.props;
 ---
 
-<Layout>
 	<article
-		class='p-4 grid gap-y-5 mt-[12.2222%] content-center max-w-[400px] hover:bg-zinc-500/20 bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl transition-colors duration-150'>
+		class='p-4 grid gap-y-5 mt-[12.2222%] content-center max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
 		<a href={`/blog/${post.slug}`}>
 			<Picture
 				class='object-cover min-h-full rounded-2xl'
@@ -25,7 +23,7 @@ const { post } = Astro.props;
 			/>
 			<a href={`/blog/${post.slug}`}>
 				<h3
-					class='mb-4 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+					class='mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 					<svg
 						class='w-6 inline-block mr-1 my-auto'
 						fill='none'
@@ -43,7 +41,7 @@ const { post } = Astro.props;
 					{post.data.author}
 				</h3>
 				<date
-					class='ml-2 mb-4 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+					class='ml-2 mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 					<svg
 						class='w-6 inline-block mr-1 my-auto'
 						fill='none'
@@ -61,7 +59,7 @@ const { post } = Astro.props;
 					{post.data.publishDate}
 				</date>
 				<h3
-					class='mb-4 ml-2 my-auto text-xs font-light bg-background-0 backdrop-blur-lg backdrop-opacity-50 rounded-2xl px-2 py-1 inline-flex items-center'>
+					class='mb-4 ml-2 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 					<svg
 						class='w-6 inline-block mr-1 my-auto'
 						fill='none'
@@ -80,10 +78,6 @@ const { post } = Astro.props;
 				</h3>
 				<TitlePost h1={post.data.title} />
 				<ul><li>{post.data.tag}</li></ul>
-				<div class='mx-auto mt-5 text-lg font-light line-clamp-2 text-white'>
-					{post.body}
-				</div>
 			</a>
 		</a>
 	</article>
-</Layout>

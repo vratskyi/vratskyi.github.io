@@ -1,3 +1,10 @@
-<body class='relative container xl:max-w-7xl font-sans md:p-5 mx-auto tracking-wide text-zinc-200 bg-[#040404]'>
-	<slot />
+---
+import Footer from '../components/Footer.astro';
+---
+
+<body class='relative container xl:max-w-7xl font-sans md:px-5 mx-auto tracking-wide text-zinc-200 bg-[#040404]'>
+	<div class="flex flex-col min-h-full">
+		<slot />
+	</div>
+	<Footer />
 </body>
