@@ -4,7 +4,6 @@
 ![blog page](https://i.ibb.co/D9LfXvw/ov-template-blog.png)
 ![article page](https://i.ibb.co/B4NsLgn/ov-template-blog-article.png)
 ![portflio](https://i.ibb.co/b3FhCjF/ov-template-portflio.png)
-![menu](https://i.ibb.co/JdBKbpD/ov-template-about.png)
 
 ## 🧞 Commands
 
