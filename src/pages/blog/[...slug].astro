@@ -2,10 +2,10 @@
 import { getCollection, CollectionEntry } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
 import Head from '../../components/Head.astro';
-import TitlePost from '../../components/TitlePost.astro';
 import Header from '../../components/Header.astro';
 import { Picture } from 'astro:assets';
 import blur from '/src/assets/img/bg.svg';
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts');
@@ -29,8 +29,9 @@ const { Content } = await post.render();
 />
 <PostLayout>
 	<Header />
-	<article class='p-5 blur-bg rounded-2xl'>
+	<article class='p-5 mb-10 lg:mb-20 blur-bg rounded-2xl'>
 		<Picture
+			transition:name={post.data.title}
 			src={post.data.image}
 			alt={post.data.title}
 			width='1024'
@@ -123,7 +124,7 @@ const { Content } = await post.render();
 					fill='currentColor'
 				></path>
 			</svg>
-			<div class='blur-bg px-3 py-2 rounded-2xl bg-primary-0'>
+			<div class='blur-bg px-3 py-2 rounded-2xl'>
 				<h5 class='line-clamp-1 lg:line-clamp-none'>
 					<svg
 						class='w-5 inline-block md:mr-1 my-auto'
@@ -230,11 +231,13 @@ const { Content } = await post.render();
 			</h3>
 		</div>
 		<div class="pt-2">
-			<TitlePost h1={post.data.title} />
+			 <h1 class="text-5xl lg:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0">{post.data.title}</h1> 
 			<div
-				class='mb-10 mt-5 prose lg:prose-xl text-xl font-thin subpixel-antialiased tracking-wide text-white'>
+				class='mb-10 mt-5 prose lg:prose-xl text-2xl lg:text-4xl font-black !tracking-wide !leading-snug subpixel-antialiased break-words text-[#bbcfcf]'>
 				<Content />
 			</div>
 		</div>
 	</article>
 </PostLayout>
+
+<Footer />

@@ -3,7 +3,6 @@ import PostsLayout from '../../layouts/PostsLayout.astro';
 import Title from '../../components/Title.astro';
 import PostList from '../../components/PostList.astro';
 import Head from '../../components/Head.astro';
-import Header from '../../components/Header.astro';
 import { getCollection } from 'astro:content';
 import { Picture } from 'astro:assets';
 import blur from '/src/assets/img/bg.svg';
@@ -18,7 +17,6 @@ alt='blur background'
 formats={['avif', 'webp']}
 />
 <PostsLayout title='Blog'>
-	<Header />
 	<div class='grid content-center my-auto mt-[12.2222%] min-h-full'>
 		<Title text='Blog' />
 		<PostList posts={posts} />

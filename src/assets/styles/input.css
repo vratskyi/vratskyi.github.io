@@ -5,13 +5,23 @@
 html {
 	scroll-behavior: smooth;
 }
-
-h2 {
-	font-size: 1.3rem !important;
-	font-weight: 600 !important;
-	margin-bottom: 5px !important;
+h1,h2,h3,h4,h5,h6 {
+	font-family: Kanit, sans-serif !important;
+	display: inline-block;
 }
-
+h2 {
+	--tw-gradient-from: #F1362A var(--tw-gradient-from-position);
+	--tw-gradient-to: #AC1694 var(--tw-gradient-to-position);
+	color: transparent;
+	background-clip: text;
+	background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+	font-weight: 900;
+	font-size: 3.3rem !important;
+	display: inline-block;
+}
+body{
+	font-family: 'Montserrat', sans-serif !important;
+}
 
 blockquote {
 	padding-left: 0.75rem/* 12px */;
@@ -25,6 +35,12 @@ blockquote {
 	letter-spacing: 0.025em;
 }
 
+.horizontal-line{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom-width: 1px;
+    border-color: rgb(255 255 255 / 0.1);
+}
 
 /** Основные цвета */
 :root {

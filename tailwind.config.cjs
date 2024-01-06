@@ -15,8 +15,7 @@ module.exports = {
 				accent: ['#AC1694'],
 			},
 			fontFamily: {
-				sans: ["Kanit", "sans-serif"],
-				serif: ["'Libre Barcode 39'", "cursive"],
+				sans: [("Kanit", "sans-serif"), ("Montserrat", "sans-serif")],
 			  },
 			}
 		},

@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Head from '../components/Head.astro';
 import Title from '../components/Title.astro';
-import Header from '../components/Header.astro';
 import { Image, Picture } from 'astro:assets';
 import me from '/src/assets/img/oleksii-vratskyi.jpg'
 import github from '/src/assets/img/github.svg'
@@ -11,7 +10,6 @@ import blur from '/src/assets/img/bg.svg';
 
 <Head  title="About"/>
 <Layout class="relative" title="About">
-<Header />
 <div class='grid mt-[11.1111%] content-center'>
 		<Title text="About"></Title>
 	</div>
@@ -26,7 +24,7 @@ import blur from '/src/assets/img/bg.svg';
 		<div class='grid grid-flow-col auto-cols-auto content-center mt-20'>
 			<div class="grid lg:grid-cols-2 blur-bg rounded-xl p-5">
 				<div class="grid justify-center content-center mb-5 lg:mb-0">
-					<Picture class="object-cover rounded-full w-full h-full max-w-[250px] max-h-[250px] lg:max-w-[300px] lg:max-h-[300px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
+					<Picture class="object-cover rounded-full w-full h-full max-w-[200px] max-h-[200px] lg:max-w-[300px] lg:max-h-[300px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
 				</div>
 
 				<div class="grid justify-center content-center">
