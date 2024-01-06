@@ -39,4 +39,4 @@ I am currently studying Astro Framework. This website is built using JavaScript 
 
 Thank you for reading. Thank you for reading. Your support motivates me to continue learning and improving. Have a great day! I'll be in touch. 😉<br /><br />
 
-Thank you for reading.
+> Mr.Robot is watching you. 🧐
