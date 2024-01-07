@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/** Основные цвета */
+:root {
+	--primary: #f1362a;
+	--secondary: #2f2929;
+	--accent: #ac1694;
+	--background: #040404;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -9,12 +18,14 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Kanit, sans-serif !important;
 	display: inline-block;
 }
+li {
+	font-family: Kanit, sans-serif !important;
+	display: inline-block;
+}
 h2 {
-	--tw-gradient-from: #F1362A var(--tw-gradient-from-position);
-	--tw-gradient-to: #AC1694 var(--tw-gradient-to-position);
 	color: transparent;
 	background-clip: text;
-	background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+	background-image: linear-gradient(to right, var(--primary), var(--accent));
 	font-weight: 900;
 	font-size: 3.3rem !important;
 	display: inline-block;
@@ -22,6 +33,26 @@ h2 {
 body{
 	font-family: 'Montserrat', sans-serif !important;
 }
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+  }
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+  }
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(240, 54, 44, 0.6);
+  }
+::-webkit-scrollbar-thumb:hover{
+  	background: rgba(240, 54, 44,0.8);
+  }
+::-webkit-scrollbar-thumb:active{
+  	background: rgba(240, 54, 44);
+  }
+/* -------------- */
 
 blockquote {
 	padding-left: 0.75rem/* 12px */;
@@ -36,19 +67,13 @@ blockquote {
 }
 
 .horizontal-line{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+	display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-bottom-width: 1px;
     border-color: rgb(255 255 255 / 0.1);
 }
 
-/** Основные цвета */
-:root {
-	--primary: #f1362a;
-	--secondary: #2f2929;
-	--accent: #ac1694;
-	--background: #040404;
-}
 
 /** Меню */
 #main-menu > .menu {
