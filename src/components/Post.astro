@@ -11,7 +11,7 @@ const { post } = Astro.props;
 ---
 
 <article
-	class='p-4 grid gap-y-5 mt-[12.2222%] content-center max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
+	class='p-4 grid gap-y-5 mt-[12.2222%] w-full max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
 	<a href={`/blog/${post.slug}`}>
 		<Picture
 			transition:name={post.data.title}
@@ -20,7 +20,7 @@ const { post } = Astro.props;
 			width='500'
 			height='350'
 			formats={['avif', 'webp']}
-			class='object-cover min-h-full rounded-2xl'
+			class='object-cover h-full max-h-[220px] w-full rounded-2xl'
 		/>
 		<a href={`/blog/${post.slug}`}>
 			<h3
@@ -78,7 +78,6 @@ const { post } = Astro.props;
 				{post.data.categories}
 			</h3>
 			<TitlePost h1={post.data.title} />
-			<ul><li>{post.data.tag}</li></ul>
 		</a>
 	</a>
 </article>

@@ -1,0 +1,55 @@
+---
+import { Picture } from 'astro:assets';
+import BadgeLink from './BadgeLink.astro';
+import Badge from './Badge.astro';
+import Button from './Button.astro';
+
+let { description, title, img, site, badgeLinkProps, badgeProps } = Astro.props;
+---
+
+<div class='grid blur-bg p-5 lg:p-10 rounded-xl'>
+	<div class='grid lg:grid-cols-2'>
+		<div class='grid self-start'>
+			<Picture
+				class='object-cover object-center min-h-full rounded-2xl'
+				src={img}
+				width='500'
+				height='350'
+				alt={title}
+				formats={['avif', 'webp']}
+			/>
+		</div>
+		<div class='lg:ml-10'>
+			<h3
+				class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl lg:text-4xl mb-5 mt-3 lg:mt-0'>
+				{title}
+			</h3>
+			<p class='inline-flex text-xl font-light'>
+				{description}
+			</p>
+			<div class='py-5'>
+				<h4 class='text-lg mb-5'>Technologies i used:</h4>
+				<ul class='flex space-x-2 flex-wrap'>
+               {Array.isArray(badgeLinkProps) ? (
+                badgeLinkProps.map((badgeLink, index) => (
+                   <BadgeLink key={index} {...badgeLink} />
+                ))
+             ) : (
+                <BadgeLink {...badgeLinkProps} />
+             )}
+             
+            {Array.isArray(badgeProps) ? (
+                badgeProps.map((badge, index) => (
+                    <Badge key={index} {...badge} />
+                ))
+                ) : (
+                <Badge {...badgeProps} />
+                )}
+				</ul>
+			</div>
+			<div class='mt-5'>
+				<Button text="Check out" link={site} />
+			</div>
+		</div>
+	</div>
+</div>

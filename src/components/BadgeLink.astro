@@ -1,0 +1,13 @@
+---
+let { href, text } = Astro.props;
+---
+
+<a
+	href={href}
+	target='_blank'
+	class='inline-grid justify-self-start'>
+	<li
+		class='justify-self-start font-light blur-bg hover:bg-primary-0 duration-150 rounded-2xl px-3 py-2'>
+		{text}
+	</li>
+</a>
