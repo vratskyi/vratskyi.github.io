@@ -39,21 +39,36 @@ import Button from '../components/Button.astro';
 					</blockquote>
 				</div>
 			</div>
-
-			<div
-				class='self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
-				<Picture
-					src={cover}
-					class='mx-auto object-cover rounded-xl'
-					alt='cover'
-					formats={['avif', 'webp']}
-				/>
-				<p class='text-xl font-light tracking-wide mt-5'>
-					You can find this site on GitHub, I'm developing it for my portfolio,
-					as well as for blogging.
-				</p>
-				<div class='mt-5'>
-					<Button text="Check out" link="https://github.com/vratskyi/vratskyi.github.io" />
+			<div>
+				<div
+					class='self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
+					<Picture
+						src={cover}
+						class='mx-auto object-cover rounded-xl'
+						alt='cover'
+						formats={['avif', 'webp']}
+					/>
+					<p class='text-xl font-light tracking-wide mt-5'>
+						You can find this site on GitHub, I'm developing it for my
+						portfolio, as well as for blogging.
+					</p>
+					<div class='mt-5'>
+						<Button
+							text='Check out'
+							link='https://github.com/vratskyi/vratskyi.github.io'
+						/>
+					</div>
+				</div>
+				<div
+					class='mt-5 flex justify-between items-center self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
+					<h3
+						class='text-2xl text-white'>
+						Some good staff:
+					</h3><Button
+						text='Read blog'
+						link='/blog'
+						target='_self'
+					/>
 				</div>
 			</div>
 		</section>

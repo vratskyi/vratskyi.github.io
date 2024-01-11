@@ -29,7 +29,7 @@ let { description, title, img, site, badgeLinkProps, badgeProps } = Astro.props;
 			</p>
 			<div class='py-5'>
 				<h4 class='text-lg mb-5'>Technologies i used:</h4>
-				<ul class='flex space-x-2 flex-wrap'>
+				<ul class='flex flex-wrap space-x-2 space-y-2 xs:space-y-0'>
                {Array.isArray(badgeLinkProps) ? (
                 badgeLinkProps.map((badgeLink, index) => (
                    <BadgeLink key={index} {...badgeLink} />

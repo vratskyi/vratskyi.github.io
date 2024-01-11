@@ -1,9 +1,10 @@
 ---
 import { getCollection, CollectionEntry } from 'astro:content';
+import { Picture } from 'astro:assets';
 import PostLayout from '../../layouts/PostLayout.astro';
 import Head from '../../components/Head.astro';
 import Header from '../../components/Header.astro';
-import { Picture } from 'astro:assets';
+import Tag from '../../components/Tag.astro';
 import blur from '/src/assets/img/bg.svg';
 import Footer from '../../components/Footer.astro';
 
@@ -156,8 +157,8 @@ const { Content } = await post.render();
 				</h5>
 			</div>
 		</div>
-		<div class="pb-1 border-b-[1px] border-white/10">
-			<h3
+		<ul class="pb-1 border-b-[1px] border-white/10">
+			<li
 				class='mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 				<svg
 					class='w-6 inline-block mr-1 my-auto'
@@ -174,26 +175,27 @@ const { Content } = await post.render();
 					></path>
 				</svg>
 				{post.data.author}
-			</h3>
-			<date
-				class='ml-2 mb-4 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
-				<svg
-					class='w-6 inline-block mr-1 my-auto'
-					fill='none'
-					stroke='currentColor'
-					stroke-width='1'
-					viewBox='0 0 24 24'
-					xmlns='http://www.w3.org/2000/svg'
-					aria-hidden='true'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z'
-					></path>
-				</svg>
-				{post.data.publishDate}
-			</date>
-			<h3
+			</li>
+			<li class="ml-2 mb-4 my-auto text-xs font-light blur-bg rounded-2xl">
+				<date class="px-2 py-1 inline-flex items-center">
+					<svg
+						class='w-6 inline-block mr-1 my-auto'
+						fill='none'
+						stroke='currentColor'
+						stroke-width='1'
+						viewBox='0 0 24 24'
+						xmlns='http://www.w3.org/2000/svg'
+						aria-hidden='true'>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z'
+						></path>
+					</svg>
+					{post.data.publishDate}
+				</date>
+				</li>
+			<li
 				class='mb-4 ml-2 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
 				<svg
 					class='w-6 inline-block mr-1 my-auto'
@@ -210,26 +212,9 @@ const { Content } = await post.render();
 					></path>
 				</svg>
 				{post.data.categories}
-			</h3>
-			<h3
-				class='mb-4 ml-2 my-auto text-xs font-light blur-bg rounded-2xl px-2 py-1 inline-flex items-center'>
-				<svg
-					class='w-6 inline-block mr-1 my-auto'
-					fill='none'
-					stroke='currentColor'
-					stroke-width='1'
-					viewBox='0 0 24 24'
-					xmlns='http://www.w3.org/2000/svg'
-					aria-hidden='true'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5'
-					></path>
-				</svg>
-				{post.data.tags}
-			</h3>
-		</div>
+			</li>
+			<Tag text={post.data.tags} />
+		</ul>
 		<div class="pt-2">
 			 <h1 class="text-5xl lg:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0">{post.data.title}</h1> 
 			<div

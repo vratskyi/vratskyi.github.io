@@ -1,10 +1,12 @@
 ---
-let { link, text } = Astro.props;
+let { link, text, target } = Astro.props;
+
+target = target || '_blank';
 ---
 
 <a
 	href={link}
-	target='_blank'
+	target={target}
 	class='inline-block justify-self-start px-3 py-2 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
 	>{text}
 	<svg
