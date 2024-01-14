@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Head from '../components/Head.astro';
-import Title from '../components/Title.astro';
+import Layout from '@/layouts/Layout.astro';
+import Head from '@/components/Head.astro';
+import Title from '@/components/Title.astro';
 import { Image, Picture } from 'astro:assets';
 import me from '/src/assets/img/oleksii-vratskyi.jpg'
 import github from '/src/assets/img/github.svg'
@@ -15,16 +15,15 @@ import blur from '/src/assets/img/bg.svg';
 	</div>
 			<!-- ABOUT ME -->
 	<section class='grid content-start px-3 lg:px-0 mb-[5rem] text-white'>
-		<Picture
+		<Image
 		src={blur}
 		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
 		alt='blur background'
-		formats={['avif', 'webp']}
 	/>
 		<div class='grid grid-flow-col auto-cols-auto content-center mt-20'>
 			<div class="grid lg:grid-cols-2 blur-bg rounded-xl p-5">
 				<div class="grid justify-center content-center mb-5 lg:mb-0">
-					<Picture class="object-cover rounded-full ring-4 ring-white/90 w-full h-full max-w-[200px] max-h-[200px] lg:max-w-[250px] lg:max-h-[250px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
+					<Picture class="object-cover rounded-full ring-8 ring-white/80 w-full h-full max-w-[200px] max-h-[200px] lg:max-w-[250px] lg:max-h-[250px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="Oleksii Vratskyi" />
 				</div>
 
 				<div class="grid justify-center content-center">

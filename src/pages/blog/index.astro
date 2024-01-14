@@ -1,20 +1,20 @@
 ---
-import PostsLayout from '../../layouts/PostsLayout.astro';
-import Title from '../../components/Title.astro';
-import PostList from '../../components/PostList.astro';
-import Head from '../../components/Head.astro';
+import PostsLayout from '@/layouts/PostsLayout.astro';
+import Title from '@/components/Title.astro';
+import PostList from '@/components/PostList.astro';
+import Head from '@/components/Head.astro';
 import { getCollection } from 'astro:content';
-import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
 import blur from '/src/assets/img/bg.svg';
+
 const posts = await getCollection('posts');
 ---
 
 <Head title='Blog' />
-<Picture
-src={blur}
-class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-alt='blur background'
-formats={['avif', 'webp']}
+<Image
+	src={blur}
+	class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+	alt='blur background'
 />
 <PostsLayout title='Blog'>
 	<div class='grid content-center my-auto mt-[12.2222%] min-h-full'>

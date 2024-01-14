@@ -26,9 +26,10 @@ h2 {
 	color: transparent;
 	background-clip: text;
 	background-image: linear-gradient(to right, var(--primary), var(--accent));
-	font-weight: 900;
+	font-weight: 900 !important;
 	font-size: 3.3rem !important;
 	display: inline-block;
+	align-self: self-start;
 }
 body{
 	font-family: 'Montserrat', sans-serif !important;
@@ -40,17 +41,17 @@ body{
   }
 ::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0);
+    background: rgb(255, 255, 255);
   }
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background: rgba(240, 54, 44, 0.6);
+    background: rgb(47, 41, 41);
   }
 ::-webkit-scrollbar-thumb:hover{
-  	background: rgba(240, 54, 44,0.8);
+  	background: rgb(47, 41, 41);
   }
 ::-webkit-scrollbar-thumb:active{
-  	background: rgba(240, 54, 44);
+  	background: rgb(240, 54, 44);
   }
 /* -------------- */
 

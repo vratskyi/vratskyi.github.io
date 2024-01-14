@@ -1,11 +1,11 @@
 ---
 import { getCollection, CollectionEntry } from 'astro:content';
-import { Picture } from 'astro:assets';
+import { Picture,Image } from 'astro:assets';
 import PostLayout from '../../layouts/PostLayout.astro';
 import Head from '../../components/Head.astro';
-import Header from '../../components/Header.astro';
 import Tag from '../../components/Tag.astro';
 import blur from '/src/assets/img/bg.svg';
+import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
@@ -22,11 +22,10 @@ const { Content } = await post.render();
 ---
 
 <Head title={`OV Blog - ${post.data.title}`} />
-<Picture
-	src={blur}
-	class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-	alt='blur background'
-	formats={['avif', 'webp']}
+<Image
+src={blur}
+class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+alt='blur background'
 />
 <PostLayout>
 	<Header />
@@ -218,7 +217,7 @@ const { Content } = await post.render();
 		<div class="pt-2">
 			 <h1 class="text-5xl lg:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0">{post.data.title}</h1> 
 			<div
-				class='mb-10 mt-5 prose lg:prose-xl text-2xl lg:text-4xl font-black !tracking-wide !leading-snug subpixel-antialiased break-words text-[#bbcfcf]'>
+				class='mb-10 mt-5 prose lg:prose-xl text-2xl lg:text-4xl font-regular !tracking-wide !leading-snug subpixel-antialiased break-words text-balance text-[#bbcfcf]'>
 				<Content />
 			</div>
 		</div>

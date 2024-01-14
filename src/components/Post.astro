@@ -11,14 +11,14 @@ const { post } = Astro.props;
 ---
 
 <article
-	class='p-4 grid gap-y-3 mt-[12.2222%] w-full max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
+	class='p-4 flex flex-col space-y-3 mt-[12.2222%] w-full max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
 	<a href={`/blog/${post.slug}`}>
 		<Picture
 			transition:name={post.data.title}
 			src={post.data.image}
 			alt={post.data.title}
 			width='500'
-			height='350'
+			height='220'
 			formats={['avif', 'webp']}
 			class='object-cover h-full max-h-[220px] w-full rounded-2xl'
 		/>

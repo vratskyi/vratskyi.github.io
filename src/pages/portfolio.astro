@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Head from '../components/Head.astro';
-import Title from '../components/Title.astro';
-import { Picture } from 'astro:assets';
+import Layout from '@/layouts/Layout.astro';
+import Head from '@/components/Head.astro';
+import Title from '@/components/Title.astro';
+import { Image } from 'astro:assets';
 import water from '/src/assets/img/water-website.png';
 import byshikat from '/src/assets/img/online-store-byshikat.png';
 import lmd from '/src/assets/img/online-store-lmd.png';
 import blur from '/src/assets/img/bg.svg';
-import PortfolioCard from '../components/PortfolioCard.astro';
+import PortfolioCard from '@/components/PortfolioCard.astro';
 
 let title = Astro.props;
 ---
@@ -21,12 +21,11 @@ let title = Astro.props;
 	</div>
 	<!-- ABOUT ME -->
 	<section class='grid px-3 lg:px-0 content-start text-white'>
-		<Picture
-			src={blur}
-			class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-			alt='blur background'
-			formats={['avif', 'webp']}
-		/>
+		<Image
+		src={blur}
+		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+		alt='blur background'
+	/>
 		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 
 			<PortfolioCard
