@@ -1,5 +1,5 @@
 # New OV.Template
-### Not fully supported mobile devices yet
+------------------------------------------------------------------------------
 ![ov-template](https://i.ibb.co/YkX8KfK/ov-template-1.png)
 ![blog page](https://i.ibb.co/D9LfXvw/ov-template-blog.png)
 ![article page](https://i.ibb.co/B4NsLgn/ov-template-blog-article.png)
