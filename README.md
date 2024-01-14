@@ -1,9 +1,14 @@
-# New OV.Template
+# OV Template - Personal Blog & Portfolio
+Introducing a versatile and free template designed for use with the latest Astro version. This template boasts frequent updates, 
+a user-friendly interface, and compatibility with various purposes. Ideal for showcasing your portfolio, crafting blog articles,
+and sharing your personal narrative. Unlock the potential to express yourself effortlessly with this template.
 ------------------------------------------------------------------------------
-![ov-template](https://i.ibb.co/YkX8KfK/ov-template-1.png)
-![blog page](https://i.ibb.co/D9LfXvw/ov-template-blog.png)
-![article page](https://i.ibb.co/B4NsLgn/ov-template-blog-article.png)
-![portflio](https://i.ibb.co/b3FhCjF/ov-template-portflio.png)
+![ov-template](https://i.ibb.co/1GXGRL6/ov-main.png)
+![blog page](https://i.ibb.co/THK3vg9/ov-template-1.png)
+![portflio](https://i.ibb.co/VwmttJc/ov-template-blog.png)
+![portflio](https://i.ibb.co/3vPm3hS/ov-template-blog-article.png)
+![article page](https://i.ibb.co/XFZ7wM9/ov-template-about.png)
+![portflio](https://i.ibb.co/RYbKwCL/ov-template-portflio.png)
 
 ## 🧞 Commands
 
