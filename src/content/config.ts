@@ -5,6 +5,7 @@ const postsCollections = defineCollection({
   schema: ({ image }) => z.object({ 
     isDraft: z.boolean(),
     title: z.string(),
+    description: z.string().optional(),
     image: image(),
     author: z.string().default('Oleksii'),
     tags: z.array(z.string()).optional(),

@@ -75,6 +75,12 @@ blockquote {
     border-color: rgb(255 255 255 / 0.1);
 }
 
+.space-y {
+	display: block;
+	margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
 
 /** Меню */
 #main-menu > .menu {

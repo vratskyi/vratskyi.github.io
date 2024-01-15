@@ -11,7 +11,7 @@ const { post } = Astro.props;
 ---
 
 <article
-	class='p-4 flex flex-col space-y-3 mt-[12.2222%] w-full max-w-[400px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
+	class='p-4 flex flex-col space-y-3 mt-[12.2222%] w-full max-w-[600px] hover:bg-zinc-500/20 blur-bg rounded-2xl transition-colors duration-150'>
 	<a href={`/blog/${post.slug}`}>
 		<Picture
 			transition:name={post.data.title}
@@ -83,6 +83,7 @@ const { post } = Astro.props;
 			</li>
 		</ul>
 			<TitlePost h1={post.data.title} />
+			<p class="mt-5 line-clamp-4">{post.data.description}</p>
 		</a>
 	</a>
 </article>

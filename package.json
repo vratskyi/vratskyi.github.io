@@ -1,7 +1,7 @@
 {
   "name": "ov-template",
   "type": "module",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/vratskyi/vratskyi.github.io"
@@ -15,6 +15,7 @@
     "css": "tailwindcss -c ./tailwind.config.cjs -i ./src/assets/styles/input.css -o ./public/styles/global.css  --minify --watch"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.1.0",
     "sharp": "^0.33.1",
