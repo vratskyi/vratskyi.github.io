@@ -1,56 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-	// Определение переменных
+	// Define variables
 	let mainMenu = document.getElementById('main-menu');
 	let menuImage = document.getElementById('menu-image');
 	let menuIcon = document.getElementById('menu-icon');
 	let menuLinks = mainMenu.querySelectorAll('a');
 
-	// При клике на картинку меню
+	// On clicking the menu image
 	menuImage.addEventListener('click', function () {
-		// Проверка видимости меню
+		// Check the visibility of the menu
 		let isMenuVisible = mainMenu.style.display === 'block';
 
-		// Изменение видимости меню
+		// Change the visibility of the menu
 		mainMenu.style.display = isMenuVisible ? 'none' : 'block';
 
-		// Проверка текущего значения атрибута src
+		// Check the current value of the src attribute
 		let currentSrc = menuIcon.getAttribute('src');
 		let newSrc = '';
 
-		// Определение нового значения атрибута src
+		// Determine the new value of the src attribute
 		if (currentSrc === '/src/assets/img/menu.svg') {
 			newSrc = '/src/assets/img/close.svg';
 		} else {
 			newSrc = '/src/assets/img/menu.svg';
 		}
 
-		// Изменение значения атрибута src
+		// Change the value of the src attribute
 		menuIcon.setAttribute('src', newSrc);
 	});
 
-	// Получаем ссылки в меню
+    // Get links in the menu
 
-	// Добавляем обработчик событий на каждую ссылку
+    // Add an event handler to each link
 	menuLinks.forEach((link) => {
 		link.addEventListener('click', function (event) {
-			// Удаляем класс active у всех ссылок
+			// Remove the active class from all links
 			menuLinks.forEach((link) => {
 				link.classList.remove('active');
 			});
-			// Добавляем класс active к ссылке, по которой кликнули
+			// Add the active class to the link that was clicked
 			this.classList.add('active');
 		});
 	});
 
-	// Закрыть меню при клике на ссылку
+	// Close the menu when clicking on a link
 	menuLinks.forEach(function (link) {
 		link.addEventListener('click', function () {
 			isMenuVisible = 'none';
-			// Проверка текущего значения атрибута src
+			// Check the current value of the src attribute
 			let currentSrc = menuIcon.getAttribute('src');
 			let newSrc = '';
 
-			// Определение нового значения атрибута src
+			// Determine the new value of the src attribute
 			if (currentSrc === '/img/menu.svg') {
 				newSrc = '/src/assets/img/close.svg';
 			} else {
@@ -59,6 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
-	// Начальное значение свойства display
+	// Initial value of the display property
 	mainMenu.style.display = 'none';
 });
