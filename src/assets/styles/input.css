@@ -1,7 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@tailwindcss/typography';
 
+@font-face {
+	font-family: 'Inter', sans-serif;
+	font-display: swap;
+	src: url('../font/inter/Inter-Regular.woff2')
+		url('../font/inter/Inter-Medium.woff2')
+		url('../font/inter/Inter-SemiBold.woff2')
+		url('../font/inter/Inter-Light.woff2')
+		url('../font/inter/Inter-Black.woff2') url('../font/inter/Inter-Bold.woff2')
+		url('../font/inter/Inter-ExtraBold.woff2') 
+		url('../font/inter/Inter-Thin.woff2') 
+		url('../font/inter/Inter-ExtraLight.woff2') format('woff2');
+}
 
 /** Основные цвета */
 :root {
@@ -11,76 +24,73 @@
 	--background: #040404;
 }
 
-html {
+html, body {
 	scroll-behavior: smooth;
+	font-display: swap;
 }
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: Kanit, sans-serif !important;
-	display: inline-block;
 }
-li {
-	font-family: Kanit, sans-serif !important;
-	display: inline-block;
-}
-h2 {
-	color: transparent;
-	background-clip: text;
-	background-image: linear-gradient(to right, var(--primary), var(--accent));
-	font-weight: 900 !important;
-	font-size: 3.3rem !important;
-	display: inline-block;
-	align-self: self-start;
-}
-body{
-	font-family: 'Montserrat', sans-serif !important;
-}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 3px;
-  }
+	width: 10px;
+	height: 3px;
+}
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgb(255, 255, 255);
-  }
-::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background: rgb(47, 41, 41);
-  }
-::-webkit-scrollbar-thumb:hover{
-  	background: rgb(47, 41, 41);
-  }
-::-webkit-scrollbar-thumb:active{
-  	background: rgb(240, 54, 44);
-  }
+	border-radius: 10px;
+	background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgb(47, 41, 41);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(47, 41, 41);
+}
+::-webkit-scrollbar-thumb:active {
+	background: rgb(240, 54, 44);
+}
 /* -------------- */
 
 blockquote {
-	padding-left: 0.75rem/* 12px */;
+	padding-left: 0.75rem /* 12px */;
 	border-left-width: 2px;
 	--tw-border-opacity: 1;
 	border-color: rgb(241 54 42 / var(--tw-border-opacity));
 	display: inline-block;
-	font-size: 1.25rem/* 20px */;
-	line-height: 1.75rem/* 28px */;
+	font-size: 1.25rem /* 20px */;
+	line-height: 1.75rem /* 28px */;
 	font-weight: 300;
 	letter-spacing: 0.025em;
 }
 
-.horizontal-line{
+.horizontal-line {
 	display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-bottom-width: 1px;
-    border-color: rgb(255 255 255 / 0.1);
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-bottom-width: 1px;
+	border-color: rgb(255 255 255 / 0.1);
 }
 
 .space-y {
 	display: block;
-	margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
+.space-y-xl {
+	display: block;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.space-y-2xl {
+	display: block;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
 
 /** Меню */
 #main-menu > .menu {
@@ -95,7 +105,7 @@ blockquote {
 /** Анимация меню */
 #main-menu.animation {
 	animation-name: animation;
-	animation-duration: 500ms;
+	animation-duration: 300ms;
 }
 
 @keyframes animation {
@@ -108,7 +118,7 @@ blockquote {
 }
 
 #menu-icon {
-	transition: src 0.5s ease-in-out;
+	transition: src 0.3s ease-in-out;
 }
 
 /** Анимация элементов */
@@ -137,7 +147,7 @@ blockquote {
 
 .hover-link.active {
 	color: var(--primary);
-  }
+}
 
 @layer utilities {
 	.home-icon.active {
@@ -149,7 +159,7 @@ blockquote {
 @layer utilities {
 	@media (min-width: 424px) {
 		.xs\:mt-\[10rem\] {
-			margin-top: 10rem/* 160px */;
+			margin-top: 10rem /* 160px */;
 		}
 	}
 }
@@ -158,8 +168,16 @@ blockquote {
 	.blur-bg {
 		background-color: #4444;
 		--tw-backdrop-blur: blur(16px);
-    	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+		backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+			var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+			var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+			var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+			var(--tw-backdrop-sepia);
 		--tw-backdrop-opacity: opacity(0.5);
-    	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+		backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+			var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+			var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+			var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+			var(--tw-backdrop-sepia);
 	}
 }

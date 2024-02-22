@@ -7,7 +7,16 @@ type Props = {
 	posts: CollectionEntry<'posts'>[];
 };
 
-const { posts } = Astro.props;
+let { posts } = Astro.props;
+
+// Преобразование строки даты в формате dd/mm/yyyy в объект Date
+function convertToDate(dateString) {
+	const [day, month, year] = dateString.split('/');
+	return new Date(year, month - 1, day);
+}
+
+// Сортировка постов по дате публикации в порядке убывания
+posts = posts.sort((a, b) => convertToDate(b.data.publishDate).getTime() - convertToDate(a.data.publishDate).getTime());
 ---
 
 <Layout>

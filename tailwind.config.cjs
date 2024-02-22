@@ -19,5 +19,5 @@ module.exports = {
 			  },
 			}
 		},
-	plugins: [ require('autoprefixer'), require('cssnano'), ('@tailwindcss/typography')],
+	plugins: [ require('autoprefixer'), require('cssnano'), require('@tailwindcss/typography')],
 }

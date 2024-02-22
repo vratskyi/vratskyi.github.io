@@ -4,6 +4,8 @@ import Head from '@/components/Head.astro';
 import Title from '@/components/Title.astro';
 import { Image } from 'astro:assets';
 import water from '/src/assets/img/water-website.png';
+import water2 from '/src/assets/img/h2ovoda.png';
+import portfolioSite from '/src/assets/img/ov-main.png';
 import byshikat from '/src/assets/img/online-store-byshikat.png';
 import lmd from '/src/assets/img/online-store-lmd.png';
 import blur from '/src/assets/img/bg.svg';
@@ -28,11 +30,61 @@ let title = Astro.props;
 	/>
 		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 
+
+	<PortfolioCard
+			img={water2}
+			alt={title}
+			site="https://h2ovoda.com.ua/"
+			title='Water delivery site 2.0'
+			badgeProps={[
+				{ text: "JavaScript" },
+				{ text: "HTML/CSS" }
+		]}
+			badgeLinkProps={[ 
+				{text: "Astro", alt: "Astro logo", href: "https://astro.build/"},
+				{text: "TailwindCSS", alt: "TailwindCSS logo", href: "https://tailwindcss.com/"}
+
+		 ]}
+			description={`
+			I revamped the website to offer water delivery services in 
+			Belogorodka and its neighboring regions. 
+			The site has an attractive design, a user-friendly layout, 
+			and seamless integration with analytical tools to enhance customer engagement. 
+			Users can easily submit water delivery requests using the order form 
+			provided and gain convenient access to bottled drinking water.
+			`}
+		>
+	</PortfolioCard>
+
 			<PortfolioCard
+			img={portfolioSite}
+			alt={title}
+			site="https://vratskyi.github.io/"
+			title='Personal Blog & Portfolio'
+			badgeProps={[
+				{ text: "JavaScript" },
+				{ text: "HTML/CSS" }
+		]}
+			badgeLinkProps={[ 
+				{text: "Astro", alt: "Astro logo", href: "https://astro.build/"},
+				{text: "TailwindCSS", alt: "TailwindCSS logo", href: "https://tailwindcss.com/"}
+
+		]}
+			description={`
+			Introducing a versatile and free template designed for use with the latest Astro version. 
+			This template boasts frequent updates, a user-friendly interface, and compatibility with various purposes. 
+			Ideal for showcasing your portfolio, crafting blog articles, and sharing your personal narrative. 
+			Unlock the potential to express yourself effortlessly with this template.
+			`}
+		>
+		</PortfolioCard>
+
+
+	<PortfolioCard
 				img={water}
 				alt={title}
-				site="https://h2ovoda.com.ua/"
-				title='Water delivery website'
+				site="https://old.h2ovoda.com.ua/"
+				title='Water delivery site 1.0'
 				badgeProps={[
 					{ text: "JavaScript" },
 					{ text: "HTML/CSS" }

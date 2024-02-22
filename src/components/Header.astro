@@ -8,13 +8,13 @@ import blur from '/src/assets/img/bg.svg';
 <nav
 	transition:persist="nav"
 	transition:name="nav"
-	class='container fixed top-1 md:left-5 md:right-5 xl:max-w-7xl mx-auto font-sans bg-background-0/10 backdrop-blur-3xl rounded-xl p-5 flex justify-between items-center z-50'>
-	<div class='w-20 z-50'>
+	class='container fixed top-0 md:left-5 md:right-5 xl:max-w-7xl mx-auto font-sans bg-background-0/10 backdrop-blur-3xl rounded-xl py-2 px-5 flex justify-between items-center z-50'>
+	<div class='w-26 z-50'>
 		<a href='/'
 			><Image
 				src={logo}
-				width='80'
-				height='34'
+				width='100'
+				height='40'
 				alt='OV logo'
 			/></a
 		>
@@ -34,7 +34,7 @@ import blur from '/src/assets/img/bg.svg';
 		<div class='relative'>
 			<div
 				id='main-menu'
-				class='menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-20 h-full w-full min-h-screen lg:min-h-[700px] max-w-[1120px] mx-auto rounded-xl'>
+				class='menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-[62px] h-full w-full min-h-screen lg:min-h-[700px] max-w-[1120px] mx-auto rounded-xl'>
 				<Picture
 					src={blur}
 					class='absolute blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
@@ -73,7 +73,6 @@ import blur from '/src/assets/img/bg.svg';
 					</li>
 				</ul>
 			</div>
-			<div></div>
 		</div>
 	</button>
 </nav>
