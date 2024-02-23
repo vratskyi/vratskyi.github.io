@@ -1,4 +1,4 @@
-# OV Template - Personal Blog & Portfolio
+Personal Blog & Portfolio
 Introducing a versatile and free template designed for use with the latest Astro version. This template boasts frequent updates, 
 a user-friendly interface, and compatibility with various purposes. Ideal for showcasing your portfolio, crafting blog articles,
 and sharing your personal narrative. Unlock the potential to express yourself effortlessly with this template.
