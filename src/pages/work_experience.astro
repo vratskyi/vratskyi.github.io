@@ -8,7 +8,6 @@ import byshikat from '/src/assets/img/online-store-byshikat.png';
 import lmd from '/src/assets/img/online-store-lmd.png';
 import blur from '/src/assets/img/bg.svg';
 import PortfolioCard from '@/components/PortfolioCard.astro';
-import PortfolioCardAlt from '@/components/PortfolioCard_Alternate.astro';
 
 let title = Astro.props;
 ---
@@ -53,29 +52,6 @@ let title = Astro.props;
 			>
 	</PortfolioCard>
 
-		<PortfolioCardAlt
-		img={byshikat}
-		alt={title}
-		site="https://byshikat.com/"
-		title='Co-op Engineering Student'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			Analyzed the target audience, I realized that it is necessary to
-			make something similar to the model of behavior in Instagram, as
-			well as similar at least remotely similar design, thanks to a set
-			of solutions sales from their instagram store went to online store
-			and increased by 1000%
-			`}
-		>
-		</PortfolioCardAlt>
 		<PortfolioCard
 		img={byshikat}
 		alt={title}
@@ -99,7 +75,7 @@ let title = Astro.props;
 			`}
 		>
 		</PortfolioCard>
-		<PortfolioCardAlt
+		<PortfolioCard
 		img={byshikat}
 		alt={title}
 		site="https://byshikat.com/"
@@ -121,7 +97,30 @@ let title = Astro.props;
 			and increased by 1000%
 			`}
 		>
-		</PortfolioCardAlt>
+		</PortfolioCard>
+		<PortfolioCard
+		img={byshikat}
+		alt={title}
+		site="https://byshikat.com/"
+		title='Co-op Engineering Student'
+		badgeProps={[
+			{ text: "PHP" },
+			{ text: "ACF" },
+			{ text: "JavaScript" },
+			{ text: "HTML/CSS" }
+		]}
+			badgeLinkProps={[ 
+				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
+		]}
+			description={`
+			Analyzed the target audience, I realized that it is necessary to
+			make something similar to the model of behavior in Instagram, as
+			well as similar at least remotely similar design, thanks to a set
+			of solutions sales from their instagram store went to online store
+			and increased by 1000%
+			`}
+		>
+		</PortfolioCard>
 		</div>
 	</section>
 </Layout>
