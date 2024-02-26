@@ -6,7 +6,6 @@ import { Image } from 'astro:assets';
 import lmd from '/src/assets/img/online-store-lmd.png';
 import blur from '/src/assets/img/bg.svg';
 import PortfolioCard from '@/components/PortfolioCard.astro';
-import PortfolioCardAlt from '@/components/PortfolioCard_Alternate.astro';
 
 import cybersecurityI from '/src/assets/img/certifications/Coursera_CybersecurityI.jpg';
 import cybersecurityII from '/src/assets/img/certifications/Coursera_CybersecurityII.jpg';
@@ -35,184 +34,171 @@ let title = Astro.props;
 		alt='blur background'
 	/>
 		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+
 			<PortfolioCard
-				img={cybersecurityI}
-				alt={title}
-				site="https://h2ovoda.com.ua/"
-				title='Foundations of Cybersecurity'
-				badgeProps={[
-					{ text: "JavaScript" },
-					{ text: "HTML/CSS" }
+			img={cybersecurityI}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/567B3TRXXL66"
+			title='Foundations of Cybersecurity'
+			badgeProps={[
+				{ text: "Cybersecurity" },
+			]}
+			badgeLinkProps={[ 
+			]}
+			description={`
+			I was introduced to cybersecurity through a Google-developed curriculum, exploring significant events in the field's evolution, 
+			the impact of security incidents on businesses, and the role of an entry-level cybersecurity analyst. The course included interactive content 
+			from current Google professionals, hands-on activities, and simulations to build job-ready skills, covering CISSP security domains, frameworks, 
+			controls, ethics, and analytical tools.
+			`}
+			>	
+			</PortfolioCard>
+
+			<PortfolioCard
+			img={cybersecurityII}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/734E7RTNRMRU"
+			title='Play It Safe: Manage Security Risks'
+			badgeProps={[
+					{ text: "Cybersecurity" },
+			]}
+			badgeLinkProps={[ 
+			]}
+			description={`
+			In this advanced cybersecurity course, I deepened my knowledge of frameworks and controls, risk management, 
+			and threat mitigation. Guided by Google professionals, I learned to navigate SIEM data, use playbooks for threat responses, 
+			and conduct security audits, gaining practical skills for entry-level cybersecurity roles.
+			`}
+			>
+			</PortfolioCard>
+
+			<PortfolioCard
+			img={cybersecurityIII}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/4KVYW4LST84B"
+			title='Network Security'
+			badgeProps={[
+				{ text: "Cybersecurity" },
+				{ text: " Network Security" }
+			]}
+			badgeLinkProps={[ 
+			]}
+			description={`
+			I completed a course enhancing my understanding of network infrastructure and security monitoring tools. 
+			I can now elucidate ACL operations, NAT concepts, and the utility of various NSM tools within a SOC. 
+			My knowledge extends to network-based malware defenses, load balancing, web application firewalls, and access control models.
+			`}
+			>
+			</PortfolioCard>
+			<PortfolioCard
+			img={aiI}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/UWL3CSRJS6LA"
+			title='Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning'
+			badgeProps={[
+				{ text: "TensorFlow" },
+				{ text: "Python" },
+				{ text: "Google Colab" },
+				{ text: "Machine Learning" }		
 			]}
 				badgeLinkProps={[ 
-					{text: "Astro", alt: "Astro logo", href: "https://astro.build/"},
-					{text: "TailwindCSS", alt: "TailwindCSS logo", href: "https://tailwindcss.com/"}
-
-			 ]}
+			]}
 				description={`
-				I was introduced to cybersecurity through a Google-developed curriculum, exploring significant events in the field's evolution, the impact of security incidents on businesses, and the role of an entry-level cybersecurity analyst. The course included interactive content from current Google professionals, hands-on activities, and simulations to build job-ready skills, covering CISSP security domains, frameworks, controls, ethics, and analytical tools.
+				In this course, I have learned to harness the power of TensorFlow, mastering best practices 
+				for this leading open-source machine learning framework. I have built and trained a basic neural 
+				network, applying my skills to a computer vision application. My understanding of convolutions 
+				has deepened, enabling me to significantly improve neural network efficiency and accuracy. 
+				Through hands-on projects, I have acquired practical expertise to innovate and excel in machine 
+				learning endeavors.
 				`}
-			>	
-	</PortfolioCard>
-		<PortfolioCardAlt
-		img={cybersecurityII}
-		alt={title}
-		site="https://byshikat.com/"
-		title='Play It Safe: Manage Security Risks'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			Analyzed the target audience, I realized that it is necessary to
-			make something similar to the model of behavior in Instagram, as
-			well as similar at least remotely similar design, thanks to a set
-			of solutions sales from their instagram store went to online store
-			and increased by 1000%
-			`}
-		>
-		</PortfolioCardAlt>
+			>
+			</PortfolioCard>
 
-		<PortfolioCard
-		img={cybersecurityIII}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Network Security'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCard>
+			<PortfolioCard
+			img={aiII}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/87VYPLKNH7WE"
+			title='Convolutional Neural Networks in TensorFlow'
+			badgeProps={[
+				{ text: "TensorFlow" },
+				{ text: "Python" },
+				{ text: "Google Colab" },
+				{ text: "Machine Learning" }		
+			]}
+				badgeLinkProps={[ 
+					{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
+			]}
+				description={`
+				I have completed a certification where I honed my skills in handling real-world image data, 
+				plotting loss and accuracy, and implementing strategies to prevent overfitting, 
+				like augmentation and dropout. I also learned about transfer learning, gaining the ability 
+				to extract learned features from existing models.
+				`}
+			>
+			</PortfolioCard>
 
+			<PortfolioCard
+			img={aiIII}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/M62EF8BSTMG8"
+			title='Custom Models, Layers, and Loss Functions with TensorFlow'
+			badgeProps={[
+				{ text: "TensorFlow" },
+				{ text: "Python" },
+				{ text: "Google Colab" },
+				{ text: "Machine Learning" }				
+			]}
+			badgeLinkProps={[ 
+			]}
+				description={`
+				In this course, I learned to differentiate and build models using TensorFlow's 
+				Functional and Sequential APIs, including multi-output models and Siamese networks. 
+				I have crafted custom loss functions like the contrastive loss, developed unique layers,
+				 and explored activation functions. Furthermore, I gained proficiency in enhancing models with 
+				 custom features and creating advanced architectures such as ResNets by defining custom model 
+				 classes.
+				`}
+			>
+			</PortfolioCard>
 
-		<PortfolioCard
-		img={aiI}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning'
-		badgeProps={[
-			{ text: "TensorFlow" },
-			{ text: "Python" },
-			{ text: "Google Colab" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCard>
-		<PortfolioCardAlt
-		img={aiII}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Convolutional Neural Networks in TensorFlow'
-		badgeProps={[
-			{ text: "TensorFlow" },
-			{ text: "Python" },
-			{ text: "Google Colab" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCardAlt>
-		<PortfolioCard
-		img={aiIII}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Custom Models, Layers, and Loss Functions with TensorFlow'
-		badgeProps={[
-			{ text: "TensorFlow" },
-			{ text: "Python" },
-			{ text: "Google Colab" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCard>
-		<PortfolioCard
-		img={deploymentI}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Docker for absolute beginners'
-		badgeProps={[
-			{ text: "TensorFlow" },
-			{ text: "Python" },
-			{ text: "Google Colab" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCard>
-		<PortfolioCard
-		img={networkI}
-		alt={title}
-		site="https://lmd.lviv.ua/"
-		title='Fundamentals of Network Communication'
-		badgeProps={[
-			{ text: "TensorFlow" },
-			{ text: "Python" },
-			{ text: "Google Colab" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			This online store is based on WordPress CMS and WooCommerce, I
-			redesigned the old site to a modern design and optimized the
-			loading time, thanks to a comprehensive approach, the number of
-			visitors and sales increased. Now the site is at the top of google
-			in Ukraine.
-			`}
-		>
-		</PortfolioCard>
+			<PortfolioCard
+			img={deploymentI}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/CLL7T6MMLQ68"
+			title='Docker for absolute beginners'
+			badgeProps={[
+				{ text: "Docker" }
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				In a 2-hour guided project on Docker, I learned its architecture, commands for managing images 
+				and containers, networking, and volume management. I applied these skills to deploy a 
+				web application as a Docker container, streamlining application build, share, and run processes.
+				`}
+			>
+			</PortfolioCard>
+
+			<PortfolioCard
+			img={networkI}
+			alt={title}
+			site="https://www.coursera.org/account/accomplishments/certificate/CD8M527ZZ2N7"
+			title='Fundamentals of Network Communication'
+			badgeProps={[
+				{ text: "Communication Networks" },
+				{ text: "Internet Protocols" },
+				{ text: "Error Control Techniques" }
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				This course provided a comprehensive overview of network evolution, key concepts, and functions 
+				of layered architecture. It detailed protocols and services integral to current networks, explained 
+				digital communication fundamentals, and error control techniques such as parity checks, polynomial 
+				codes, and Internet checksums. ​
+				`}
+			>
+			</PortfolioCard>
 
 		</div>
 	</section>
