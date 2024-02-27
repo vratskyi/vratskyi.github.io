@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import Head from '@/components/Head.astro';
 import Title from '@/components/Title.astro';
+import Subtitle from '@/components/Subtitle.astro';
 import { Image } from 'astro:assets';
 import lmd from '/src/assets/img/online-store-lmd.png';
 import blur from '/src/assets/img/bg.svg';
@@ -26,180 +27,191 @@ let title = Astro.props;
 	<div class='grid mt-[11.1111%] content-center'>
 		<Title text='Certifications'/>
 	</div>
-	<!-- ABOUT ME -->
+	<!-- CERTIFICATIONS -->
 	<section class='grid px-3 lg:px-0 content-start text-white'>
 		<Image
 		src={blur}
 		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
 		alt='blur background'
 	/>
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
-
-			<PortfolioCard
-			img={cybersecurityI}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/567B3TRXXL66"
-			title='Foundations of Cybersecurity'
-			badgeProps={[
-				{ text: "Cybersecurity" },
-			]}
-			badgeLinkProps={[ 
-			]}
-			description={`
-			I was introduced to cybersecurity through a Google-developed curriculum, exploring significant events in the field's evolution, 
-			the impact of security incidents on businesses, and the role of an entry-level cybersecurity analyst. The course included interactive content 
-			from current Google professionals, hands-on activities, and simulations to build job-ready skills, covering CISSP security domains, frameworks, 
-			controls, ethics, and analytical tools.
-			`}
-			>	
-			</PortfolioCard>
-
-			<PortfolioCard
-			img={cybersecurityII}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/734E7RTNRMRU"
-			title='Play It Safe: Manage Security Risks'
-			badgeProps={[
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Cybersecurity'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={cybersecurityI}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/567B3TRXXL66"
+				title='Foundations of Cybersecurity'
+				badgeProps={[
 					{ text: "Cybersecurity" },
-			]}
-			badgeLinkProps={[ 
-			]}
-			description={`
-			In this advanced cybersecurity course, I deepened my knowledge of frameworks and controls, risk management, 
-			and threat mitigation. Guided by Google professionals, I learned to navigate SIEM data, use playbooks for threat responses, 
-			and conduct security audits, gaining practical skills for entry-level cybersecurity roles.
-			`}
-			>
-			</PortfolioCard>
-
-			<PortfolioCard
-			img={cybersecurityIII}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/4KVYW4LST84B"
-			title='Network Security'
-			badgeProps={[
-				{ text: "Cybersecurity" },
-				{ text: " Network Security" }
-			]}
-			badgeLinkProps={[ 
-			]}
-			description={`
-			I completed a course enhancing my understanding of network infrastructure and security monitoring tools. 
-			I can now elucidate ACL operations, NAT concepts, and the utility of various NSM tools within a SOC. 
-			My knowledge extends to network-based malware defenses, load balancing, web application firewalls, and access control models.
-			`}
-			>
-			</PortfolioCard>
-			<PortfolioCard
-			img={aiI}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/UWL3CSRJS6LA"
-			title='Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning'
-			badgeProps={[
-				{ text: "TensorFlow" },
-				{ text: "Python" },
-				{ text: "Google Colab" },
-				{ text: "Machine Learning" }		
-			]}
+				]}
 				badgeLinkProps={[ 
-			]}
+				]}
 				description={`
-				In this course, I have learned to harness the power of TensorFlow, mastering best practices 
-				for this leading open-source machine learning framework. I have built and trained a basic neural 
-				network, applying my skills to a computer vision application. My understanding of convolutions 
-				has deepened, enabling me to significantly improve neural network efficiency and accuracy. 
-				Through hands-on projects, I have acquired practical expertise to innovate and excel in machine 
-				learning endeavors.
+				I was introduced to cybersecurity through a Google-developed curriculum, exploring significant events in the field's evolution, 
+				the impact of security incidents on businesses, and the role of an entry-level cybersecurity analyst. The course included interactive content 
+				from current Google professionals, hands-on activities, and simulations to build job-ready skills, covering CISSP security domains, frameworks, 
+				controls, ethics, and analytical tools.
 				`}
-			>
-			</PortfolioCard>
-
-			<PortfolioCard
-			img={aiII}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/87VYPLKNH7WE"
-			title='Convolutional Neural Networks in TensorFlow'
-			badgeProps={[
-				{ text: "TensorFlow" },
-				{ text: "Python" },
-				{ text: "Google Colab" },
-				{ text: "Machine Learning" }		
-			]}
+				>	
+				</PortfolioCard>
+				
+				<PortfolioCard
+				img={cybersecurityII}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/734E7RTNRMRU"
+				title='Play It Safe: Manage Security Risks'
+				badgeProps={[
+						{ text: "Cybersecurity" },
+				]}
 				badgeLinkProps={[ 
-					{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-			]}
+				]}
 				description={`
-				I have completed a certification where I honed my skills in handling real-world image data, 
-				plotting loss and accuracy, and implementing strategies to prevent overfitting, 
-				like augmentation and dropout. I also learned about transfer learning, gaining the ability 
-				to extract learned features from existing models.
+				In this advanced cybersecurity course, I deepened my knowledge of frameworks and controls, risk management, 
+				and threat mitigation. Guided by Google professionals, I learned to navigate SIEM data, use playbooks for threat responses, 
+				and conduct security audits, gaining practical skills for entry-level cybersecurity roles.
 				`}
-			>
-			</PortfolioCard>
+				>
+				</PortfolioCard>
 
-			<PortfolioCard
-			img={aiIII}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/M62EF8BSTMG8"
-			title='Custom Models, Layers, and Loss Functions with TensorFlow'
-			badgeProps={[
-				{ text: "TensorFlow" },
-				{ text: "Python" },
-				{ text: "Google Colab" },
-				{ text: "Machine Learning" }				
-			]}
-			badgeLinkProps={[ 
-			]}
-				description={`
-				In this course, I learned to differentiate and build models using TensorFlow's 
-				Functional and Sequential APIs, including multi-output models and Siamese networks. 
-				I have crafted custom loss functions like the contrastive loss, developed unique layers,
-				 and explored activation functions. Furthermore, I gained proficiency in enhancing models with 
-				 custom features and creating advanced architectures such as ResNets by defining custom model 
-				 classes.
-				`}
-			>
-			</PortfolioCard>
-
-			<PortfolioCard
-			img={deploymentI}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/CLL7T6MMLQ68"
-			title='Docker for absolute beginners'
-			badgeProps={[
-				{ text: "Docker" }
-			]}
+				<PortfolioCard
+				img={cybersecurityIII}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/4KVYW4LST84B"
+				title='Network Security'
+				badgeProps={[
+					{ text: "Cybersecurity" },
+					{ text: " Network Security" }
+				]}
 				badgeLinkProps={[ 
-			]}
+				]}
 				description={`
-				In a 2-hour guided project on Docker, I learned its architecture, commands for managing images 
-				and containers, networking, and volume management. I applied these skills to deploy a 
-				web application as a Docker container, streamlining application build, share, and run processes.
+				I completed a course enhancing my understanding of network infrastructure and security monitoring tools. 
+				I can now elucidate ACL operations, NAT concepts, and the utility of various NSM tools within a SOC. 
+				My knowledge extends to network-based malware defenses, load balancing, web application firewalls, and access control models.
 				`}
-			>
-			</PortfolioCard>
+				>
+				</PortfolioCard>
 
-			<PortfolioCard
-			img={networkI}
-			alt={title}
-			site="https://www.coursera.org/account/accomplishments/certificate/CD8M527ZZ2N7"
-			title='Fundamentals of Network Communication'
-			badgeProps={[
-				{ text: "Communication Networks" },
-				{ text: "Internet Protocols" },
-				{ text: "Error Control Techniques" }
-			]}
+								<PortfolioCard
+				img={networkI}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/CD8M527ZZ2N7"
+				title='Fundamentals of Network Communication'
+				badgeProps={[
+					{ text: "Communication Networks" },
+					{ text: "Internet Protocols" },
+					{ text: "Error Control Techniques" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					This course provided a comprehensive overview of network evolution, key concepts, and functions 
+					of layered architecture. It detailed protocols and services integral to current networks, explained 
+					digital communication fundamentals, and error control techniques such as parity checks, polynomial 
+					codes, and Internet checksums. ​
+					`}
+				>
+				</PortfolioCard>
+			</div> 
+		</div> 
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Artificial Intelligence and Machine Learning'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={aiI}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/UWL3CSRJS6LA"
+				title='Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning'
+				badgeProps={[
+					{ text: "TensorFlow" },
+					{ text: "Python" },
+					{ text: "Google Colab" },
+					{ text: "Machine Learning" }		
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					In this course, I have learned to harness the power of TensorFlow, mastering best practices 
+					for this leading open-source machine learning framework. I have built and trained a basic neural 
+					network, applying my skills to a computer vision application. My understanding of convolutions 
+					has deepened, enabling me to significantly improve neural network efficiency and accuracy. 
+					Through hands-on projects, I have acquired practical expertise to innovate and excel in machine 
+					learning endeavors.
+					`}
+				>
+				</PortfolioCard>
+
+				<PortfolioCard
+				img={aiII}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/87VYPLKNH7WE"
+				title='Convolutional Neural Networks in TensorFlow'
+				badgeProps={[
+					{ text: "TensorFlow" },
+					{ text: "Python" },
+					{ text: "Google Colab" },
+					{ text: "Machine Learning" }		
+				]}
+					badgeLinkProps={[ 
+						{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
+				]}
+					description={`
+					I have completed a certification where I honed my skills in handling real-world image data, 
+					plotting loss and accuracy, and implementing strategies to prevent overfitting, 
+					like augmentation and dropout. I also learned about transfer learning, gaining the ability 
+					to extract learned features from existing models.
+					`}
+				>
+				</PortfolioCard>
+
+				<PortfolioCard
+				img={aiIII}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/M62EF8BSTMG8"
+				title='Custom Models, Layers, and Loss Functions with TensorFlow'
+				badgeProps={[
+					{ text: "TensorFlow" },
+					{ text: "Python" },
+					{ text: "Google Colab" },
+					{ text: "Machine Learning" }				
+				]}
 				badgeLinkProps={[ 
-			]}
-				description={`
-				This course provided a comprehensive overview of network evolution, key concepts, and functions 
-				of layered architecture. It detailed protocols and services integral to current networks, explained 
-				digital communication fundamentals, and error control techniques such as parity checks, polynomial 
-				codes, and Internet checksums. ​
-				`}
-			>
-			</PortfolioCard>
+				]}
+					description={`
+					In this course, I learned to differentiate and build models using TensorFlow's 
+					Functional and Sequential APIs, including multi-output models and Siamese networks. 
+					I have crafted custom loss functions like the contrastive loss, developed unique layers,
+					and explored activation functions. Furthermore, I gained proficiency in enhancing models with 
+					custom features and creating advanced architectures such as ResNets by defining custom model 
+					classes.
+					`}
+				>
+				</PortfolioCard>
+			</div> 
+		</div> 
 
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Deployment and CI/CD'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={deploymentI}
+				alt={title}
+				site="https://www.coursera.org/account/accomplishments/certificate/CLL7T6MMLQ68"
+				title='Docker for absolute beginners'
+				badgeProps={[
+					{ text: "Docker" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					In a 2-hour guided project on Docker, I learned its architecture, commands for managing images 
+					and containers, networking, and volume management. I applied these skills to deploy a 
+					web application as a Docker container, streamlining application build, share, and run processes.
+					`}
+				>
+				</PortfolioCard>
+			</div>
 		</div>
 	</section>
 </Layout>
