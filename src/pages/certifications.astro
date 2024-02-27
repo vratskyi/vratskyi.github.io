@@ -11,10 +11,30 @@ import PortfolioCard from '@/components/PortfolioCard.astro';
 import cybersecurityI from '/src/assets/img/certifications/Coursera_CybersecurityI.jpg';
 import cybersecurityII from '/src/assets/img/certifications/Coursera_CybersecurityII.jpg';
 import cybersecurityIII from '/src/assets/img/certifications/Coursera_Network_Security.jpg';
+
 import aiI from '/src/assets/img/certifications/Coursera_Intro_TF.jpg';
 import aiII from '/src/assets/img/certifications/Coursera_CNN_TF.jpg';
 import aiIII from '/src/assets/img/certifications/Coursera_CustomModels_TF.jpg';
+
 import deploymentI from '/src/assets/img/certifications/Coursera_Docker_Beginners.jpg';
+
+import networkI from '/src/assets/img/certifications/Coursera_Fundamentals_Network_Communication.jpg';
+
+import webdev from '/src/assets/img/certifications/edX_Web_Programming.png';
+
+import db from '/src/assets/img/certifications/Udemy_PostgreSQL.jpg';
+
+import log from '/src/assets/img/certifications/Intro_to_Splunk.jpeg';
+
+import roboticsI from '/src/assets/img/certifications/Roboboat2023.jpg';
+import roboticsII from '/src/assets/img/certifications/Roboboat2024.jpg';
+
+import unittestingI from '/src/assets/img/certifications/Udemy_JUnit.jpg';
+import unittestingII from '/src/assets/img/certifications/Udemy_Mockito.jpg';
+
+import cadI from '/src/assets/img/certifications/Onshape.jpeg';
+import cadII from '/src/assets/img/certifications/AutoCAD.jpeg';
+
 import networkI from '/src/assets/img/certifications/Coursera_Fundamentals_Network_Communication.jpg';
 
 let title = Astro.props;
@@ -213,5 +233,218 @@ let title = Astro.props;
 				</PortfolioCard>
 			</div>
 		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Web Development'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={webdev}
+				alt={title}
+				site="https://courses.edx.org/certificates/3996348988b24b8a9506d54a76c82217"
+				title='Introduction to Cloud Development with HTML, CSS and JavaScript'
+				badgeProps={[
+					{ text: "HTML" },
+					{ text: "CSS" },
+					{ text: "JavaScript" },
+					{ text: "GitHub" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					Through this course, I have gained a comprehensive understanding of the cloud development ecosystem, familiarizing myself 
+					with essential terminology and tools. I've become proficient in developer tools and IDEs, enhanced my skills in HTML, CSS, and JavaScript 
+					for user interface creation, and developed expertise in managing projects with Git and GitHub. This has prepared me for professional web development. ​
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Robotics'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={roboticsII}
+				alt={title}
+				site="https://github.com/IcebergASV"
+				title='Roboboat 2024'
+				badgeProps={[
+					{ text: "Robotics Operating System (ROS)" },
+					{ text: "Computer Vision" },
+					{ text: "C++" },
+					{ text: "Python" },
+					{ text: "GitHub" }	
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					Second year at Robobat 2024 Competition: RoboBoat is an international competition where student teams globally create autonomous surface vehicles (ASVs) 
+					to autonomously navigate through a series of maritime challenges. These robotic boats showcase advanced maritime maneuverability and are engineered
+					to address real-world issues such as coastal surveillance, port security, and oceanographic operations, reflecting the pressing needs of the maritime industry.
+					`}
+				>
+				</PortfolioCard>
+
+				<PortfolioCard
+				img={roboticsI}
+				alt={title}
+				site="https://github.com/IcebergASV"
+				title='Roboboat 2023'
+				badgeProps={[
+					{ text: "Robotics Operating System (ROS)" },
+					{ text: "Computer Vision" },
+					{ text: "C++" },
+					{ text: "Python" },
+					{ text: "GitHub" }	
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					First year at Robobat 2023 Competition: RoboBoat is an international competition where student teams globally create autonomous surface vehicles (ASVs) 
+					to autonomously navigate through a series of maritime challenges. These robotic boats showcase advanced maritime maneuverability and are engineered
+					to address real-world issues such as coastal surveillance, port security, and oceanographic operations, reflecting the pressing needs of the maritime industry.
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Database Management and Analysis'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={db}
+				alt={title}
+				site="https://www.udemy.com/certificate/UC-95b1d7e4-3f7c-48c2-ad9a-b93da8e963bb/"
+				title='Intro To PostgreSQL Databases With PgAdmin For Beginners'
+				badgeProps={[
+					{ text: "PostgreSQL" },
+					{ text: "PgAdmin" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					Successfully completed training in PostgreSQL and PgAdmin 4. Proficient in installation, database creation, data manipulation, and basic reporting. 
+					Acquired skills in SQL commands, Primary and Foreign Keys, and database backup/restoration. This certification attests to expertise in PostgreSQL and 
+					PgAdmin 4, covering database management, SQL operations, and data integrity.
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Log Management and Analysis'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={log}
+				alt={title}
+				title='Intro to Splunk'
+				badgeProps={[
+					{ text: "Splunk" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					In the 'Intro to Splunk' eLearning course, I learned to utilize Splunk for creating reports, dashboards, and event exploration using the Search 
+					Processing Language. I mastered Splunk's architecture, user roles, and navigation of the Splunk Web interface, gaining skills in building searches,
+					 visualizations, and understanding knowledge objects, preparing me for advanced data analysis tasks. ​
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='Java Unit Testing'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={unittestingI}
+				alt={title}
+				site="https://www.udemy.com/certificate/UC-5493c6db-7b3f-42cf-9448-8d5124041c43/"
+				reposite="https://github.com/DavidGuamanDavila/JUnit5-Testing-Showcase"
+				title='Practical Java Unit Testing with JUnit 5'
+				badgeProps={[
+					{ text: "JUnit" },
+					{ text: "Java" },
+					{ text: "Eclipse IDE" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					Finished JUnit 5 training: Gained expertise in unit testing, best practices, and TDD basics. 
+					Ready to boost code quality with effective tests in IDEs.
+					`}
+				>
+				</PortfolioCard>
+
+				<PortfolioCard
+				img={unittestingII}
+				alt={title}
+				site="https://www.udemy.com/certificate/UC-e5b9627b-defb-47c2-b78c-dbe87b157ca8/"
+				reposite="https://github.com/DavidGuamanDavila/JUnit5-Testing-Showcase"
+				title='Mockito: Next-Level Java Unit Testing'
+				badgeProps={[
+					{ text: "Mockito" },
+					{ text: "JUnit" },
+					{ text: "Java" },
+					{ text: "Eclipse IDE" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					I recently completed a comprehensive course focused on enhancing Java JUnit tests using mocks, specifically learning about Mockito 5 version. 
+					The course equipped me with the skills to efficiently run unit tests with mocks in the Eclipse IDE, addressing practical, real-world testing problems.
+					Throughout my learning journey, I was guided to follow mocking best practices, which has significantly improved my ability to develop high-quality test 
+					suites for Java applications.
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
+		<div class='grid mt-[11.1111%] content-center'>
+			<Subtitle text='CAD Drawing'/>
+			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+				<PortfolioCard
+				img={cadII}
+				alt={title}
+				site="https://www.credly.com/badges/26dd6d15-1978-497e-abf1-f2ed9386615a?source=linked_in_profile"
+				title='AutoCAD Certified User'
+				badgeProps={[
+					{ text: "AutoCAD" },
+					{ text: "Assembly Design" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					I completed an Autodesk AutoCAD training course, enhancing my expertise in computer-aided design. 
+					Alongside formal education, I acquired hands-on experience with Autodesk AutoCAD software, applying theoretical knowledge in practical applications. 
+					My proficiency was validated through a proctored exam, inclusive of identity verification, at a Certiport Authorized Testing Center, where I successfully 
+					demonstrated my competency in AutoCAD to earn the certification.
+					`}
+				>
+				</PortfolioCard>
+
+				<PortfolioCard
+				img={cadI}
+				alt={title}
+				title='Onshape Fundamentals: CAD'
+				badgeProps={[
+					{ text: "Onshape" },
+					{ text: "Assembly Design" }
+				]}
+					badgeLinkProps={[ 
+				]}
+					description={`
+					I completed the Onshape Learning Pathway, gaining expertise in advanced CAD features like sketching, modeling, 
+					and assembly. The program emphasized Onshape's unique capabilities and best practices, ensuring a seamless transition from traditional 
+					parametric 3D CAD. My proficiency was certified upon completion, showcasing my readiness for modern CAD challenges.
+					`}
+				>
+				</PortfolioCard>
+			</div>
+		</div>
+
 	</section>
 </Layout>
