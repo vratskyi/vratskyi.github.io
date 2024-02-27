@@ -353,7 +353,7 @@ video {
     var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
     var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
     var(--tw-backdrop-sepia);
-  background-color: #4444;
+  background-color: #03259544;
 }
 .visible {
   visibility: visible;
