@@ -2,164 +2,175 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /** Основные цвета */
 :root {
-	--primary: #f1362a;
-	--secondary: #2f2929;
-	--accent: #ac1694;
-	--background: #040404;
+  --primary: #67d9ff;
+  --secondary: #2f2929;
+  --accent: #ac1694;
+  --background: #040404;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-h1,h2,h3,h4,h5,h6 {
-	font-family: Kanit, sans-serif !important;
-	display: inline-block;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Kanit, sans-serif !important;
+  display: inline-block;
 }
 li {
-	font-family: Kanit, sans-serif !important;
-	display: inline-block;
+  font-family: Kanit, sans-serif !important;
+  display: inline-block;
 }
 h2 {
-	color: transparent;
-	background-clip: text;
-	background-image: linear-gradient(to right, var(--primary), var(--accent));
-	font-weight: 900 !important;
-	font-size: 3.3rem !important;
-	display: inline-block;
-	align-self: self-start;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--primary), var(--accent));
+  font-weight: 900 !important;
+  font-size: 3.3rem !important;
+  display: inline-block;
+  align-self: self-start;
 }
-body{
-	font-family: 'Montserrat', sans-serif !important;
+body {
+  font-family: "Montserrat", sans-serif !important;
 }
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 3px;
-  }
+  width: 10px;
+  height: 3px;
+}
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgb(255, 255, 255);
-  }
-::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background: rgb(47, 41, 41);
-  }
-::-webkit-scrollbar-thumb:hover{
-  	background: rgb(47, 41, 41);
-  }
-::-webkit-scrollbar-thumb:active{
-  	background: rgb(240, 54, 44);
-  }
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(47, 41, 41);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(47, 41, 41);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgb(240, 54, 44);
+}
 /* -------------- */
 
 blockquote {
-	padding-left: 0.75rem/* 12px */;
-	border-left-width: 2px;
-	--tw-border-opacity: 1;
-	border-color: rgb(241 54 42 / var(--tw-border-opacity));
-	display: inline-block;
-	font-size: 1.25rem/* 20px */;
-	line-height: 1.75rem/* 28px */;
-	font-weight: 300;
-	letter-spacing: 0.025em;
+  padding-left: 0.75rem /* 12px */;
+  border-left-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(241 54 42 / var(--tw-border-opacity));
+  display: inline-block;
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+  font-weight: 300;
+  letter-spacing: 0.025em;
 }
 
-.horizontal-line{
-	display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-bottom-width: 1px;
-    border-color: rgb(255 255 255 / 0.1);
+.horizontal-line {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom-width: 1px;
+  border-color: rgb(255 255 255 / 0.1);
 }
 
 .space-y {
-	display: block;
-	margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
-
 
 /** Меню */
 #main-menu > .menu {
-	scroll-margin-top: 76px;
+  scroll-margin-top: 76px;
 }
 
 .blur-menu {
-	backdrop-filter: blur(100px) !important;
-	-webkit-backdrop-filter: blur(100px) !important;
+  backdrop-filter: blur(100px) !important;
+  -webkit-backdrop-filter: blur(100px) !important;
 }
 
 /** Анимация меню */
 #main-menu.animation {
-	animation-name: animation;
-	animation-duration: 500ms;
+  animation-name: animation;
+  animation-duration: 500ms;
 }
 
 @keyframes animation {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #menu-icon {
-	transition: src 0.5s ease-in-out;
+  transition: src 0.5s ease-in-out;
 }
 
 /** Анимация элементов */
 .animate {
-	position: relative;
-	transform: translateY(150px);
-	opacity: 0;
-	transition: 1s all ease;
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
 }
 
 .animate.active {
-	transform: translateY(0);
-	opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .active {
-	visibility: visible !important;
+  visibility: visible !important;
 }
 
 @layer utilities {
-	.hover-link:hover {
-		color: var(--primary);
-		transition-duration: 150ms;
-	}
+  .hover-link:hover {
+    color: var(--primary);
+    transition-duration: 150ms;
+  }
 }
 
 .hover-link.active {
-	color: var(--primary);
-  }
-
-@layer utilities {
-	.home-icon.active {
-		stroke: var(--primary);
-		transition-duration: 150ms;
-	}
+  color: var(--primary);
 }
 
 @layer utilities {
-	@media (min-width: 424px) {
-		.xs\:mt-\[10rem\] {
-			margin-top: 10rem/* 160px */;
-		}
-	}
+  .home-icon.active {
+    stroke: var(--primary);
+    transition-duration: 150ms;
+  }
+}
+
+@layer utilities {
+  @media (min-width: 424px) {
+    .xs\:mt-\[10rem\] {
+      margin-top: 10rem /* 160px */;
+    }
+  }
 }
 
 @layer components {
-	.blur-bg {
-		background-color: #4444;
-		--tw-backdrop-blur: blur(16px);
-    	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-		--tw-backdrop-opacity: opacity(0.5);
-    	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-	}
+  .blur-bg {
+    background-color: #4444;
+    --tw-backdrop-blur: blur(16px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+      var(--tw-backdrop-sepia);
+    --tw-backdrop-opacity: opacity(0.5);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+      var(--tw-backdrop-sepia);
+  }
 }
