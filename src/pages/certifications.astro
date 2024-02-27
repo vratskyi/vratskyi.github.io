@@ -54,7 +54,50 @@ let title = Astro.props;
 		class='fixed blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
 		alt='blur background'
 	/>
-		<div class='grid mt-[11.1111%] content-center'>
+    <!-- Horizontal Menu -->
+		<nav class='w-full'>
+		<ul class='flex justify-center space-x-4 my-4'>
+			<li class='hover:underline'>
+			<a href="#cybersecurity" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Cybersecurity</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#ai" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>AI and ML</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#deployment_cicd" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Deployment and CI/CD</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#webdev" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Web Development</a>
+			</li>
+
+		</ul>
+		<ul class='flex justify-center space-x-4 my-4'>
+			<li class='hover:underline'>
+			<a href="#robotics" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Robotics</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#db" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Database Management and Analysis</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#log" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Log Management and Analysis</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#unittest" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>Java Unit Testing</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#cad" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-lg'>CAD Drawing</a>
+			</li>
+		</ul>
+		</nav>
+
+		<div class='grid mt-[11.1111%] content-center' id="cybersecurity">
 			<Subtitle text='Cybersecurity'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -135,7 +178,7 @@ let title = Astro.props;
 				</PortfolioCard>
 			</div> 
 		</div> 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="ai">
 			<Subtitle text='Artificial Intelligence and Machine Learning'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -211,7 +254,7 @@ let title = Astro.props;
 			</div> 
 		</div> 
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="deployment_cicd">
 			<Subtitle text='Deployment and CI/CD'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -234,7 +277,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="webdev">
 			<Subtitle text='Web Development'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -260,7 +303,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="robotics">
 			<Subtitle text='Robotics'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -309,7 +352,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="db">
 			<Subtitle text='Database Management and Analysis'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -333,7 +376,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="log">
 			<Subtitle text='Log Management and Analysis'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -355,7 +398,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="unittest">
 			<Subtitle text='Java Unit Testing'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
@@ -403,7 +446,7 @@ let title = Astro.props;
 			</div>
 		</div>
 
-		<div class='grid mt-[11.1111%] content-center'>
+		<div class='grid mt-[11.1111%] content-center' id="cad">
 			<Subtitle text='CAD Drawing'/>
 			<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
 				<PortfolioCard
