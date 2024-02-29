@@ -1,7 +1,7 @@
 {
   "name": "ov-template",
   "type": "module",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/vratskyi/vratskyi.github.io"
@@ -23,7 +23,8 @@
     "astro-compress": "^2.2.10",
     "atropos": "^2.0.2",
     "autoprefixer": "^10.4.17",
-    "cssnano": "^6.0.3"
+    "cssnano": "^6.0.3",
+    "sharp": "^0.33.2"
   },
   "description": "``` npm create astro@latest -- --template minimal ```",
   "main": "index.js",
