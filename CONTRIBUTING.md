@@ -1,6 +1,6 @@
-# Astro Framework - ov-template - Contributing Guidelines
+# Astro Framework - vratskyi.github.io - Contributing Guidelines
 
-Thank you for your interest in contributing to the development of Astro Framework's "ov-template"! We welcome your contributions.
+Thank you for your interest in contributing to the development of Astro Framework's "vratskyi.github.io"! We welcome your contributions.
 
 ## How to Contribute
 
@@ -9,13 +9,13 @@ Thank you for your interest in contributing to the development of Astro Framewor
 2. **Clone** your fork to your local machine:
 
     ```bash
-    git clone https://github.com/your_username/ov-template.git
+    git clone https://github.com/vratskyi/vratskyi.github.io.git
     ```
 
 3. **Install dependencies**:
 
     ```bash
-    cd ov-template
+    cd vratskyi.github.io
     npm install
     ```
 
@@ -55,4 +55,4 @@ If you find a bug or have a feature request, please create an Issue in the "Issu
 
 Your contribution will automatically be considered as an agreement to the project's license. Please make sure you have read the [LICENSE](https://github.com/vratskyi/vratskyi.github.io/blob/master/LICENSE).
 
-Thank you for contributing to Astro Framework's "ov-template"!
+Thank you for contributing to Astro Framework's "vratskyi.github.io"!
