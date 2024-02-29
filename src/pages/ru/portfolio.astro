@@ -13,6 +13,7 @@ import PortfolioCard from "@/components/PortfolioCard.astro";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 getAbsoluteLocaleUrl("ru");
+export const prerender = true;
 
 let title = Astro.props;
 ---

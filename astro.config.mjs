@@ -3,7 +3,7 @@ import mdx from "@astrojs/mdx";
 import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
 
-import vercel from "@astrojs/vercel/serverless";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,19 +30,18 @@ export default defineConfig({
   }), tailwind()],
   // site: 'http://localhost:4321',
   prefetch: {
-    prefetchAll: false,
+    prefetchAll: true,
     defaultStrategy: 'viewport'
   },
   experimental: {
-    clientPrerender: false,
+    clientPrerender: true
   },
-  output: "server",
-  adapter: vercel({
-    isr: {
-      expiration: 60 * 60 * 24,
-    },
-    webAnalytics: {
-      enabled: true,
-  },
+  output: "hybrid",
+  adapter: cloudflare({ 
+    mode: 'directory',
+    functionPerRoute: true,
+    routes: {
+      strategy: 'auto'
+    } 
   })
 });

@@ -6,6 +6,7 @@ import Head from "@components/Head.astro";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 getAbsoluteLocaleUrl("ru");
+export const prerender = true;
 
 ---
 <Head title='Ошибка 404' />

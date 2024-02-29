@@ -10,6 +10,8 @@ import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 getAbsoluteLocaleUrl("en");
 
+export const prerender = true;
+
 const allPosts = await getCollection("posts");
 ---
 
