@@ -38,7 +38,7 @@ export default defineConfig({
   },
   output: "hybrid",
   adapter: cloudflare({ 
-    mode: 'advanced',
+    mode: 'directory',
     functionPerRoute: true,
     routes: {
       strategy: 'include'
