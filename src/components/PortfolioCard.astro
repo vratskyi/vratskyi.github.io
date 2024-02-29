@@ -4,7 +4,7 @@ import BadgeLink from './BadgeLink.astro';
 import Badge from './Badge.astro';
 import Button from './Button.astro';
 
-let { description, title, img, site, reposite, badgeLinkProps, badgeProps } = Astro.props;
+let { description, title, img, site, reposite, project, projectdesc, companyweb, badgeLinkProps, badgeProps } = Astro.props;
 ---
 
 <div class='grid blur-bg p-5 lg:p-10 rounded-xl'>
@@ -48,8 +48,11 @@ let { description, title, img, site, reposite, badgeLinkProps, badgeProps } = As
 				</ul>
 			</div>
 			<div class='flex mt-5 space-x-3'>
-				{site && <Button text="Check out my Certificate" link={site} />}
-				{reposite && <Button text="Check out my Repository" link={reposite} />}
+				{site && <Button text="Check out the certification" link={site} />}
+				{reposite && <Button text="Check out the GitHub repository" link={reposite} />}
+				{companyweb && <Button text="Company's website" link={companyweb} />}
+				{project && <Button text="Check out the website" link={project} />}
+				{projectdesc && <Button text="Learn more about the project" link={projectdesc} />}
 			</div>
 		</div>
 	</div>

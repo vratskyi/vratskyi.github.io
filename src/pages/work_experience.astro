@@ -2,10 +2,14 @@
 import Layout from '@/layouts/Layout.astro';
 import Head from '@/components/Head.astro';
 import Title from '@/components/Title.astro';
+import Subtitle from '@/components/Subtitle.astro';
 import { Image } from 'astro:assets';
 import water from '/src/assets/img/water-website.png';
-import byshikat from '/src/assets/img/online-store-byshikat.png';
-import lmd from '/src/assets/img/online-store-lmd.png';
+import seafood from '/src/assets/img/seafood_prod.png';
+import ocio from '/src/assets/img/ocio.jpg';
+import buildings from '/src/assets/img/smartbuildings.jpg';
+import security from '/src/assets/img/security.jpg';
+
 import blur from '/src/assets/img/bg.svg';
 import PortfolioCard from '@/components/PortfolioCard.astro';
 
@@ -26,21 +30,40 @@ let title = Astro.props;
 		class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
 		alt='blur background'
 	/>
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]'>
+		<nav class='w-full'>
+		<ul class='flex justify-center space-x-4 my-4'>
+			<li class='hover:underline'>
+			<a href="#nrc" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>NRC</a>
+			</li>
 
+			<li class='hover:underline'>
+			<a href="#nasdaq" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>Nasdaq-Verafin</a>
+			</li>
+
+			<li class='hover:underline'>
+			<a href="#ocio" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>OCIO</a>
+			</li>
+		</ul>
+		</nav>
+
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nasdaq">
+			<Subtitle text='Nasdaq-Verafin'/>
 			<PortfolioCard
-				img={water}
+				img={security}
 				alt={title}
-				site="https://h2ovoda.com.ua/"
+				companyweb="https://verafin.com/"
+				projectdesc="https://verafin.com/product/bsa-aml-compliance-management/#:~:text=Verafin%20analyzes%20a%20wide%20variety,financing%20or%20human%20trafficking%20activity."
 				title='Software Developer Intern'
 				badgeProps={[
-					{ text: "JavaScript" },
-					{ text: "HTML/CSS" }
+					{ text: "Java" },
+					{ text: "JUnit" },
+					{ text: "Mockito" },
+					{ text: "GitHub" },
+					{ text: "QA Testing" },
+					{ text: "IntelliJ IDEA" }
+
 			]}
 				badgeLinkProps={[ 
-					{text: "Astro", alt: "Astro logo", href: "https://astro.build/"},
-					{text: "TailwindCSS", alt: "TailwindCSS logo", href: "https://tailwindcss.com/"}
-
 			 ]}
 				description={`
 				The website I developed offers water delivery in Belogorodka and
@@ -50,77 +73,95 @@ let title = Astro.props;
 				order form and get access to bottled drinking water.
 				`}
 			>
-	</PortfolioCard>
+			</PortfolioCard>
+		</div>
 
-		<PortfolioCard
-		img={byshikat}
-		alt={title}
-		site="https://byshikat.com/"
-		title='Co-op Engineering Student'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			Analyzed the target audience, I realized that it is necessary to
-			make something similar to the model of behavior in Instagram, as
-			well as similar at least remotely similar design, thanks to a set
-			of solutions sales from their instagram store went to online store
-			and increased by 1000%
-			`}
-		>
-		</PortfolioCard>
-		<PortfolioCard
-		img={byshikat}
-		alt={title}
-		site="https://byshikat.com/"
-		title='Co-op Engineering Student'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			Analyzed the target audience, I realized that it is necessary to
-			make something similar to the model of behavior in Instagram, as
-			well as similar at least remotely similar design, thanks to a set
-			of solutions sales from their instagram store went to online store
-			and increased by 1000%
-			`}
-		>
-		</PortfolioCard>
-		<PortfolioCard
-		img={byshikat}
-		alt={title}
-		site="https://byshikat.com/"
-		title='Co-op Engineering Student'
-		badgeProps={[
-			{ text: "PHP" },
-			{ text: "ACF" },
-			{ text: "JavaScript" },
-			{ text: "HTML/CSS" }
-		]}
-			badgeLinkProps={[ 
-				{text: "WordPress", alt: "WordPress logo", href: "https://wordpress.com/"},
-		]}
-			description={`
-			Analyzed the target audience, I realized that it is necessary to
-			make something similar to the model of behavior in Instagram, as
-			well as similar at least remotely similar design, thanks to a set
-			of solutions sales from their instagram store went to online store
-			and increased by 1000%
-			`}
-		>
-		</PortfolioCard>
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nrc">
+			<Subtitle text='National Research Council (NRC)'/>
+			<PortfolioCard
+			img={buildings}
+			alt={title}
+			site="https://nrc.canada.ca/en"
+			projectdesc="https://nrc.canada.ca/en/research-development/research-collaboration/programs/high-performance-buildings-program"
+			title='Web Application Developer'
+			badgeProps={[
+				{ text: "Back-End" },
+				{ text: "Python" },
+				{ text: "Java" },
+				{ text: "HQL" },
+				{ text: "JUnit" },
+				{ text: "Maven" },
+				{ text: "SQLAlchemy" },
+				{ text: "GitLab" },
+				{ text: "Eclipse IDE" },
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				Analyzed the target audience, I realized that it is necessary to
+				make something similar to the model of behavior in Instagram, as
+				well as similar at least remotely similar design, thanks to a set
+				of solutions sales from their instagram store went to online store
+				and increased by 1000%
+				`}
+			>
+			</PortfolioCard>
+		</div>
+
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="ocio">
+			<Subtitle text='Office of the Chief Information Officer (OCIO)'/>		
+			<PortfolioCard
+			img={ocio}
+			alt={title}
+			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
+			title='Co-op Engineering Student'
+			badgeProps={[
+				{ text: "Back-End" },
+				{ text: "APEX" },
+				{ text: "SQL" },
+				{ text: "Oracle Databse" },
+				{ text: "Tortoise SVN" },
+				{ text: "SVN" },
+				{ text: "VS Code" }
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				Analyzed the target audience, I realized that it is necessary to
+				make something similar to the model of behavior in Instagram, as
+				well as similar at least remotely similar design, thanks to a set
+				of solutions sales from their instagram store went to online store
+				and increased by 1000%
+				`}
+			>
+			</PortfolioCard>
+			<PortfolioCard
+			img={seafood}
+			alt={title}
+			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
+			project="https://www.geosurv.gov.nl.ca/fishaq/directory/"
+			title='Co-op Engineering Student'
+			badgeProps={[
+				{ text: "Front-End" },
+				{ text: "ASP.NET/Classic ASP" },
+				{ text: "Jira" },
+				{ text: "JavaScript" },
+				{ text: "HTML/CSS" },
+				{ text: "Tortoise SVN" },
+				{ text: "SVN" },
+				{ text: "VS Code" }
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				Analyzed the target audience, I realized that it is necessary to
+				make something similar to the model of behavior in Instagram, as
+				well as similar at least remotely similar design, thanks to a set
+				of solutions sales from their instagram store went to online store
+				and increased by 1000%
+				`}
+			>
+			</PortfolioCard>
 		</div>
 	</section>
 </Layout>
