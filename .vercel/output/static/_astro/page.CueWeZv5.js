@@ -1,1 +1,0 @@
-import{i}from"./index.CgGp2TZk.js";i();
