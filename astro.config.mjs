@@ -3,7 +3,7 @@ import mdx from "@astrojs/mdx";
 import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
 
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,10 +30,13 @@ export default defineConfig({
   }), tailwind()],
   // site: 'http://localhost:4321',
   prefetch: {
-    prefetchAll: true,
+    prefetchAll: false,
     defaultStrategy: 'viewport'
   },
-  output: "static",
+  experimental: {
+    clientPrerender: false,
+  },
+  output: "server",
   adapter: vercel({
     isr: {
       expiration: 60 * 60 * 24,

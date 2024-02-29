@@ -1,0 +1,1 @@
+import{A as o}from"./atropos.DZR9lnpr.js";import"./hoisted.ByMID1ba.js";import"./index.CgGp2TZk.js";window.innerWidth>1024&&document.querySelectorAll(".my-atropos").forEach(e=>{o({el:e,highlight:!1,activeOffset:0,shadowOffset:0,shadowScale:0})});

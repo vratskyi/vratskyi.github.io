@@ -1,0 +1,124 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import { Picture, Image } from "astro:assets";
+import blur from "/src/assets/img/bg.png";
+import cover from "/src/assets/img/ov-main.png";
+import Button from "@/components/Button.astro";
+import { getRelativeLocaleUrl, getAbsoluteLocaleUrl } from 'astro:i18n';
+
+getAbsoluteLocaleUrl("en");
+
+
+const blogURL=getRelativeLocaleUrl("en", "blog");
+---
+
+<Head title='VRATSKYI' />
+<Layout>
+  <!-- HERO -->
+  
+  <section
+    class="grid gap-x-10 gap-y-10 lg:gap-y-0 place-content-center content-center lg:grid-flow-col lg:auto-cols-max lg:mt-[10rem] 2xl:mt-[15rem] mb-[5rem] px-3 lg:px-0 h-full text-white"
+  >
+    <Image
+      src={blur}
+      class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+      alt="blur background"
+    />
+
+    <div>
+      <div class="atropos my-atropos">
+        <div class="atropos-scale">
+          <div class="atropos-rotate">
+            <div class="atropos-inner blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]">
+                <div class="atropos-text">
+                  <h1
+                    class="text-7xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
+                  >
+                    Happy to see you here!
+                  </h1>
+                </div>
+          
+                <div class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10">
+                  <blockquote>
+                    Here, you can learn about me, read my blog, and familiarize yourself with my portfolio. Currently, I am studying JavaScript and the Astro Framework, and I plan to study the Vue Framework. I am also interested in Qwik and enjoy learning new things. Most importantly, I am passionate about my work.
+                  </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+<div>
+  <div class="atropos my-atropos">
+    <div class="atropos-scale">
+      <div class="atropos-rotate">
+        <div class="atropos-inner self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
+      <Picture
+        src={cover}
+        class="mx-auto object-cover rounded-xl"
+        alt="cover"
+        formats={["avif", "webp"]}
+      />
+      <p class="atropos-text text-xl font-extralight tracking-wide mt-5">
+        You can find this site on GitHub, I'm developing it for my portfolio, as well as for blogging.
+      </p>
+      <div class="mt-5 atropos-text">
+        <Button
+          text='Check out'
+          link="https://github.com/vratskyi/vratskyi.github.io"
+        />
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="atropos my-atropos">
+    <div class="atropos-scale">
+      <div class="atropos-rotate">
+        <div class="atropos-inner">
+          <div class="mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
+            <p class="text-2xl font-light text-white">
+              Read my blog
+            </p><Button
+            text='Read blog'
+            link={blogURL}
+            target="_self"
+            showIcon={false}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+  
+  <link rel="stylesheet" href="/styles/atropos.min.css">
+
+  <script>
+import Atropos from 'atropos';
+
+if (window.innerWidth > 1024) {
+  const elements = document.querySelectorAll('.my-atropos');
+
+  elements.forEach((el) => {
+    Atropos({
+      el: el as HTMLElement,
+      highlight: false,
+      activeOffset: 0,
+      shadowOffset: 0,
+      shadowScale: 0,
+    });
+  });
+}
+  </script>
+</Layout>
