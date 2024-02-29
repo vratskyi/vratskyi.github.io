@@ -40,7 +40,6 @@ export default defineConfig({
     },
     webAnalytics: {
       enabled: true,
-    out: 'dist'
   },
   })
 });
