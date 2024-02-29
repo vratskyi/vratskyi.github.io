@@ -1,0 +1,1 @@
+function animate(){let e=document.querySelectorAll(".animate");for(let t=0;t<e.length;t++){let n=window.innerHeight;e[t].getBoundingClientRect().top<n-150?e[t].classList.add("active"):e[t].classList.remove("active")}}window.addEventListener("scroll",animate);
