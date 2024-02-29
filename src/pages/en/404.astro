@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import blur from "@/assets/img/bg.png";
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+
+getAbsoluteLocaleUrl("en");
+
+---
+<Head title='Error 404' />
+<Layout>
+    <section class="min-h-screen grid gap-5 px-3 lg:px-0  place-content-center place-items-center content-center tracking-wide text-white">
+      <Image
+      src={blur}
+      class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+      alt='blur background'
+    /> 
+      <h3 class="text-9xl font-black bg-clip-text text-transparent bg-gradient-to-t from-primary-0 to-accent-0">404</h3>
+		<h1 class="font-black text-8xl">Wooops..</h1><p class="font-black text-5xl">Something was wrong..</p>
+    <button
+    onclick="window.location.href = '/';"
+    class='justify-self-center px-3 py-2 mt-5 rounded-lg border-2 hover:border-primary-0 hover:bg-primary-0 duration-150'
+    >Back to home
+  </button>
+    </section>
+    <Layout />

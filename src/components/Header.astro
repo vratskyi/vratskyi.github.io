@@ -1,78 +1,70 @@
 ---
-import { Image, Picture } from 'astro:assets';
-import logo from '/src/assets/img/logo.svg';
-import blur from '/src/assets/img/bg.svg';
+import { Image, Picture } from "astro:assets";
+import logo from "/src/assets/img/logo.svg";
+import blur from "/src/assets/img/bg.svg";
+import SwitchLang from "./SwitchLang.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <!-- HEADER -->
 <nav
-	transition:persist="nav"
-	transition:name="nav"
-	class='container fixed top-0 md:left-5 md:right-5 xl:max-w-7xl mx-auto font-sans bg-background-0/10 backdrop-blur-3xl rounded-xl py-2 px-5 flex justify-between items-center z-50'>
-	<div class='w-26 z-50'>
-		<a href='/'
-			><Image
-				src={logo}
-				width='100'
-				height='40'
-				alt='OV logo'
-			/></a
-		>
-	</div>
+  transition:persist="nav"
+  transition:name="nav"
+  class="container fixed top-0 md:left-5 md:right-5 xl:max-w-7xl mx-auto font-sans bg-[#97979733]/20 backdrop-blur-[80px] rounded-xl py-2 px-5 flex justify-between items-center z-50"
+>
+  <div class="w-26 z-50">
+    <a href={`/${lang}/`}><Image src={logo} width="100" height="40" alt="OV logo" /></a>
+  </div>
 
-	<button
-		transition:persist
-		id='menu-image'
-		class='z-50 p-2 rounded-lg transition-colors duration-150 hover:bg-zinc-800'>
-		<Image
-			id='menu-icon'
-			src='/src/assets/img/menu.svg'
-			width='34'
-			height='34'
-			alt='menu'
-		/>
-		<div class='relative'>
-			<div
-				id='main-menu'
-				class='menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-[62px] h-full w-full min-h-screen lg:min-h-[700px] max-w-[1120px] mx-auto rounded-xl'>
-				<Picture
-					src={blur}
-					class='absolute blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-					alt='blur background'
-					formats={['avif', 'webp']}
-				/>
-				<ul
-					class='text-7xl lg:text-8xl font-black grid gap-y-5 lg:gap-y-10 my-auto mt-10 lg:mt-0 content-start lg:content-center h-full max-h-[680px] text-white'>
-					<li>
-						<a
-							href='/'
-							class='hover-link active'>
-							Home
-						</a>
-					</li>
-					<li>
-						<a
-							href='/blog'
-							class='hover-link'
-							>Blog</a
-						>
-					</li>
-					<li>
-						<a
-							href='/about'
-							class='hover-link'
-							>About</a
-						>
-					</li>
-					<li>
-						<a
-							href='/portfolio'
-							class='hover-link'
-							>Portfolio</a
-						>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</button>
+  <div class="flex hover:cursor-default">
+    <button
+      transition:persist
+      id="menu-image"
+      class="z-50 p-2 rounded-lg transition-colors duration-150 hover:bg-zinc-800 justify-self-end hover:cursor-pointer"
+    >
+      <Image
+        id="menu-icon"
+        src="/src/assets/img/menu.svg"
+        width="34"
+        height="34"
+        alt="menu"
+      />
+      <div class="relative hover:cursor-default">
+        <div
+          id="main-menu"
+          class="menu bg-[#040404]/[98%] hidden overflow-y-auto animation z-40 fixed left-0 right-0 top-[62px] h-full min-h-screen w-full lg:min-h-[120px] max-w-[1120px] mx-auto rounded-xl"
+        >
+          <Picture
+            src={blur}
+            class="absolute blur-[100px] top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+            alt="blur background"
+            formats={["avif", "webp"]}
+          />
+          <div class="block">
+            <ul class="text-6xl lg:text-3xl font-black grid lg:grid-flow-col gap-y-10 lg:gap-y-0 lg:gap-x-10 place-content-center lg:place-content-arround my-auto content-start uppercase lg:content-center h-full max-h-[120px] text-white mt-40 lg:mt-10">
+              <li class="hover:scale-110 duration-150 transition-all hover:cursor-pointer">
+                <a href={`/${lang}/`} class="hover-link active"> {t('nav.home')} </a>
+              </li>
+              <li class="hover:scale-110 duration-150 transition-all hover:cursor-pointer">
+                <a href={`/${lang}/blog/`} class="hover-link">  {t('nav.blog')} </a>
+              </li>
+              <li class="hover:scale-110 duration-150 transition-all hover:cursor-pointer">
+                <a href={`/${lang}/about/`} class="hover-link">  {t('nav.about')} </a>
+              </li>
+              <li class="hover:scale-110 duration-150 transition-all hover:cursor-pointer">
+                <a href={`/${lang}/portfolio/`} class="hover-link"> {t('nav.portfolio')} </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </button>
+    <div class="self-center mx-5 pl-5 border-l-[1px] border-white/30">
+      <SwitchLang class="bg-transparent hover:cursor-pointer" />
+    </div>
+  </div>
 </nav>

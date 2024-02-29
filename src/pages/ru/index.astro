@@ -7,13 +7,12 @@ import cover from "/src/assets/img/ov-main.png";
 import Button from "@/components/Button.astro";
 import { getRelativeLocaleUrl, getAbsoluteLocaleUrl } from 'astro:i18n';
 
-getAbsoluteLocaleUrl("en");
+getAbsoluteLocaleUrl("ru");
 
-
-const blogURL=getRelativeLocaleUrl("en", "blog");
+const blogURL=getRelativeLocaleUrl("ru", "blog");
 ---
 
-<Head title='VRATSKYI' />
+<Head title='ВРАЦКИЙ' />
 <Layout>
   <!-- HERO -->
   
@@ -27,27 +26,28 @@ const blogURL=getRelativeLocaleUrl("en", "blog");
     />
 
     <div>
-      <div class="atropos my-atropos">
-        <div class="atropos-scale">
-          <div class="atropos-rotate">
-            <div class="atropos-inner blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]">
+      <span class="atropos my-atropos">
+        <span class="atropos-scale">
+          <span class="atropos-rotate">
+            <span class="atropos-inner blur-bg rounded-xl p-4 lg:p-10 mt-[8rem] xs:mt-[10rem] sm:mt-[12rem] md:mt-[10rem] lg:mt-0 w-full max-w-[600px]">
                 <div class="atropos-text">
                   <h1
                     class="text-7xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0"
                   >
-                    Happy to see you here!
+                  Рад вас видеть здесь!
                   </h1>
                 </div>
           
                 <div class="atropos-text text-xl font-extralight lg:max-w-6xl mt-5 lg:mt-10">
                   <blockquote>
-                    Here, you can learn about me, read my blog, and familiarize yourself with my portfolio. Currently, I am studying JavaScript and the Astro Framework, and I plan to study the Vue Framework. I am also interested in Qwik and enjoy learning new things. Most importantly, I am passionate about my work.
+                    Тут вы можете узнать обо мне, почитать мой блог и ознакомиться с моим портфолио. В настоящее время я изучаю JavaScript и Astro фреимворк, 
+                    и планирую изучить Vue фреимворк. Я также интересуюсь Qwik и люблю узнавать новое. Самое главное - я увлечен своей работой.
                   </blockquote>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </span>
+          </span>
+        </span>
+      </span>
     </div>
 
 
@@ -55,10 +55,10 @@ const blogURL=getRelativeLocaleUrl("en", "blog");
 
 
 <div>
-  <div class="atropos my-atropos">
-    <div class="atropos-scale">
-      <div class="atropos-rotate">
-        <div class="atropos-inner self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
+  <span class="atropos my-atropos">
+    <span class="atropos-scale">
+      <span class="atropos-rotate">
+        <span class="atropos-inner self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
       <Picture
         src={cover}
         class="mx-auto object-cover rounded-xl"
@@ -66,39 +66,39 @@ const blogURL=getRelativeLocaleUrl("en", "blog");
         formats={["avif", "webp"]}
       />
       <p class="atropos-text text-xl font-extralight tracking-wide mt-5">
-        You can find this site on GitHub, I'm developing it for my portfolio, as well as for blogging.
+        Вы можете найти этот сайт на GitHub, я разрабатываю его для своего портфолио, а также для ведения блога.
       </p>
       <div class="mt-5 atropos-text">
         <Button
-          text='Check out'
+          text='Смотреть'
           link="https://github.com/vratskyi/vratskyi.github.io"
         />
         </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </span>
+      </span>
+    </span>
+  </span>
 
 
 
-  <div class="atropos my-atropos">
-    <div class="atropos-scale">
-      <div class="atropos-rotate">
-        <div class="atropos-inner">
-          <div class="mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
+  <span class="atropos my-atropos">
+    <span class="atropos-scale">
+      <span class="atropos-rotate">
+        <span class="atropos-inner">
+          <div class=" mt-5 grid grid-flow-col place-content-between place-items-center place-self-stretch blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]">
             <p class="text-2xl font-light text-white">
-              Read my blog
+              Читать мой блог
             </p><Button
-            text='Read blog'
+            text='Читать блог'
             link={blogURL}
             target="_self"
             showIcon={false}
             />
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        </span>
+      </span>
+    </span>
+  </span>
 </div>
 </section>
   

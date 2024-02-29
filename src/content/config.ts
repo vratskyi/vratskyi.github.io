@@ -9,8 +9,9 @@ const postsCollections = defineCollection({
     image: image(),
     author: z.string().default('Oleksii'),
     tags: z.array(z.string()).optional(),
-    categories: z.array(z.string()).default('uncategorized'),
+    categories: z.array(z.string()).default(['uncategorized']),
     publishDate: z.string(),
+    language: z.enum(['en', 'ru']),
   })
 })
 export const collections = {

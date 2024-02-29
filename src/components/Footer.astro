@@ -1,6 +1,10 @@
 ---
 import github from '/src/assets/img/github.svg';
 import { Image } from 'astro:assets';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class='py-3 px-5 lg:py-5 lg:px-10'>
@@ -8,7 +12,7 @@ import { Image } from 'astro:assets';
 	<div class='flex justify-between items-center'>
 		<div>
 			<h4 class='font-light text-sm lg:text-lg'>
-				Copyright © <span id='currentYear'></span> All rights reserved.
+				<div set:html={t('footer.copyright')}></div>
 			</h4>
 		</div>
 		<div class='flex lg:space-x-1 items-center'>

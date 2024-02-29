@@ -1,13 +1,18 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import { getLangFromUrl } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
 ---
+<html lang={lang}>
 
 <body
 	class='cursor-default relative container xl:max-w-7xl font-sans md:px-5 mx-auto tracking-wide text-zinc-200 bg-[#040404]'>
 	<Header />
-	<div class='md:flex md:flex-col md:min-h-[100vh]'>
+	<div class='md:flex md:flex-col md:min-h-full'>
 		<slot />
 	</div>
 	<Footer />
 </body>
+</html>

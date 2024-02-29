@@ -1,4 +1,16 @@
+---
+import { getLangFromUrl } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<html lang={lang}>
+
 <body
 	class='cursor-default relative container grid max-w-6xl mx-auto font-sans md:p-5 tracking-wide text-white bg-[#040404]'>
-	<slot />
+	<div>
+		<slot />
+
+	</div>
 </body>
+</html>

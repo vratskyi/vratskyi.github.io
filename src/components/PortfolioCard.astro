@@ -3,6 +3,10 @@ import { Picture } from 'astro:assets';
 import BadgeLink from './BadgeLink.astro';
 import Badge from './Badge.astro';
 import Button from './Button.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 let { description, title, img, site, badgeLinkProps, badgeProps } = Astro.props;
 ---
@@ -28,7 +32,7 @@ let { description, title, img, site, badgeLinkProps, badgeProps } = Astro.props;
 				{description}
 			</p>
 			<div class='py-5'>
-				<h4 class='text-lg mb-5'>Technologies i used:</h4>
+				<h4 class='text-base mb-5 font-thin'>{t('portfolio.subDesc')}</h4>
 				<ul class='flex flex-wrap space-x-2 space-y-2 xs:space-y-0'>
                {Array.isArray(badgeLinkProps) ? (
                 badgeLinkProps.map((badgeLink, index) => (
@@ -48,7 +52,7 @@ let { description, title, img, site, badgeLinkProps, badgeProps } = Astro.props;
 				</ul>
 			</div>
 			<div class='mt-5'>
-				<Button text="Check out" link={site} />
+				<Button text={t('portfolio.externalButton')} link={site} />
 			</div>
 		</div>
 	</div>

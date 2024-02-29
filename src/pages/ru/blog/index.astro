@@ -8,12 +8,12 @@ import { Image } from "astro:assets";
 import blur from "@/assets/img/bg.png";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
-getAbsoluteLocaleUrl("en");
+getAbsoluteLocaleUrl("ru");
 
 const allPosts = await getCollection("posts");
 ---
 
-<Head title='Blog' />
+<Head title='Блог' />
 <Image
 	src={blur}
 	class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
@@ -21,7 +21,7 @@ const allPosts = await getCollection("posts");
 />
 <PostsLayout>
 	<div class='grid content-center my-auto mt-[11.1111%] min-h-full'>
-		<Title text='Blog' />
+		<Title text='Блог' />
 		<PostList posts={allPosts} />
 	</div>
 </PostsLayout>

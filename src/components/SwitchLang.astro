@@ -1,0 +1,38 @@
+---
+import { languages } from "@/i18n/ui";
+---
+
+<select id="langSelect" class="lang-selector">
+  {
+    Object.entries(languages).map(([lang, label]) => (
+      <option value={lang}>{label}</option>
+    ))
+  }
+</select>
+
+<script type="text/javascript">
+  let selectedLang = document.cookie.replace(
+    /(?:(?:^|.*;\s*)selectedLang\s*\=\s*([^;]*).*$)|^.*$/,
+    "$1"
+  );
+  // Если cookie selectedLang не установлен, установить его на en
+  if (!selectedLang) {
+    selectedLang = "en";
+    document.cookie = "selectedLang=" + selectedLang + "; path=/";
+  }
+  const langSelect = document.getElementById("langSelect");
+  if (langSelect) {
+    langSelect.value = selectedLang;
+    langSelect.onchange = function () {
+      document.cookie = "selectedLang=" + this.value + "; path=/";
+      let newPath = window.location.pathname.replace(
+        /\/[a-z]{2}\//,
+        "/" + this.value + "/"
+      );
+      if (newPath.includes("/blog/")) {
+        newPath = newPath.substring(0, newPath.indexOf("/blog/") + 6);
+      }
+      window.location.href = newPath;
+    };
+  }
+</script>

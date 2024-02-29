@@ -1,6 +1,16 @@
+---
+import { getLangFromUrl } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<html lang={lang}>
+
 <body
 	class='cursor-default relative container mt-[20.5555%] lg:mt-[5.5555%] pb-10 grid max-w-6xl mx-auto font-sans md:p-5 tracking-wide text-white bg-[#040404]'>
-	<div class='md:flex md:flex-col'>
+  <div class='md:flex md:flex-col'>
 		<slot />
 	</div>
+
 </body>
+</html>

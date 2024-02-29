@@ -1,26 +1,30 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Post from './Post.astro';
-import Layout from '../layouts/Layout.astro';
+import Post from '@components/Post.astro';
+import Layout from '@layouts/Layout.astro';
+import { getLangFromUrl } from '@/i18n/utils';
+
 
 type Props = {
 	posts: CollectionEntry<'posts'>[];
 };
 
-let { posts } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
 
 // Преобразование строки даты в формате dd/mm/yyyy в объект Date
 function convertToDate(dateString) {
 	const [day, month, year] = dateString.split('/');
 	return new Date(year, month - 1, day);
 }
-
-// Сортировка постов по дате публикации в порядке убывания
-posts = posts.sort((a, b) => convertToDate(b.data.publishDate).getTime() - convertToDate(a.data.publishDate).getTime());
 ---
 
 <Layout>
 	<div class='grid grid-cols-2 gap-x-10 gap-y-5 p-5 mx-auto max-md:grid-cols-1 mb-24'>
-		{posts.map((post) => <Post post={post} />)}
+		{
+			Astro.props.posts
+				.sort((a, b) => convertToDate(b.data.publishDate).getTime() - convertToDate(a.data.publishDate).getTime())
+				.filter(post => post.data.language === lang)
+				.map((post) => <Post post={post} />)
+		}
 	</div>
 </Layout>
