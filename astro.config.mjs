@@ -34,14 +34,14 @@ export default defineConfig({
     defaultStrategy: 'viewport'
   },
   experimental: {
-    clientPrerender: true
+    clientPrerender: false
   },
   output: "hybrid",
   adapter: cloudflare({ 
-    mode: 'directory',
+    mode: 'advanced',
     functionPerRoute: true,
     routes: {
-      strategy: 'auto'
+      strategy: 'include'
     } 
   })
 });
