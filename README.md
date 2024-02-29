@@ -39,3 +39,205 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 ------------------------------------------------------------------------------
+
+##  🌳 Project structure - [v0.8.4](https://github.com/vratskyi/vratskyi.github.io/releases/tag/v0.8.4)
+
+```
+📦 vratskyi.github.io 
+├─ .github
+│  ├─ ISSUE_TEMPLATE
+│  │  ├─ bug_report.md
+│  │  ├─ custom.md
+│  │  └─ feature_request.md
+│  └─ workflows
+│     └─ astro.yml
+├─ .gitignore
+├─ .nojekyll
+├─ CODE_OF_CONDUCT.md
+├─ CONTRIBUTING.md
+├─ LICENSE
+├─ README.md
+├─ astro.config.mjs
+├─ favicon.svg
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ postcss.config.js
+├─ public
+│  ├─ .nojekyll
+│  ├─ favicon.svg
+│  ├─ img
+│  │  ├─ astro-logo-dark.svg
+│  │  ├─ astro-logo-light.svg
+│  │  ├─ astro-ov.png
+│  │  ├─ bg.png
+│  │  ├─ bg.svg
+│  │  ├─ close.svg
+│  │  ├─ dev.jpg
+│  │  ├─ external.svg
+│  │  ├─ github.svg
+│  │  ├─ grid-sm.svg
+│  │  ├─ grid-xs.svg
+│  │  ├─ grid-xs2.svg
+│  │  ├─ grid-xs3.svg
+│  │  ├─ grid.svg
+│  │  ├─ h2ovoda.png
+│  │  ├─ js.svg
+│  │  ├─ logo-2.svg
+│  │  ├─ logo.svg
+│  │  ├─ menu.svg
+│  │  ├─ message.svg
+│  │  ├─ oleksii-vratskyi.jpg
+│  │  ├─ online-store-byshikat.png
+│  │  ├─ online-store-lmd.png
+│  │  ├─ ov-main.png
+│  │  ├─ personal-website.png
+│  │  ├─ tailwindcss-logotype-white.svg
+│  │  ├─ tailwindcss-logotype.svg
+│  │  ├─ timeline.png
+│  │  ├─ water-website.png
+│  │  └─ wordpress.svg
+│  ├─ src
+│  │  └─ assets
+│  │     ├─ img
+│  │     │  ├─ astro-logo-dark.svg
+│  │     │  ├─ astro-logo-light.svg
+│  │     │  ├─ bg.svg
+│  │     │  ├─ close.svg
+│  │     │  ├─ dev.jpg
+│  │     │  ├─ external.svg
+│  │     │  ├─ github.svg
+│  │     │  ├─ grid-sm.svg
+│  │     │  ├─ grid-xs.svg
+│  │     │  ├─ grid-xs2.svg
+│  │     │  ├─ grid-xs3.svg
+│  │     │  ├─ grid.svg
+│  │     │  ├─ js.svg
+│  │     │  ├─ logo-2.svg
+│  │     │  ├─ logo.svg
+│  │     │  ├─ menu.svg
+│  │     │  ├─ message.svg
+│  │     │  ├─ oleksii-vratskyi.jpg
+│  │     │  ├─ online-store-byshikat.png
+│  │     │  ├─ online-store-lmd.png
+│  │     │  ├─ personal-website.png
+│  │     │  ├─ tailwindcss-logotype-white.svg
+│  │     │  ├─ tailwindcss-logotype.svg
+│  │     │  ├─ water-website.png
+│  │     │  └─ wordpress.svg
+│  │     └─ js
+│  │        ├─ animate.js
+│  │        └─ menu.js
+│  └─ styles
+│     ├─ atropos.min.css
+│     ├─ global.css
+│     └─ reset.css
+├─ src
+│  ├─ assets
+│  │  ├─ img
+│  │  │  ├─ astro-logo-dark.svg
+│  │  │  ├─ astro-logo-light.svg
+│  │  │  ├─ astro-ov.png
+│  │  │  ├─ bg.png
+│  │  │  ├─ bg.svg
+│  │  │  ├─ close.svg
+│  │  │  ├─ dev.jpg
+│  │  │  ├─ external.svg
+│  │  │  ├─ github.svg
+│  │  │  ├─ grid-sm.svg
+│  │  │  ├─ grid-xs.svg
+│  │  │  ├─ grid-xs2.svg
+│  │  │  ├─ grid-xs3.svg
+│  │  │  ├─ grid.svg
+│  │  │  ├─ h2ovoda.png
+│  │  │  ├─ js.svg
+│  │  │  ├─ logo-2.svg
+│  │  │  ├─ logo.svg
+│  │  │  ├─ menu.svg
+│  │  │  ├─ message.svg
+│  │  │  ├─ oleksii-vratskyi.jpg
+│  │  │  ├─ online-store-byshikat.png
+│  │  │  ├─ online-store-lmd.png
+│  │  │  ├─ ov-main.png
+│  │  │  ├─ personal-website.png
+│  │  │  ├─ tailwindcss-logotype-white.svg
+│  │  │  ├─ tailwindcss-logotype.svg
+│  │  │  ├─ timeline.png
+│  │  │  ├─ water-website.png
+│  │  │  └─ wordpress.svg
+│  │  ├─ js
+│  │  │  ├─ animate.js
+│  │  │  └─ menu.js
+│  │  └─ styles
+│  │     └─ input.css
+│  ├─ components
+│  │  ├─ Badge.astro
+│  │  ├─ BadgeLink.astro
+│  │  ├─ Button.astro
+│  │  ├─ Footer.astro
+│  │  ├─ Head.astro
+│  │  ├─ Header.astro
+│  │  ├─ PortfolioCard.astro
+│  │  ├─ Post.astro
+│  │  ├─ PostList.astro
+│  │  ├─ Prose.astro
+│  │  ├─ SwitchLang.astro
+│  │  ├─ Tag.astro
+│  │  ├─ Title.astro
+│  │  └─ TitlePost.astro
+│  ├─ content
+│  │  ├─ config.ts
+│  │  └─ posts
+│  │     ├─ en
+│  │     │  ├─ about-experience-in-web-dev.mdx
+│  │     │  ├─ become-cool-frontend-dev.mdx
+│  │     │  ├─ cool-plugins-for-vs-code.mdx
+│  │     │  ├─ ui-kit-for-tailwind.mdx
+│  │     │  └─ what-happened-in-a-month-my-blog.mdx
+│  │     ├─ images
+│  │     │  ├─ astro-ov.png
+│  │     │  ├─ astro.jpg
+│  │     │  ├─ experience.jpg
+│  │     │  ├─ extension.jpg
+│  │     │  ├─ figma-design.jpg
+│  │     │  ├─ mads-de-silva.jpg
+│  │     │  ├─ timeline.png
+│  │     │  ├─ ui.jpg
+│  │     │  └─ what-happened-in-a-month-my-vlog.png
+│  │     └─ ru
+│  │        ├─ about-experience-in-web-dev.mdx
+│  │        ├─ become-cool-frontend-dev.mdx
+│  │        ├─ cool-plugins-for-vs-code.mdx
+│  │        ├─ ui-kit-for-tailwind.mdx
+│  │        └─ what-happened-in-a-month-my-blog.mdx
+│  ├─ env.d.ts
+│  ├─ i18n
+│  │  ├─ ui.ts
+│  │  └─ utils.ts
+│  ├─ layouts
+│  │  ├─ Layout.astro
+│  │  ├─ PostLayout.astro
+│  │  └─ PostsLayout.astro
+│  └─ pages
+│     ├─ blog
+│     │  └─ index.astro
+│     ├─ en
+│     │  ├─ 404.astro
+│     │  ├─ about.astro
+│     │  ├─ blog
+│     │  │  ├─ [...slug].astro
+│     │  │  └─ index.astro
+│     │  ├─ index.astro
+│     │  └─ portfolio.astro
+│     ├─ index.astro
+│     └─ ru
+│        ├─ 404.astro
+│        ├─ about.astro
+│        ├─ blog
+│        │  ├─ [...slug].astro
+│        │  └─ index.astro
+│        ├─ index.astro
+│        └─ portfolio.astro
+├─ tailwind.config.cjs
+└─ tsconfig.json
+```
