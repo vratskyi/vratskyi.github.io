@@ -12,7 +12,7 @@ module.exports = {
         background: ["#4444"],
         primary: ["#0000FF"],
         secondary: ["#18181B"],
-        accent: ["#0000FF"],
+        accent: ["#FFFFFF"],
       },
       fontFamily: {
         sans: [("Kanit", "sans-serif"), ("Montserrat", "sans-serif")],
