@@ -24,7 +24,7 @@ export default defineConfig({
   integrations: [mdx(), compress({
     CSS: true,
     HTML: false,
-    Image: true,
+    Image: false,
     JavaScript: true,
     SVG: false
   }), tailwind()],
