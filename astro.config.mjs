@@ -41,7 +41,11 @@ export default defineConfig({
     mode: 'directory',
     functionPerRoute: true,
     routes: {
-      strategy: 'include'
+      strategy: 'include',
+      include: [
+        '/en/blog/*',
+        '/ru/blog/*'
+    ]
     } 
   })
 });
