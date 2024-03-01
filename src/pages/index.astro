@@ -5,6 +5,7 @@ import { Picture,Image } from 'astro:assets';
 import blur from '/src/assets/img/bg.svg';
 import cover from '/src/assets/img/dev.jpg';
 import Button from '@/components/Button.astro';
+import DownloadButton from '@/components/DownloadButton.astro';
 ---
 <html lang='en'>
 	<Head title='DGD - Home' />
@@ -56,16 +57,12 @@ import Button from '@/components/Button.astro';
 						/>
 					</div>
 				</div>
-				<div
-					class='mt-5 flex justify-between items-center self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
-					<h3
-						class='text-2xl font-light text-white'>
+				<div class='mt-5 flex justify-between items-center self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
+					<h3 class='text-2xl font-light text-white'>
 						My resume:
-					</h3><Button
-						text='Read blog'
-						link='/blog'
-						target='_self'
-					/>
+					</h3>
+					<!-- Use the DownloadButton Component -->
+					<DownloadButton link="/src/assets/Anton_David_Guaman_Davila_s_Resume.pdf" text="Download Resume"/>
 				</div>
 			</div>
 		</section>
