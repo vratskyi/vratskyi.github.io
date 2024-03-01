@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
 import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
-
 import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
@@ -15,7 +14,8 @@ export default defineConfig({
       codes: ["ru", "ru-RU"]
     }],
     routing: {
-      prefixDefaultLocale: true
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true
     },
     fallback: {
       ru: "en"
@@ -28,7 +28,17 @@ export default defineConfig({
     JavaScript: true,
     SVG: false
   }), tailwind()],
+  image: {
+    service: {
+       entrypoint: 'astro/assets/services/sharp',
+       config: {
+         limitInputPixels: false,
+      },
+     },
+  },
   // site: 'http://localhost:4321',
+  redirects: {
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'viewport'
