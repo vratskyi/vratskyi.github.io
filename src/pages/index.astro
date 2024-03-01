@@ -8,8 +8,7 @@ import Button from "@/components/Button.astro";
 import { getRelativeLocaleUrl, getAbsoluteLocaleUrl } from 'astro:i18n';
 
 getAbsoluteLocaleUrl("en");
-export const prerender = true;
-import { Buffer } from 'node:buffer';
+
 
 
 const blogURL=getRelativeLocaleUrl("en", "blog");

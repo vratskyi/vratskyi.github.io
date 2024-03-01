@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
 import compress from "astro-compress";
 import tailwind from "@astrojs/tailwind";
-import cloudflare from "@astrojs/cloudflare";
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -40,22 +40,14 @@ export default defineConfig({
   redirects: {
   },
   prefetch: {
-    prefetchAll: true,
+    prefetchAll: false,
     defaultStrategy: 'viewport'
   },
   experimental: {
-    clientPrerender: true
+    clientPrerender: false
   },
   output: "hybrid",
-  adapter: cloudflare({ 
-    mode: 'directory',
-    functionPerRoute: true,
-    routes: {
-      strategy: 'include',
-      include: [
-        '/en/blog/*',
-        '/ru/blog/*'
-    ]
-    } 
+  adapter: netlify({ 
+    edgeMiddleware: true,
   })
 });

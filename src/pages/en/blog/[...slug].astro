@@ -14,8 +14,7 @@ import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-export const prerender = true;
-import { Buffer } from 'node:buffer';
+
 
 getAbsoluteLocaleUrl("en");
 
