@@ -19,10 +19,10 @@ document.addEventListener('astro:page-load', () => {
 			let newSrc = '';
 
 			// Определение нового значения атрибута src
-			if (currentSrc === '/src/assets/img/menu.svg') {
-				newSrc = '/src/assets/img/close.svg';
+			if (currentSrc === '/img/menu.png') {
+				newSrc = '/img/close.png';
 			} else {
-				newSrc = '/src/assets/img/menu.svg';
+				newSrc = '/img/menu.png';
 			}
 
 			// Изменение значения атрибута src
@@ -52,10 +52,10 @@ document.addEventListener('astro:page-load', () => {
 				let newSrc = '';
 
 				// Определение нового значения атрибута src
-				if (currentSrc === '/img/menu.svg') {
-					newSrc = '/src/assets/img/close.svg';
+				if (currentSrc === '/img/menu.png') {
+					newSrc = '/img/close.png';
 				} else {
-					newSrc = '/src/assets/img/menu.svg';
+					newSrc = '/img/menu.png';
 				}
 			});
 		});

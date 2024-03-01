@@ -1,7 +1,7 @@
 ---
 import { Image, Picture } from "astro:assets";
-import logo from "/src/assets/img/logo.svg";
-import blur from "/src/assets/img/bg.svg";
+import logo from "/src/assets/img/logo.png";
+import blur from "/src/assets/img/bg.png";
 import SwitchLang from "./SwitchLang.astro";
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
@@ -27,9 +27,9 @@ const t = useTranslations(lang);
     >
       <Image
         id="menu-icon"
-        src="/src/assets/img/menu.svg"
-        width="34"
-        height="34"
+        src="/src/assets/img/menu.png"
+        width="23"
+        height="23"
         alt="menu"
       />
       <div class="relative hover:cursor-default">
