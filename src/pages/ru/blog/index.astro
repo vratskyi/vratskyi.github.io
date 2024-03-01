@@ -9,7 +9,7 @@ import blur from "@/assets/img/bg.png";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 getAbsoluteLocaleUrl("ru");
-export const prerender = false;
+export const prerender = true;
 import { Buffer } from 'node:buffer';
 
 const allPosts = await getCollection("posts");

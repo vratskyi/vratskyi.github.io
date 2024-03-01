@@ -44,7 +44,7 @@ export default defineConfig({
     defaultStrategy: 'viewport'
   },
   experimental: {
-    clientPrerender: false
+    clientPrerender: true
   },
   output: "hybrid",
   adapter: cloudflare({ 
