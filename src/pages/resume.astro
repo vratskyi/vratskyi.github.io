@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Head from '@/components/Head.astro';
+import Title from '@/components/Title.astro';
+import Subtitle from '@/components/Subtitle.astro';
+import { Image } from 'astro:assets';
+
+import blur from '/src/assets/img/bg.svg';
+import PortfolioCard from '@/components/PortfolioCard.astro';
+
+let title = Astro.props;
+---
+
+<Head title='Resume' />
+<Layout
+    class='relative'
+    title='Resume'>
+    <div class='grid mt-[11.1111%] content-center'>
+        <Title text='Resume' />
+    </div>
+    <section class='grid px-3 lg:px-0 content-start text-white'>
+        <Image
+            src={blur}
+            class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
+            alt='blur background'
+        />
+        <div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nasdaq">
+            <!--Display Resume here-->
+            <object data="/src/assets/Anton_David_Guaman_Davila_Resume.pdf" type="application/pdf" class="w-full h-screen">
+                <p>Your browser does not support PDFs. Please download the PDF to view it: <a href="/src/assets/Anton_David_Guaman_Davila_s_Resume.pdf">Download PDF</a>.</p>
+            </object>
+        </div>
+    </section>
+</Layout>
