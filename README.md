@@ -67,64 +67,9 @@ All commands are run from the root of the project, from a terminal:
 │  ├─ .nojekyll
 │  ├─ favicon.svg
 │  ├─ img
-│  │  ├─ astro-logo-dark.svg
-│  │  ├─ astro-logo-light.svg
-│  │  ├─ astro-ov.png
-│  │  ├─ bg.png
-│  │  ├─ bg.svg
-│  │  ├─ close.svg
-│  │  ├─ dev.jpg
-│  │  ├─ external.svg
-│  │  ├─ github.svg
-│  │  ├─ grid-sm.svg
-│  │  ├─ grid-xs.svg
-│  │  ├─ grid-xs2.svg
-│  │  ├─ grid-xs3.svg
-│  │  ├─ grid.svg
-│  │  ├─ h2ovoda.png
-│  │  ├─ js.svg
-│  │  ├─ logo-2.svg
-│  │  ├─ logo.svg
-│  │  ├─ menu.svg
-│  │  ├─ message.svg
-│  │  ├─ oleksii-vratskyi.jpg
-│  │  ├─ online-store-byshikat.png
-│  │  ├─ online-store-lmd.png
-│  │  ├─ ov-main.png
-│  │  ├─ personal-website.png
-│  │  ├─ tailwindcss-logotype-white.svg
-│  │  ├─ tailwindcss-logotype.svg
-│  │  ├─ timeline.png
-│  │  ├─ water-website.png
-│  │  └─ wordpress.svg
 │  ├─ src
 │  │  └─ assets
 │  │     ├─ img
-│  │     │  ├─ astro-logo-dark.svg
-│  │     │  ├─ astro-logo-light.svg
-│  │     │  ├─ bg.svg
-│  │     │  ├─ close.svg
-│  │     │  ├─ dev.jpg
-│  │     │  ├─ external.svg
-│  │     │  ├─ github.svg
-│  │     │  ├─ grid-sm.svg
-│  │     │  ├─ grid-xs.svg
-│  │     │  ├─ grid-xs2.svg
-│  │     │  ├─ grid-xs3.svg
-│  │     │  ├─ grid.svg
-│  │     │  ├─ js.svg
-│  │     │  ├─ logo-2.svg
-│  │     │  ├─ logo.svg
-│  │     │  ├─ menu.svg
-│  │     │  ├─ message.svg
-│  │     │  ├─ oleksii-vratskyi.jpg
-│  │     │  ├─ online-store-byshikat.png
-│  │     │  ├─ online-store-lmd.png
-│  │     │  ├─ personal-website.png
-│  │     │  ├─ tailwindcss-logotype-white.svg
-│  │     │  ├─ tailwindcss-logotype.svg
-│  │     │  ├─ water-website.png
-│  │     │  └─ wordpress.svg
 │  │     └─ js
 │  │        ├─ animate.js
 │  │        └─ menu.js
@@ -135,36 +80,6 @@ All commands are run from the root of the project, from a terminal:
 ├─ src
 │  ├─ assets
 │  │  ├─ img
-│  │  │  ├─ astro-logo-dark.svg
-│  │  │  ├─ astro-logo-light.svg
-│  │  │  ├─ astro-ov.png
-│  │  │  ├─ bg.png
-│  │  │  ├─ bg.svg
-│  │  │  ├─ close.svg
-│  │  │  ├─ dev.jpg
-│  │  │  ├─ external.svg
-│  │  │  ├─ github.svg
-│  │  │  ├─ grid-sm.svg
-│  │  │  ├─ grid-xs.svg
-│  │  │  ├─ grid-xs2.svg
-│  │  │  ├─ grid-xs3.svg
-│  │  │  ├─ grid.svg
-│  │  │  ├─ h2ovoda.png
-│  │  │  ├─ js.svg
-│  │  │  ├─ logo-2.svg
-│  │  │  ├─ logo.svg
-│  │  │  ├─ menu.svg
-│  │  │  ├─ message.svg
-│  │  │  ├─ oleksii-vratskyi.jpg
-│  │  │  ├─ online-store-byshikat.png
-│  │  │  ├─ online-store-lmd.png
-│  │  │  ├─ ov-main.png
-│  │  │  ├─ personal-website.png
-│  │  │  ├─ tailwindcss-logotype-white.svg
-│  │  │  ├─ tailwindcss-logotype.svg
-│  │  │  ├─ timeline.png
-│  │  │  ├─ water-website.png
-│  │  │  └─ wordpress.svg
 │  │  ├─ js
 │  │  │  ├─ animate.js
 │  │  │  └─ menu.js
@@ -195,15 +110,6 @@ All commands are run from the root of the project, from a terminal:
 │  │     │  ├─ ui-kit-for-tailwind.mdx
 │  │     │  └─ what-happened-in-a-month-my-blog.mdx
 │  │     ├─ images
-│  │     │  ├─ astro-ov.png
-│  │     │  ├─ astro.jpg
-│  │     │  ├─ experience.jpg
-│  │     │  ├─ extension.jpg
-│  │     │  ├─ figma-design.jpg
-│  │     │  ├─ mads-de-silva.jpg
-│  │     │  ├─ timeline.png
-│  │     │  ├─ ui.jpg
-│  │     │  └─ what-happened-in-a-month-my-vlog.png
 │  │     └─ ru
 │  │        ├─ about-experience-in-web-dev.mdx
 │  │        ├─ become-cool-frontend-dev.mdx
