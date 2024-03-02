@@ -939,7 +939,7 @@ video {
   transition-duration: 0.15s;
 }
 :root {
-  --primary: #67d9ff;
+  --primary: #0000ff;
   --secondary: #2f2929;
   --accent: #ac1694;
   --background: #040404;
