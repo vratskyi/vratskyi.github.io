@@ -4,8 +4,14 @@ import Head from '@/components/Head.astro';
 import { Picture,Image } from 'astro:assets';
 import blur from '/src/assets/img/bg.svg';
 import cover from '/src/assets/img/dev.jpg';
+import me from '/src/assets/img/antondavidguamandavila.jpeg'
 import Button from '@/components/Button.astro';
 import DownloadButton from '@/components/DownloadButton.astro';
+import linkedin from '/src/assets/img/linkedin.svg'
+import github from '/src/assets/img/github.svg';
+import tvs  from '/src/assets/img/tv-1.svg';
+import resume  from '/src/assets/img/resume.svg';
+import explore  from '/src/assets/img/explore.svg';
 ---
 <html lang='en'>
 	<Head title='Home' />
@@ -38,31 +44,64 @@ import DownloadButton from '@/components/DownloadButton.astro';
 				</div>
 			</div>
 			<div>
-				<div
-					class='self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
-					<Picture
-						src={cover}
-						class='mx-auto object-cover rounded-xl'
-						alt='cover'
-						formats={['avif', 'webp']}
-					/>
-					<p class='text-xl font-light tracking-wide mt-5'>
-					This site can be foun on GitHub, I am developing it both for my professional portfolio and where I share insights into my work in 
-					cybersecurity, robotics, and computer vision.
-					</p>
-					<div class='mt-5'>
-						<Button
-							text='Check it out'
-							link='https://github.com/DavidGuamanDavila/DavidGuamanDavila.github.io'
-						/>
+				<div class='self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
+					<div class="grid justify-center content-center mb-5 lg:mb-0">
+						<Picture class="my-4 object-cover rounded-full ring-8 ring-white/80 w-full h-full max-w-[200px] max-h-[200px] lg:max-w-[250px] lg:max-h-[250px]" src={me} formats={["avif", "webp"]} width="300" height="300" alt="David Guaman Davila" />
+						<nav>
+							<ul class='justify-center my-4'>
+								<li class="mb-6"> <!-- Adjust the margin bottom value as needed -->
+									<Image
+										class='inline-block w-6 lg:w-8 mr-4'
+										src={github}
+										width='40'
+										height='40'
+										alt='David Guaman Davila's Github'
+									/>
+									<Button text="Check out what I'm developing" link="https://github.com/DavidGuamanDavila" />
+								</li>
+								<li class="mb-6">
+									<Image
+										class='inline-block w-6 lg:w-8 mr-4'
+										src={linkedin}
+										width='40'
+										height='40'
+										alt='Anton David Guaman Davila's linkedin'
+									/>
+									<Button text="Visit me on LinkedIn" link="https://www.linkedin.com/in/anton-david-guaman-davila/" />
+								</li>
+								<li class="mb-6">
+									<Image
+										class='inline-block w-6 lg:w-8 mr-4'
+										src={resume}
+										width='40'
+										height='40'
+										alt='Anton David Guaman Davila's linkedin'
+									/>
+									<DownloadButton text="Download Resume" link="/src/assets/Anton_David_Guaman_Davila_Resume.pdf" />
+								</li>
+								<li class="mb-6">
+									<Image
+										class='inline-block w-6 lg:w-8 mr-4'
+										src={explore}
+										width='40'
+										height='40'
+										alt='Anton David Guaman Davila's linkedin'
+									/>
+									<Button text="Currently exploring" link="https://arxiv.org/pdf/2311.09093.pdf" />
+								</li>
+								<li class="mb-6"> 
+									<Image
+										class='inline-block w-6 lg:w-8 mr-4'
+										src={tvs}
+										width='40'
+										height='40'
+										alt='Anton David Guaman Davila's linkedin'
+									/>
+									<Button text="Currently binge watching Seinfeld" link="https://www.youtube.com/watch?v=hQXKyIG_NS4" />
+								</li>
+							</ul>
+						</nav>		
 					</div>
-				</div>
-				<div class='mt-5 flex justify-between items-center self-start blur-bg rounded-xl p-4 lg:p-10 w-full max-w-[400px]'>
-					<h3 class='text-2xl font-light text-white'>
-						Resume:
-					</h3>
-					<!-- Use the DownloadButton Component -->
-					<DownloadButton link="/src/assets/Anton_David_Guaman_Davila_Resume.pdf" text="Download Resume"/>
 				</div>
 			</div>
 		</section>
