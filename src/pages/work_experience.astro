@@ -8,6 +8,7 @@ import seafood from '/src/assets/img/seafood_prod.png';
 import ocio from '/src/assets/img/ocio.jpg';
 import buildings from '/src/assets/img/smartbuildings.jpg';
 import security from '/src/assets/img/security.jpg';
+import ra from '/src/assets/img/residentassistant.jpg';
 
 import blur from '/src/assets/img/bg.svg';
 import PortfolioCard from '@/components/PortfolioCard.astro';
@@ -41,6 +42,10 @@ let title = Astro.props;
 
 				<li class='hover:underline'>
 				<a href="#ocio" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>OCIO</a>
+				</li>
+
+				<li class='hover:underline'>
+				<a href="#mun" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>MUN</a>
 				</li>
 			</ul>
 		</nav>
@@ -160,6 +165,32 @@ let title = Astro.props;
 				Seafood Products Directory web application for the Fisheries, Forestry, and Agriculture department. 
 				This upgrade was implemented using the ASP.Net framework, along with HTML, CSS, and JavaScript to enhance the 
 				application's usability and aesthetic appeal.
+				`}
+			>
+			</PortfolioCard>
+		</div>
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="mun">
+			<Subtitle text='Student Residences MUN'/>		
+			<PortfolioCard
+			img={ra}
+			alt={title}
+			reposite="https://github.com/DavidGuamanDavila/Web-Automation-Dinning-Hall"
+			companyweb="https://www.mun.ca/residences/"
+			title='Resident Assistant'
+			badgeProps={[
+				{ text: "Leadership" },
+				{ text: "Communication" },
+				{ text: "Teamwork" },
+				{ text: "Event Planning" },
+			]}
+				badgeLinkProps={[ 
+			]}
+				description={`
+				Student residences offer more than just housing; they provide a secure, supportive community that enriches both academic and social 
+				life. My role as a Resident Assistant, inspired by my predecessors, centers on cultivating a safe, inclusive environment conducive to academic
+				success and personal growth. I've fostered a positive community, encouraged teamwork, guided residents in their academic and personal journeys,
+				and created engaging programs. My responsibilities also include responding to emergencies and upholding university policies, all to ensure the 
+				community's well-being.
 				`}
 			>
 			</PortfolioCard>
