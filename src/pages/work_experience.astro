@@ -9,6 +9,7 @@ import ocio from '/src/assets/img/ocio.jpg';
 import buildings from '/src/assets/img/smartbuildings.jpg';
 import security from '/src/assets/img/security.jpg';
 import ra from '/src/assets/img/residentassistant.jpg';
+import asv from '/src/assets/img/asv.jpeg';
 
 import blur from '/src/assets/img/bg.svg';
 import PortfolioCard from '@/components/PortfolioCard.astro';
@@ -32,6 +33,9 @@ let title = Astro.props;
 	/>
 		<nav class='w-full'>
 			<ul class='flex justify-center space-x-4 my-4'>
+				<li class='hover:underline'>
+					<a href="#iceberg" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Iceberg ASV</a>
+					</li>
 				<li class='hover:underline'>
 				<a href="#nrc" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>NRC</a>
 				</li>
@@ -76,6 +80,37 @@ let title = Astro.props;
 				analyzing system performance to maintain transaction integrity and collaborating in an Agile team environment. 
 				This collaborative effort was pivotal in ensuring continuous improvement and adaptability to meet evolving financial security
 				demands.
+				`}
+			>
+			</PortfolioCard>
+		</div>
+
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="iceberg">
+			<Subtitle text='Iceberg ASV'/>
+			<PortfolioCard
+				img={asv}
+				alt={title}
+				companyweb="https://www.icebergasv.ca/"
+				reposite="https://github.com/IcebergASV"
+				title='Computer Vision Engineer'
+				badgeProps={[
+					{ text: "Robotics Operating System" },
+					{ text: "Linux" },
+					{ text: "C++" },
+					{ text: "GitHub" },
+					{ text: "Python" },
+					{ text: "Sensors" },
+					{ text: "Visual Studio Code" }
+
+			]}
+				badgeLinkProps={[ 
+			 ]}
+				description={`
+				Iceberg ASV is a student-driven team from Memorial University that participates in the International RoboBoat Competition in Florida. This 
+				interdisciplinary group of engineering students focuses on designing, building, and testing an Autonomous Surface Vehicle (ASV) for competition. 
+				Iceberg ASV has showcased its innovations at the RoboBoat events in 2023 and 2024. My contributions include developing ASV code with ROS on Linux, 
+				crafting a YOLOv5 object detection model via RoboFlow for aquatic object recognition, managing our codebase with GitHub, conducting code reviews to 
+				ensure quality, and documenting our processes and models in GitBook.
 				`}
 			>
 			</PortfolioCard>
@@ -174,8 +209,8 @@ let title = Astro.props;
 			<PortfolioCard
 			img={ra}
 			alt={title}
-			reposite="https://github.com/DavidGuamanDavila/Web-Automation-Dinning-Hall"
 			companyweb="https://www.mun.ca/residences/"
+			reposite="https://github.com/DavidGuamanDavila/Web-Automation-Dinning-Hall"
 			title='Resident Assistant'
 			badgeProps={[
 				{ text: "Leadership" },
