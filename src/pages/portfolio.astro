@@ -4,7 +4,6 @@ import Head from '@/components/Head.astro';
 import Title from '@/components/Title.astro';
 import Subtitle from '@/components/Subtitle.astro';
 import { Image } from 'astro:assets';
-import seafood from '/src/assets/img/seafood_prod.png';
 import ocio from '/src/assets/img/ocio.jpg';
 import buildings from '/src/assets/img/smartbuildings.jpg';
 import security from '/src/assets/img/security.jpg';
@@ -15,12 +14,12 @@ import PortfolioCard from '@/components/PortfolioCard.astro';
 let title = Astro.props;
 ---
 
-<Head title='Work Experience' />
+<Head title='Portfolio' />
 <Layout
 	class='relative'
 	title='Portfolio'>
 	<div class='grid mt-[11.1111%] content-center'>
-		<Title text='Work Experience' />
+		<Title text='Portfolio' />
 	</div>
 	<!-- ABOUT ME -->
 	<section class='grid px-3 lg:px-0 content-start text-white'>
@@ -28,25 +27,25 @@ let title = Astro.props;
 		src={blur}
 		class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
 		alt='blur background'
-	/>
+		/>
 		<nav class='w-full'>
 			<ul class='flex justify-center space-x-4 my-4'>
 				<li class='hover:underline'>
-				<a href="#nrc" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>NRC</a>
+				<a href="#asv" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Iceberg ASV</a>
 				</li>
 
 				<li class='hover:underline'>
-				<a href="#nasdaq" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>Nasdaq-Verafin</a>
+				<a href="#projs" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Projects</a>
 				</li>
 
 				<li class='hover:underline'>
-				<a href="#ocio" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>OCIO</a>
+				<a href="#utils" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Utils</a>
 				</li>
 			</ul>
 		</nav>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nasdaq">
-			<Subtitle text='Nasdaq-Verafin'/>
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="asv">
+			<Subtitle text='Iceberg ASV'/>
 			<PortfolioCard
 				img={security}
 				alt={title}
@@ -75,8 +74,8 @@ let title = Astro.props;
 			</PortfolioCard>
 		</div>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nrc">
-			<Subtitle text='National Research Council (NRC)'/>
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="projs">
+			<Subtitle text='Projects'/>
 			<PortfolioCard
 			img={buildings}
 			alt={title}
@@ -107,8 +106,8 @@ let title = Astro.props;
 			</PortfolioCard>
 		</div>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="ocio">
-			<Subtitle text='Office of the Chief Information Officer (OCIO)'/>		
+		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="utils">
+			<Subtitle text='Utils'/>		
 			<PortfolioCard
 			img={ocio}
 			alt={title}
@@ -119,33 +118,6 @@ let title = Astro.props;
 				{ text: "APEX" },
 				{ text: "SQL" },
 				{ text: "Oracle Databse" },
-				{ text: "Tortoise SVN" },
-				{ text: "SVN" },
-				{ text: "VS Code" }
-			]}
-				badgeLinkProps={[ 
-			]}
-				description={`
-				Analyzed the target audience, I realized that it is necessary to
-				make something similar to the model of behavior in Instagram, as
-				well as similar at least remotely similar design, thanks to a set
-				of solutions sales from their instagram store went to online store
-				and increased by 1000%
-				`}
-			>
-			</PortfolioCard>
-			<PortfolioCard
-			img={seafood}
-			alt={title}
-			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			project="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			title='Co-op Engineering Student'
-			badgeProps={[
-				{ text: "Front-End" },
-				{ text: "ASP.NET/Classic ASP" },
-				{ text: "Jira" },
-				{ text: "JavaScript" },
-				{ text: "HTML/CSS" },
 				{ text: "Tortoise SVN" },
 				{ text: "SVN" },
 				{ text: "VS Code" }
