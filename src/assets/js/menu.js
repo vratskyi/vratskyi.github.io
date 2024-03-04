@@ -60,6 +60,19 @@ document.addEventListener('astro:page-load', () => {
 				}
 			});
 		});
+		
+        // Event listener for the header link to update active state
+        homeLink.addEventListener('click', function () {
+            menuLinks.forEach((link) => {
+                link.classList.remove('active');
+            });
+            // Assuming the first link in your menu is the home link
+            menuLinks[0].classList.add('active');
+            // Close the menu
+            mainMenu.style.display = 'none';
+            // Reset the menu icon to its default state
+            menuIcon.setAttribute('src', '/src/assets/img/menu.svg');
+        });
 
 		// Initial value of the display property
 		mainMenu.style.display = 'none';
