@@ -61,7 +61,7 @@ document.addEventListener('astro:page-load', () => {
 			});
 		});
 
-		// Начальное значение свойства display
+		// Initial value of the display property
 		mainMenu.style.display = 'none';
 	});
 });
