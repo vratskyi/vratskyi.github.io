@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	let menuImage = document.getElementById('menu-image');
 	let menuIcon = document.getElementById('menu-icon');
 	let menuLinks = mainMenu.querySelectorAll('a');
+	let homeLink = document.getElementById('home-link');
 
-	// On clicking the menu image
+	// On click of the menu image
 	menuImage.addEventListener('click', function () {
-		// Check the visibility of the menu
+		// Check menu visibility
 		let isMenuVisible = mainMenu.style.display === 'block';
 
-		// Change the visibility of the menu
+		// Check menu visibility
 		mainMenu.style.display = isMenuVisible ? 'none' : 'block';
 
 		// Check the current value of the src attribute
@@ -28,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		menuIcon.setAttribute('src', newSrc);
 	});
 
-    // Get links in the menu
+	// Get links in the menu
 
-    // Add an event handler to each link
+	// Add event handlers to each link
 	menuLinks.forEach((link) => {
 		link.addEventListener('click', function (event) {
 			// Remove the active class from all links
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
-	// Close the menu when clicking on a link
+	// Close the menu when a link is clicked
 	menuLinks.forEach(function (link) {
 		link.addEventListener('click', function () {
 			isMenuVisible = 'none';
@@ -57,6 +58,19 @@ document.addEventListener('DOMContentLoaded', function () {
 				newSrc = '/src/assets/img/menu.svg';
 			}
 		});
+	});
+	
+	// Event listener for the header link to update active state
+	homeLink.addEventListener('click', function () {
+		menuLinks.forEach((link) => {
+			link.classList.remove('active');
+		});
+		// Assuming the first link in your menu is the home link
+		menuLinks[0].classList.add('active');
+		// Close the menu
+		mainMenu.style.display = 'none';
+		// Reset the menu icon to its default state
+		menuIcon.setAttribute('src', '/src/assets/img/menu.svg');
 	});
 
 	// Initial value of the display property
