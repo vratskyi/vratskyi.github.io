@@ -1,68 +1,93 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Head from '@/components/Head.astro';
-import Title from '@/components/Title.astro';
-import Subtitle from '@/components/Subtitle.astro';
-import { Image } from 'astro:assets';
-import ocio from '/src/assets/img/ocio.jpg';
-import buildings from '/src/assets/img/smartbuildings.jpg';
-import security from '/src/assets/img/security.jpg';
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import Subtitle from "@/components/Subtitle.astro";
+import { Image, imageConfig } from "astro:assets";
+import grocery from "/src/assets/img/grocery.jpg";
+import arduino from "/src/assets/img/arduino.jpg";
+import board from "/src/assets/img/board.jpg";
+import cover from '/src/assets/img/dev.jpg';
+import boardI from "/src/assets/img/boardI.jpg";
+import electronics from "/src/assets/img/electronics.jpg";
+import coding from "/src/assets/img/coding.jpg";
+import buildings from "/src/assets/img/smartbuildings.jpg";
+import security from "/src/assets/img/security.jpg";
 
-import blur from '/src/assets/img/bg.svg';
-import PortfolioCard from '@/components/PortfolioCard.astro';
+import blur from "/src/assets/img/bg.svg";
+import PortfolioCard from "@/components/PortfolioCard.astro";
 
 let title = Astro.props;
 ---
 
-<Head title='Portfolio' />
-<Layout
-	class='relative'
-	title='Portfolio'>
-	<div class='grid mt-[11.1111%] content-center'>
-		<Title text='Portfolio' />
+<Head title="Portfolio" />
+<Layout class="relative" title="Portfolio">
+	<div class="grid mt-[11.1111%] content-center">
+		<Title text="Portfolio" />
 	</div>
 	<!-- ABOUT ME -->
-	<section class='grid px-3 lg:px-0 content-start text-white'>
+	<section class="grid px-3 lg:px-0 content-start text-white">
 		<Image
-		src={blur}
-		class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-		alt='blur background'
+			src={blur}
+			class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+			alt="blur background"
 		/>
-		<nav class='w-full'>
-			<ul class='flex justify-center space-x-4 my-4'>
-				<li class='hover:underline'>
-				<a href="#asv" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Iceberg ASV</a>
+		<nav class="w-full">
+			<ul class="flex justify-center space-x-4 my-4">
+				<li class="hover:underline">
+					<a
+						href="#asv"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Iceberg ASV</a
+					>
 				</li>
 
-				<li class='hover:underline'>
-				<a href="#projs" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Projects</a>
+				<li class="hover:underline">
+					<a
+						href="#projs"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Projects</a
+					>
 				</li>
 
-				<li class='hover:underline'>
-				<a href="#utils" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl'>Utils</a>
+				<li class="hover:underline">
+					<a
+						href="#utils"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Utils</a
+					>
+				</li>
+
+				<li class="hover:underline">
+					<a
+						href="#coursework"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Coursework</a
+					>
 				</li>
 			</ul>
 		</nav>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="asv">
-			<Subtitle text='Iceberg ASV'/>
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="asv"
+		>
+			<Subtitle text="Iceberg ASV" />
 			<PortfolioCard
 				img={security}
 				alt={title}
 				companyweb="https://verafin.com/"
 				projectdesc="https://verafin.com/product/bsa-aml-compliance-management/#:~:text=Verafin%20analyzes%20a%20wide%20variety,financing%20or%20human%20trafficking%20activity."
-				title='Software Developer Intern'
+				title="Software Developer Intern"
 				badgeProps={[
 					{ text: "Java" },
 					{ text: "JUnit" },
 					{ text: "Mockito" },
 					{ text: "GitHub" },
 					{ text: "QA Testing" },
-					{ text: "IntelliJ IDEA" }
-
-			]}
-				badgeLinkProps={[ 
-			 ]}
+					{ text: "IntelliJ IDEA" },
+				]}
+				badgeLinkProps={[]}
 				description={`
 				The website I developed offers water delivery in Belogorodka and
 				surrounding areas. It has an attractive design, intuitive layout
@@ -70,31 +95,251 @@ let title = Astro.props;
 				Visitors can easily leave a request for water delivery through the
 				order form and get access to bottled drinking water.
 				`}
-			>
-			</PortfolioCard>
+			/>
 		</div>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="projs">
-			<Subtitle text='Projects'/>
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="projs"
+		>
+			<Subtitle text="Projects" />
+
 			<PortfolioCard
-			img={buildings}
-			alt={title}
-			site="https://nrc.canada.ca/en"
-			projectdesc="https://nrc.canada.ca/en/research-development/research-collaboration/programs/high-performance-buildings-program"
-			title='Web Application Developer'
-			badgeProps={[
-				{ text: "Back-End" },
-				{ text: "Python" },
-				{ text: "Java" },
-				{ text: "HQL" },
-				{ text: "JUnit" },
-				{ text: "Maven" },
-				{ text: "SQLAlchemy" },
-				{ text: "GitLab" },
-				{ text: "Eclipse IDE" },
-			]}
-				badgeLinkProps={[ 
-			]}
+				img={cover}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/DavidGuamanDavila.github.io"
+				project=""
+				title="Web Application Developer"
+				badgeProps={[
+					{ text: "Astro" },
+					{ text: "HTML" },
+					{ text: "CSS" },
+					{ text: "JavaScript" },
+					{ text: "SVG" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+ 				I am developing it both for my professional portfolio and where I share insights into my work in cybersecurity, robotics, and computer vision.
+				`}
+			/>
+
+			<PortfolioCard
+				img={cover}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/JUnit5-Testing-Showcase"
+				title="JUnit5 Testing Showcase"
+				badgeProps={[
+					{ text: "JUnit" },
+					{ text: "Mockito" },
+					{ text: "JavaScript" },
+					{ text: "Github" },
+					{ text: "Eclipse IDE" }
+				]}
+				badgeLinkProps={[]}
+				description={`This repository showcases a collection of JUnit 5 and Mockito test cases and scenarios, developed as part of my learning 
+				journey from the Udemy courses. It serves as a practical demonstration of my unit testing skills, relevant to my upcoming internship at 
+				Nasdaq-Verafin. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={cover}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/David_Guaman_Davila_Resume"
+				title="Gray Scale Image Box Filter"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "OpenCV library" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`Smoothing is an image processing technique used to blur, remove small details and reduce the noise of an image. 
+				There are different filter types, such as linear and non-linear. The filter for this project was a 3*3 box filter. The box filter is the 
+				mean of the neighbouring pixel intensities. In this project, we explore how the box filter affects different images.
+				`}
+			/>
+
+			<PortfolioCard
+				img={cover}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/David_Guaman_Davila_Resume"
+				title="Resume"
+				badgeProps={[
+					{ text: "Latex" },
+					{ text: "Overleaf" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				`}
+			/>
+
+			<PortfolioCard
+				img={cover}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/simple-interest-calculator"
+				project="https://davidguamandavila.github.io/simple-interest-calculator/"
+				title="Simple Interest Calculator"
+				badgeProps={[
+					{ text: "HTML" },
+					{ text: "CSS" },
+					{ text: "JavaScript" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`This Simple Interest Calculator is a web-based tool that allows users to calculate the interest on a principal amount over a 
+				period of time. The project is built using HTML, CSS, and JavaScript and was developed as part of the course CAD101EN: Introduction to Cloud 
+				Development with HTML, CSS, and JavaScript provided by IBM. 
+				`}
+			/>
+			
+		</div>
+
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="utils"
+		>
+			<Subtitle text="Utils" />
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/pdf_pageshot_extractor_util"
+				title="PDF Pageshot Extractor Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "pdf2image library" },
+					{ text: "Poppler library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				PDF PageShot Extractor is a Python tool designed to efficiently convert each page of a PDF document into individual image files. This utility 
+				was inspired by a friend who needed to take numerous screenshots for her class. The challenge was that the PDF contained scanned images, 
+				making it difficult to extract information directly. This tool simplifies the process, enabling easier access to the content, particularly 
+				when used in conjunction with OCR (Optical Character Recognition) technologies for text extraction.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/auto_screenshot_util"
+				title="Auto Screenshot Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "moviepy library" },
+					{ text: "Pillow library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				A Python utility designed to facilitate the automatic capture of screenshots from a video file at specified time intervals. This utility was 
+				inspired by the specific needs encountered in the field of computer vision, particularly in the process of creating custom datasets. 
+				It addresses a common challenge where researchers and developers extract camera feeds in MP4 format from ROS (Robot Operating System) 
+				bag files and require an efficient method to generate image datasets.
+				`}
+			/>
+
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/auto_screenshot_util"
+				title="Form Automation Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "Selenium library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This utility automates the process of filling out and submitting the Box Lunch Order form for MUN's Dining Hall. It also includes a feature to send a confirmation email upon successful submission of the form.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/camera_display_and_save_pkg"
+				title="Camera Display and Save Package"
+				badgeProps={[
+					{ text: "Robotics Operating System" },
+					{ text: "C++" },
+					{ text: "CMake" },
+					{ text: "OpenCV library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This ROS (Robot Operating System) package is designed to subscribe to a camera feed topic, display the image using OpenCV, and save the 
+				image to a file. It utilizes ROS publishers and subscribers, OpenCV for image handling, and cv_bridge for converting between ROS image 
+				messages and OpenCV image representation.
+				`}
+			/>
+
+		</div>
+
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="coursework"
+		>
+			<Subtitle text="Coursework" />
+
+			<PortfolioCard
+				img={board}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/YOLOv5-Image-Preprocessing-for-Vehicle-Detection"
+				title="COMP 3301 Image Preprocessing for Vehicle Detection"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "OpenCV library" },
+					{ text: "Roboflow" },
+					{ text: "YOLOv5" },
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				The primary purpose of this project is to apply some of the image processing techniques that we were taught in this course on images that are 
+				input to a You Only Look Once (YOLO) version 5 model trained on vehicle classification and examine the effects of each process on the 
+				performance of the model. We will also be comparing our results with those obtained from inputting the unmodified images into the model.
+				`}
+			/>
+
+			<PortfolioCard
+				img={board}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/YOLOv5-Image-Preprocessing-for-Vehicle-Detection"
+				title="ECE 5010 "
+				badgeProps={[
+					{ text: "Java" },
+					{ text: "JavaFX" },
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				`}
+			/>
+
+
+			<PortfolioCard
+				img={board}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE5500-digital-systems-showcase"
+				title="ECE 5500 Digital Systems Showcase"
+				badgeProps={[{ text: "VHDL" }, 
+				{ text: "Quartus" }]}
+				badgeLinkProps={[]}
 				description={`
 				Analyzed the target audience, I realized that it is necessary to
 				make something similar to the model of behavior in Instagram, as
@@ -102,37 +347,63 @@ let title = Astro.props;
 				of solutions sales from their instagram store went to online store
 				and increased by 1000%
 				`}
-			>
-			</PortfolioCard>
-		</div>
+			/>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="utils">
-			<Subtitle text='Utils'/>		
 			<PortfolioCard
-			img={ocio}
-			alt={title}
-			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			title='Co-op Engineering Student'
-			badgeProps={[
-				{ text: "Back-End" },
-				{ text: "APEX" },
-				{ text: "SQL" },
-				{ text: "Oracle Databse" },
-				{ text: "Tortoise SVN" },
-				{ text: "SVN" },
-				{ text: "VS Code" }
-			]}
-				badgeLinkProps={[ 
-			]}
+				img={coding}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE4400-data-strutures-showcase"
+				title="ECE 4400 Data Structures Showcase"
+				badgeProps={[
+					{ text: "Data Structures" },
+					{ text: "Recursion" },
+					{ text: "C++" },
+				]}
+				badgeLinkProps={[]}
 				description={`
-				Analyzed the target audience, I realized that it is necessary to
-				make something similar to the model of behavior in Instagram, as
-				well as similar at least remotely similar design, thanks to a set
-				of solutions sales from their instagram store went to online store
-				and increased by 1000%
+				The ECE 4400 Data Structures Showcase repository explores essential and efficient data structures, emphasizing recursion, generic programming, and modularity. It focuses on procedural and data abstraction, alongside precise documentation for optimal software development. 
 				`}
-			>
-			</PortfolioCard>
+			/>
+
+			<PortfolioCard
+				img={grocery}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE4400_GroceryManager/tree/main"
+				title="ECE 4400 Grocery Manager"
+				badgeProps={[{ text: "Data Structures" }, { text: "C++" }]}
+				badgeLinkProps={[]}
+				description={`
+				The ECE4400 GroceryManager is an efficient inventory management system developed for ECE 4400, employing BST, DLL, and CQ data structures for
+				 item organization, inventory management, and tracking customer history, streamlining grocery management and data analysis. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={electronics}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ENGI1020-intro-to-programming-showcase/tree/main"
+				title="ECE 1020 Intro to Programming Showcase"
+				badgeProps={[{ text: "Arduino" }, { text: "Python" }]}
+				badgeLinkProps={[]}
+				description={`
+				The ECE 4400 Data Structures Showcase repository explores essential and efficient data structures, emphasizing recursion, generic programming, 
+				and modularity. It focuses on procedural and data abstraction, alongside precise documentation for optimal software development. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={arduino}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/TriviaGame"
+				title="ECE 1020 Trivia Grame"
+				badgeProps={[{ text: "Arduino" }, { text: "Python" }]}
+				badgeLinkProps={[]}
+				description={`
+				"Trivia Game" is an interactive Python-based trivia game designed for Arduino, combining elements of various subjects including Math, History, 
+				Chemistry, and Physics. Developed as part of the ENGI 1020 Lab-Mini Project, this game is tailored to provide an entertaining and educational 
+				experience for users, challenging their knowledge across different fields.
+				`}
+			/>
 		</div>
 	</section>
 </Layout>
