@@ -11,11 +11,14 @@ import cover from '/src/assets/img/dev.jpg';
 import boardI from "/src/assets/img/boardI.jpg";
 import electronics from "/src/assets/img/electronics.jpg";
 import coding from "/src/assets/img/coding.jpg";
-import buildings from "/src/assets/img/smartbuildings.jpg";
+import coach from "/src/assets/img/coachomatic.png";
+import interestcalc from "/src/assets/img/simple_interest.png";
+import detectedvehicles from "/src/assets/img/detected_vehicles.png";
 import security from "/src/assets/img/security.jpg";
 
 import blur from "/src/assets/img/bg.svg";
 import PortfolioCard from "@/components/PortfolioCard.astro";
+import { defaultErrorMap } from "astro/zod";
 
 let title = Astro.props;
 ---
@@ -179,7 +182,7 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={cover}
+				img={interestcalc}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/simple-interest-calculator"
 				project="https://davidguamandavila.github.io/simple-interest-calculator/"
@@ -295,7 +298,7 @@ let title = Astro.props;
 			<Subtitle text="Coursework" />
 
 			<PortfolioCard
-				img={board}
+				img={detectedvehicles}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/YOLOv5-Image-Preprocessing-for-Vehicle-Detection"
 				title="COMP 3301 Image Preprocessing for Vehicle Detection"
@@ -316,23 +319,29 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={board}
+				img={coach}
 				alt={title}
-				reposite="https://github.com/DavidGuamanDavila/YOLOv5-Image-Preprocessing-for-Vehicle-Detection"
-				title="ECE 5010 "
+				reposite="https://github.com/term5-projects/CoachOMatic_Maven"
+				demo="https://www.youtube.com/watch?v=54mRcNmHEZs"
+				title="ECE 5010 Coach O Matic"
 				badgeProps={[
 					{ text: "Java" },
 					{ text: "JavaFX" },
+					{ text: "Maven" }, 
 					{ text: "GitHub" },
 					{ text: "VS Code" }
 				]}
 				badgeLinkProps={[]}
-				description={`
+				description={`Coach O Matic is a desktop application crafted for amateur soccer team coaches to generate equal playing time lineups, 
+				developed as part of our ECE 5010 Software Design course project. Utilizing Java and JavaFx, along with Maven for build automation, the 
+				application emphasizes adherence to SOLID principles to ensure a robust and maintainable architecture. This project not only demonstrates 
+				our ability to apply theoretical concepts into practical software development but also aims to enhance the coaching experience by 
+				streamlining team management and lineup generation tasks.
 				`}
 			/>
 
 
-			<PortfolioCard
+			<!-- <PortfolioCard
 				img={board}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/ECE5500-digital-systems-showcase"
@@ -347,7 +356,7 @@ let title = Astro.props;
 				of solutions sales from their instagram store went to online store
 				and increased by 1000%
 				`}
-			/>
+			/> -->
 
 			<PortfolioCard
 				img={coding}
