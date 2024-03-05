@@ -15,6 +15,14 @@ import coach from "/src/assets/img/coachomatic.png";
 import interestcalc from "/src/assets/img/simple_interest.png";
 import detectedvehicles from "/src/assets/img/detected_vehicles.png";
 import security from "/src/assets/img/security.jpg";
+import pdf from "/src/assets/img/pdf.jpg";
+import testing from "/src/assets/img/testing.jpg";
+import forms from "/src/assets/img/forms.jpg";
+import robot from "/src/assets/img/robot.jpg";
+import robotI from "/src/assets/img/robotI.jpg";
+import resume from "/src/assets/img/resume.png";
+import website from "/src/assets/img/website.png";
+import filter from "/src/assets/img/filter.png";
 
 import blur from "/src/assets/img/bg.svg";
 import PortfolioCard from "@/components/PortfolioCard.astro";
@@ -108,11 +116,11 @@ let title = Astro.props;
 			<Subtitle text="Projects" />
 
 			<PortfolioCard
-				img={cover}
+				img={website}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/DavidGuamanDavila.github.io"
 				project=""
-				title="Web Application Developer"
+				title="Personal Website"
 				badgeProps={[
 					{ text: "Astro" },
 					{ text: "HTML" },
@@ -124,12 +132,13 @@ let title = Astro.props;
 				]}
 				badgeLinkProps={[]}
 				description={`
- 				I am developing it both for my professional portfolio and where I share insights into my work in cybersecurity, robotics, and computer vision.
+ 				I am developing my personal website for my professional portfolio and where I share insights into my work in cybersecurity, 
+				robotics, and computer vision.
 				`}
 			/>
 
 			<PortfolioCard
-				img={cover}
+				img={testing}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/JUnit5-Testing-Showcase"
 				title="JUnit5 Testing Showcase"
@@ -148,9 +157,9 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={cover}
+				img={filter}
 				alt={title}
-				reposite="https://github.com/DavidGuamanDavila/David_Guaman_Davila_Resume"
+				reposite="https://github.com/DavidGuamanDavila/GrayscaleImageBoxFilter"
 				title="Gray Scale Image Box Filter"
 				badgeProps={[
 					{ text: "Python" },
@@ -166,7 +175,7 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={cover}
+				img={resume}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/David_Guaman_Davila_Resume"
 				title="Resume"
@@ -177,7 +186,10 @@ let title = Astro.props;
 					{ text: "VSCode" }
 				]}
 				badgeLinkProps={[]}
-				description={`
+				description={`This repository contains the LaTeX source code for my professional resume. The resume highlights my education, work experience, 
+				skills, extracurricular activities, honors, and certifications. It is designed using the altacv class to create a visually appealing and 
+				detailed CV. This document was developed using Overleaf, an online LaTeX editor that simplifies the process of LaTeX document creation, 
+				and is adapted from the AltaCV template available on Overleaf.
 				`}
 			/>
 
@@ -209,7 +221,7 @@ let title = Astro.props;
 		>
 			<Subtitle text="Utils" />
 			<PortfolioCard
-				img={security}
+				img={pdf}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/pdf_pageshot_extractor_util"
 				title="PDF Pageshot Extractor Util"
@@ -230,7 +242,7 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={robot}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/auto_screenshot_util"
 				title="Auto Screenshot Util"
@@ -252,9 +264,9 @@ let title = Astro.props;
 
 
 			<PortfolioCard
-				img={security}
+				img={forms}
 				alt={title}
-				reposite="https://github.com/DavidGuamanDavila/auto_screenshot_util"
+				reposite="https://github.com/DavidGuamanDavila/Web-Automation-Dinning-Hall"
 				title="Form Automation Util"
 				badgeProps={[
 					{ text: "Python" },
@@ -264,12 +276,13 @@ let title = Astro.props;
 				]}
 				badgeLinkProps={[]}
 				description={`
-				This utility automates the process of filling out and submitting the Box Lunch Order form for MUN's Dining Hall. It also includes a feature to send a confirmation email upon successful submission of the form.
+				This utility automates the process of filling out and submitting the Box Lunch Order form for MUN's Dining Hall. 
+				It also includes a feature to send a confirmation email upon successful submission of the form.
 				`}
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={robotI}
 				alt={title}
 				reposite="https://github.com/DavidGuamanDavila/camera_display_and_save_pkg"
 				title="Camera Display and Save Package"
