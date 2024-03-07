@@ -87,24 +87,91 @@ let title = Astro.props;
 			<PortfolioCard
 				img={security}
 				alt={title}
-				companyweb="https://verafin.com/"
-				projectdesc="https://verafin.com/product/bsa-aml-compliance-management/#:~:text=Verafin%20analyzes%20a%20wide%20variety,financing%20or%20human%20trafficking%20activity."
-				title="Software Developer Intern"
+				reposite="https://github.com/IcebergASV/ros_obj_detection"
+				title="Computer Vision YOLOv5 and ROS 2nd Iteration"
 				badgeProps={[
-					{ text: "Java" },
-					{ text: "JUnit" },
-					{ text: "Mockito" },
+					{ text: "Robotics Operating System" },
+					{ text: "Python" },
 					{ text: "GitHub" },
-					{ text: "QA Testing" },
-					{ text: "IntelliJ IDEA" },
+					{ text: "VS Code" },
 				]}
 				badgeLinkProps={[]}
 				description={`
-				The website I developed offers water delivery in Belogorodka and
-				surrounding areas. It has an attractive design, intuitive layout
-				and integration with analytical tools to attract more customers.
-				Visitors can easily leave a request for water delivery through the
-				order form and get access to bottled drinking water.
+				Real-time object detection with ROS, based on YOLOv5 and PyTorch tailored for Iceberg ASV using Intel RealSense D435.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/IcebergASV/object_detection_pkg"
+				title="Computer Vision YOLOv5 and ROS 1st Iteration"
+				badgeProps={[
+					{ text: "Robotics Operating System" },
+					{ text: "C++" },					
+					{ text: "Python" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				Real-time object detection with ROS, based on YOLOv5 and PyTorch tailored for Iceberg ASV using Intel RealSense D435.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/IcebergASV/real_world_marine_markers_custom_dataset_yolov5_training"
+				title="Real World Marine Markers Custom Dataset YOLOv5 Training"
+				badgeProps={[
+					{ text: "Roboflow" },
+					{ text: "Annotation& Labelling" },					
+					{ text: "Jupyter Notebook" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This project focuses on training YOLOv5 models using a custom dataset of real-life images of marine markers for the Roboboat compettion. 
+				Our objective is to enhance object detection in marine environments, contributing to safer marine navigation and advanced research.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/IcebergASV/gazebo_simulation_marine_markers_custom_dataset_yolov5_training"
+				title="Gazebo Simulation Marine Markers Custom Dataset YOLOv5 Training"
+				badgeProps={[
+					{ text: "Roboflow" },
+					{ text: "Annotation& Labelling" },					
+					{ text: "Jupyter Notebook" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This project is dedicated to training YOLOv5 models using a custom dataset of marine markers generated from Gazebo simulations for the Roboboat 
+				competition. Our goal is to be able to test our object detection with our robotic application in Gazebo.
+				`}
+			/>
+
+			<PortfolioCard
+				img={security}
+				alt={title}
+				reposite="https://github.com/IcebergASV/bag_to_video_pkg"
+				title="Bag to Video Package Util"
+				badgeProps={[
+					{ text: "Robotics Operating System" },	
+					{ text: "Python" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				ROS bag_to_video_pkg converts camera data from ROS bag files to video, ideal for analyzing or recording robotic system footage. Includes installation, 
+				usage instructions, and Kdenlive editing integration. 
 				`}
 			/>
 		</div>
