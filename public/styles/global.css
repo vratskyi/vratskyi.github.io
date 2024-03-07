@@ -711,7 +711,7 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .to-accent-0 {
-  --tw-gradient-to: #ac1694 var(--tw-gradient-to-position);
+  --tw-gradient-to: #ffffff var(--tw-gradient-to-position);
 }
 .bg-clip-text {
   -webkit-background-clip: text;
@@ -941,7 +941,7 @@ video {
 :root {
   --primary: #0000ff;
   --secondary: #2f2929;
-  --accent: #ac1694;
+  --accent: #ffffff;
   --background: #040404;
 }
 html {
