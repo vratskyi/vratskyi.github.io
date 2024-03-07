@@ -4,7 +4,7 @@ import BadgeLink from './BadgeLink.astro';
 import Badge from './Badge.astro';
 import Button from './Button.astro';
 
-let { description, title, img, site, reposite, project, projectdesc, companyweb, badgeLinkProps, badgeProps } = Astro.props;
+let { description, title, img, site, reposite, project, projectdesc, companyweb, demo, roboflowproj, badgeLinkProps, badgeProps } = Astro.props;
 ---
 
 <div class='grid blur-bg p-5 lg:p-10 rounded-xl'>
@@ -53,6 +53,8 @@ let { description, title, img, site, reposite, project, projectdesc, companyweb,
 				{reposite && <Button text="Check out the GitHub repository" link={reposite} />}
 				{project && <Button text="Check out the website" link={project} />}
 				{projectdesc && <Button text="Learn more about the project" link={projectdesc} />}
+				{demo && <Button text="Check out the demo" link={demo} />}
+				{roboflowproj && <Button text="Check out the Roboflow project" link={roboflowproj} />}
 			</div>
 		</div>
 	</div>

@@ -1,130 +1,437 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Head from '@/components/Head.astro';
-import Title from '@/components/Title.astro';
-import Subtitle from '@/components/Subtitle.astro';
-import { Image } from 'astro:assets';
-import seafood from '/src/assets/img/seafood_prod.png';
-import ocio from '/src/assets/img/ocio.jpg';
-import buildings from '/src/assets/img/smartbuildings.jpg';
-import security from '/src/assets/img/security.jpg';
+import Layout from "@/layouts/Layout.astro";
+import Head from "@/components/Head.astro";
+import Title from "@/components/Title.astro";
+import Subtitle from "@/components/Subtitle.astro";
+import { Image, imageConfig } from "astro:assets";
+import grocery from "/src/assets/img/grocery.jpg";
+import arduino from "/src/assets/img/arduino.jpg";
+import electronics from "/src/assets/img/electronics.jpg";
+import coding from "/src/assets/img/coding.jpg";
+import coach from "/src/assets/img/coachomatic.png";
+import interestcalc from "/src/assets/img/simple_interest.png";
+import detectedvehicles from "/src/assets/img/detected_vehicles.png";
+import pdf from "/src/assets/img/pdf.jpg";
+import testing from "/src/assets/img/testing.jpg";
+import forms from "/src/assets/img/forms.jpg";
+import robot from "/src/assets/img/robot.jpg";
+import robotI from "/src/assets/img/robotI.jpg";
+import resume from "/src/assets/img/resume.png";
+import website from "/src/assets/img/website.png";
+import filter from "/src/assets/img/filter.png";
+import buoys from "/src/assets/img/real_acuatic_markers_annotation.png"
+import buoysI from "/src/assets/img/gazebo_acuatic_markers_annotation.png"
+import boat from "/src/assets/img/boat.jpg"
+import boatI from "/src/assets/img/boatI.jpg"
+import boatII from "/src/assets/img/boatII.jpeg"
 
-import blur from '/src/assets/img/bg.svg';
-import PortfolioCard from '@/components/PortfolioCard.astro';
+import blur from "/src/assets/img/bg.svg";
+import PortfolioCard from "@/components/PortfolioCard.astro";
+import { defaultErrorMap } from "astro/zod";
 
 let title = Astro.props;
 ---
 
-<Head title='Work Experience' />
-<Layout
-	class='relative'
-	title='Portfolio'>
-	<div class='grid mt-[11.1111%] content-center'>
-		<Title text='Work Experience' />
+<Head title="Portfolio" />
+<Layout class="relative" title="Portfolio">
+	<div class="grid mt-[11.1111%] content-center">
+		<Title text="Portfolio" />
 	</div>
 	<!-- ABOUT ME -->
-	<section class='grid px-3 lg:px-0 content-start text-white'>
+	<section class="grid px-3 lg:px-0 content-start text-white">
 		<Image
-		src={blur}
-		class='fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]'
-		alt='blur background'
-	/>
-		<nav class='w-full'>
-			<ul class='flex justify-center space-x-4 my-4'>
-				<li class='hover:underline'>
-				<a href="#nrc" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>NRC</a>
+			src={blur}
+			class="fixed top-0 bottom-0 left-0 right-0 m-auto h-full w-full object-cover object-center z-[-1]"
+			alt="blur background"
+		/>
+		<nav class="w-full">
+			<ul class="flex justify-center space-x-4 my-4">
+				<li class="hover:underline">
+					<a
+						href="#asv"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Iceberg ASV</a
+					>
 				</li>
 
-				<li class='hover:underline'>
-				<a href="#nasdaq" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>Nasdaq-Verafin</a>
+				<li class="hover:underline">
+					<a
+						href="#projs"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Projects</a
+					>
 				</li>
 
-				<li class='hover:underline'>
-				<a href="#ocio" class='font-black bg-clip-text text-transparent bg-gradient-to-r from-primary-0 to-accent-0 text-3xl'>OCIO</a>
+				<li class="hover:underline">
+					<a
+						href="#utils"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Utils</a
+					>
+				</li>
+
+				<li class="hover:underline">
+					<a
+						href="#coursework"
+						class="font-black bg-clip-text text-transparent bg-gradient-to-r from-accent-0 to-accent-0 text-3xl"
+						>Coursework</a
+					>
 				</li>
 			</ul>
 		</nav>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nasdaq">
-			<Subtitle text='Nasdaq-Verafin'/>
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="asv"
+		>
+			<Subtitle text="Iceberg ASV" />
 			<PortfolioCard
-				img={security}
+				img={boat}
 				alt={title}
-				companyweb="https://verafin.com/"
-				projectdesc="https://verafin.com/product/bsa-aml-compliance-management/#:~:text=Verafin%20analyzes%20a%20wide%20variety,financing%20or%20human%20trafficking%20activity."
-				title='Software Developer Intern'
+				reposite="https://github.com/IcebergASV/ros_obj_detection"
+				title="Computer Vision YOLOv5 and ROS 2nd Iteration"
 				badgeProps={[
-					{ text: "Java" },
+					{ text: "Robotics Operating System" },
+					{ text: "Python" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				Real-time object detection with ROS, based on YOLOv5 and PyTorch tailored for Iceberg ASV using Intel RealSense D435.
+				`}
+			/>
+
+			<PortfolioCard
+				img={boatI}
+				alt={title}
+				reposite="https://github.com/IcebergASV/object_detection_pkg"
+				title="Computer Vision YOLOv5 and ROS 1st Iteration"
+				badgeProps={[
+					{ text: "Robotics Operating System" },
+					{ text: "C++" },					
+					{ text: "Python" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				Real-time object detection with ROS, based on YOLOv5 and PyTorch tailored for Iceberg ASV using Intel RealSense D435.
+				`}
+			/>
+
+			<PortfolioCard
+				img={buoys}
+				alt={title}
+				reposite="https://github.com/IcebergASV/real_world_marine_markers_custom_dataset_yolov5_training"
+				roboflowproj="https://universe.roboflow.com/icebergasv-ab2fn/roboboat-2024-marine-markers"
+				title="Real World Marine Markers Custom Dataset YOLOv5 Training"
+				badgeProps={[
+					{ text: "Roboflow" },
+					{ text: "Annotation& Labelling" },					
+					{ text: "Jupyter Notebook" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This project focuses on training YOLOv5 models using a custom dataset of real-life images of marine markers for the Roboboat compettion. 
+				Our objective is to enhance object detection in marine environments, contributing to safer marine navigation and advanced research.
+				`}
+			/>
+
+			<PortfolioCard
+				img={buoysI}
+				alt={title}
+				reposite="https://github.com/IcebergASV/gazebo_simulation_marine_markers_custom_dataset_yolov5_training"
+				roboflowproj="https://universe.roboflow.com/icebergasv-ab2fn/gazebo-simulation-marine-markers"
+				title="Gazebo Simulation Marine Markers Custom Dataset YOLOv5 Training"
+				badgeProps={[
+					{ text: "Roboflow" },
+					{ text: "Annotation& Labelling" },					
+					{ text: "Jupyter Notebook" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This project is dedicated to training YOLOv5 models using a custom dataset of marine markers generated from Gazebo simulations for the Roboboat 
+				competition. Our goal is to be able to test our object detection with our robotic application in Gazebo.
+				`}
+			/>
+
+			<PortfolioCard
+				img={boatII}
+				alt={title}
+				reposite="https://github.com/IcebergASV/bag_to_video_pkg"
+				title="Bag to Video Package Util"
+				badgeProps={[
+					{ text: "Robotics Operating System" },	
+					{ text: "Python" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				ROS bag_to_video_pkg converts camera data from ROS bag files to video, ideal for analyzing or recording robotic system footage. Includes installation, 
+				usage instructions, and Kdenlive editing integration. 
+				`}
+			/>
+		</div>
+
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="projs"
+		>
+			<Subtitle text="Projects" />
+
+			<PortfolioCard
+				img={website}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/DavidGuamanDavila.github.io"
+				project=""
+				title="Personal Website"
+				badgeProps={[
+					{ text: "Astro" },
+					{ text: "HTML" },
+					{ text: "CSS" },
+					{ text: "JavaScript" },
+					{ text: "SVG" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+ 				I am developing my personal website for my professional portfolio and where I share insights into my work in cybersecurity, 
+				robotics, and computer vision.
+				`}
+			/>
+
+			<PortfolioCard
+				img={testing}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/JUnit5-Testing-Showcase"
+				title="JUnit5 Testing Showcase"
+				badgeProps={[
 					{ text: "JUnit" },
 					{ text: "Mockito" },
+					{ text: "JavaScript" },
+					{ text: "Github" },
+					{ text: "Eclipse IDE" }
+				]}
+				badgeLinkProps={[]}
+				description={`This repository showcases a collection of JUnit 5 and Mockito test cases and scenarios, developed as part of my learning 
+				journey from the Udemy courses. It serves as a practical demonstration of my unit testing skills, relevant to my upcoming internship at 
+				Nasdaq-Verafin. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={filter}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/GrayscaleImageBoxFilter"
+				title="Gray Scale Image Box Filter"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "OpenCV library" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`Smoothing is an image processing technique used to blur, remove small details and reduce the noise of an image. 
+				There are different filter types, such as linear and non-linear. The filter for this project was a 3*3 box filter. The box filter is the 
+				mean of the neighbouring pixel intensities. In this project, we explore how the box filter affects different images.
+				`}
+			/>
+
+			<PortfolioCard
+				img={resume}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/David_Guaman_Davila_Resume"
+				title="Resume"
+				badgeProps={[
+					{ text: "Latex" },
+					{ text: "Overleaf" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`This repository contains the LaTeX source code for my professional resume. The resume highlights my education, work experience, 
+				skills, extracurricular activities, honors, and certifications. It is designed using the altacv class to create a visually appealing and 
+				detailed CV. This document was developed using Overleaf, an online LaTeX editor that simplifies the process of LaTeX document creation, 
+				and is adapted from the AltaCV template available on Overleaf.
+				`}
+			/>
+
+			<PortfolioCard
+				img={interestcalc}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/simple-interest-calculator"
+				project="https://davidguamandavila.github.io/simple-interest-calculator/"
+				title="Simple Interest Calculator"
+				badgeProps={[
+					{ text: "HTML" },
+					{ text: "CSS" },
+					{ text: "JavaScript" },
+					{ text: "Github" },
+					{ text: "VSCode" }
+				]}
+				badgeLinkProps={[]}
+				description={`This Simple Interest Calculator is a web-based tool that allows users to calculate the interest on a principal amount over a 
+				period of time. The project is built using HTML, CSS, and JavaScript and was developed as part of the course CAD101EN: Introduction to Cloud 
+				Development with HTML, CSS, and JavaScript provided by IBM. 
+				`}
+			/>
+			
+		</div>
+
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="utils"
+		>
+			<Subtitle text="Utils" />
+			<PortfolioCard
+				img={pdf}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/pdf_pageshot_extractor_util"
+				title="PDF Pageshot Extractor Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "pdf2image library" },
+					{ text: "Poppler library" },
 					{ text: "GitHub" },
-					{ text: "QA Testing" },
-					{ text: "IntelliJ IDEA" }
-
-			]}
-				badgeLinkProps={[ 
-			 ]}
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
 				description={`
-				The website I developed offers water delivery in Belogorodka and
-				surrounding areas. It has an attractive design, intuitive layout
-				and integration with analytical tools to attract more customers.
-				Visitors can easily leave a request for water delivery through the
-				order form and get access to bottled drinking water.
+				PDF PageShot Extractor is a Python tool designed to efficiently convert each page of a PDF document into individual image files. This utility 
+				was inspired by a friend who needed to take numerous screenshots for her class. The challenge was that the PDF contained scanned images, 
+				making it difficult to extract information directly. This tool simplifies the process, enabling easier access to the content, particularly 
+				when used in conjunction with OCR (Optical Character Recognition) technologies for text extraction.
 				`}
-			>
-			</PortfolioCard>
+			/>
+
+			<PortfolioCard
+				img={robot}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/auto_screenshot_util"
+				title="Auto Screenshot Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "moviepy library" },
+					{ text: "Pillow library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				A Python utility designed to facilitate the automatic capture of screenshots from a video file at specified time intervals. This utility was 
+				inspired by the specific needs encountered in the field of computer vision, particularly in the process of creating custom datasets. 
+				It addresses a common challenge where researchers and developers extract camera feeds in MP4 format from ROS (Robot Operating System) 
+				bag files and require an efficient method to generate image datasets.
+				`}
+			/>
+
+
+			<PortfolioCard
+				img={forms}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/Web-Automation-Dinning-Hall"
+				title="Form Automation Util"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "Selenium library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" },
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This utility automates the process of filling out and submitting the Box Lunch Order form for MUN's Dining Hall. 
+				It also includes a feature to send a confirmation email upon successful submission of the form.
+				`}
+			/>
+
+			<PortfolioCard
+				img={robotI}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/camera_display_and_save_pkg"
+				title="Camera Display and Save Package"
+				badgeProps={[
+					{ text: "Robotics Operating System" },
+					{ text: "C++" },
+					{ text: "CMake" },
+					{ text: "OpenCV library" },
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				This ROS (Robot Operating System) package is designed to subscribe to a camera feed topic, display the image using OpenCV, and save the 
+				image to a file. It utilizes ROS publishers and subscribers, OpenCV for image handling, and cv_bridge for converting between ROS image 
+				messages and OpenCV image representation.
+				`}
+			/>
+
 		</div>
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nrc">
-			<Subtitle text='National Research Council (NRC)'/>
-			<PortfolioCard
-			img={buildings}
-			alt={title}
-			site="https://nrc.canada.ca/en"
-			projectdesc="https://nrc.canada.ca/en/research-development/research-collaboration/programs/high-performance-buildings-program"
-			title='Web Application Developer'
-			badgeProps={[
-				{ text: "Back-End" },
-				{ text: "Python" },
-				{ text: "Java" },
-				{ text: "HQL" },
-				{ text: "JUnit" },
-				{ text: "Maven" },
-				{ text: "SQLAlchemy" },
-				{ text: "GitLab" },
-				{ text: "Eclipse IDE" },
-			]}
-				badgeLinkProps={[ 
-			]}
-				description={`
-				Analyzed the target audience, I realized that it is necessary to
-				make something similar to the model of behavior in Instagram, as
-				well as similar at least remotely similar design, thanks to a set
-				of solutions sales from their instagram store went to online store
-				and increased by 1000%
-				`}
-			>
-			</PortfolioCard>
-		</div>
+		<div
+			class="grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]"
+			id="coursework"
+		>
+			<Subtitle text="Coursework" />
 
-		<div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="ocio">
-			<Subtitle text='Office of the Chief Information Officer (OCIO)'/>		
 			<PortfolioCard
-			img={ocio}
-			alt={title}
-			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			title='Co-op Engineering Student'
-			badgeProps={[
-				{ text: "Back-End" },
-				{ text: "APEX" },
-				{ text: "SQL" },
-				{ text: "Oracle Databse" },
-				{ text: "Tortoise SVN" },
-				{ text: "SVN" },
-				{ text: "VS Code" }
-			]}
-				badgeLinkProps={[ 
-			]}
+				img={detectedvehicles}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/YOLOv5-Image-Preprocessing-for-Vehicle-Detection"
+				title="COMP 3301 Image Preprocessing for Vehicle Detection"
+				badgeProps={[
+					{ text: "Python" },
+					{ text: "OpenCV library" },
+					{ text: "Roboflow" },
+					{ text: "YOLOv5" },
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`
+				The primary purpose of this project is to apply some of the image processing techniques that we were taught in this course on images that are 
+				input to a You Only Look Once (YOLO) version 5 model trained on vehicle classification and examine the effects of each process on the 
+				performance of the model. We will also be comparing our results with those obtained from inputting the unmodified images into the model.
+				`}
+			/>
+
+			<PortfolioCard
+				img={coach}
+				alt={title}
+				reposite="https://github.com/term5-projects/CoachOMatic_Maven"
+				demo="https://www.youtube.com/watch?v=54mRcNmHEZs"
+				title="ECE 5010 Coach O Matic"
+				badgeProps={[
+					{ text: "Java" },
+					{ text: "JavaFX" },
+					{ text: "Maven" }, 
+					{ text: "GitHub" },
+					{ text: "VS Code" }
+				]}
+				badgeLinkProps={[]}
+				description={`Coach O Matic is a desktop application crafted for amateur soccer team coaches to generate equal playing time lineups, 
+				developed as part of our ECE 5010 Software Design course project. Utilizing Java and JavaFx, along with Maven for build automation, the 
+				application emphasizes adherence to SOLID principles to ensure a robust and maintainable architecture. This project not only demonstrates 
+				our ability to apply theoretical concepts into practical software development but also aims to enhance the coaching experience by 
+				streamlining team management and lineup generation tasks.
+				`}
+			/>
+
+
+			<!-- <PortfolioCard
+				img={board}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE5500-digital-systems-showcase"
+				title="ECE 5500 Digital Systems Showcase"
+				badgeProps={[{ text: "VHDL" }, 
+				{ text: "Quartus" }]}
+				badgeLinkProps={[]}
 				description={`
 				Analyzed the target audience, I realized that it is necessary to
 				make something similar to the model of behavior in Instagram, as
@@ -132,35 +439,63 @@ let title = Astro.props;
 				of solutions sales from their instagram store went to online store
 				and increased by 1000%
 				`}
-			>
-			</PortfolioCard>
+			/> -->
+
 			<PortfolioCard
-			img={seafood}
-			alt={title}
-			companyweb="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			project="https://www.geosurv.gov.nl.ca/fishaq/directory/"
-			title='Co-op Engineering Student'
-			badgeProps={[
-				{ text: "Front-End" },
-				{ text: "ASP.NET/Classic ASP" },
-				{ text: "Jira" },
-				{ text: "JavaScript" },
-				{ text: "HTML/CSS" },
-				{ text: "Tortoise SVN" },
-				{ text: "SVN" },
-				{ text: "VS Code" }
-			]}
-				badgeLinkProps={[ 
-			]}
+				img={coding}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE4400-data-strutures-showcase"
+				title="ECE 4400 Data Structures Showcase"
+				badgeProps={[
+					{ text: "Data Structures" },
+					{ text: "Recursion" },
+					{ text: "C++" },
+				]}
+				badgeLinkProps={[]}
 				description={`
-				Analyzed the target audience, I realized that it is necessary to
-				make something similar to the model of behavior in Instagram, as
-				well as similar at least remotely similar design, thanks to a set
-				of solutions sales from their instagram store went to online store
-				and increased by 1000%
+				The ECE 4400 Data Structures Showcase repository explores essential and efficient data structures, emphasizing recursion, generic programming, and modularity. It focuses on procedural and data abstraction, alongside precise documentation for optimal software development. 
 				`}
-			>
-			</PortfolioCard>
+			/>
+
+			<PortfolioCard
+				img={grocery}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ECE4400_GroceryManager/tree/main"
+				title="ECE 4400 Grocery Manager"
+				badgeProps={[{ text: "Data Structures" }, { text: "C++" }]}
+				badgeLinkProps={[]}
+				description={`
+				The ECE4400 GroceryManager is an efficient inventory management system developed for ECE 4400, employing BST, DLL, and CQ data structures for
+				 item organization, inventory management, and tracking customer history, streamlining grocery management and data analysis. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={electronics}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/ENGI1020-intro-to-programming-showcase/tree/main"
+				title="ECE 1020 Intro to Programming Showcase"
+				badgeProps={[{ text: "Arduino" }, { text: "Python" }]}
+				badgeLinkProps={[]}
+				description={`
+				The ECE 4400 Data Structures Showcase repository explores essential and efficient data structures, emphasizing recursion, generic programming, 
+				and modularity. It focuses on procedural and data abstraction, alongside precise documentation for optimal software development. 
+				`}
+			/>
+
+			<PortfolioCard
+				img={arduino}
+				alt={title}
+				reposite="https://github.com/DavidGuamanDavila/TriviaGame"
+				title="ECE 1020 Trivia Grame"
+				badgeProps={[{ text: "Arduino" }, { text: "Python" }]}
+				badgeLinkProps={[]}
+				description={`
+				"Trivia Game" is an interactive Python-based trivia game designed for Arduino, combining elements of various subjects including Math, History, 
+				Chemistry, and Physics. Developed as part of the ENGI 1020 Lab-Mini Project, this game is tailored to provide an entertaining and educational 
+				experience for users, challenging their knowledge across different fields.
+				`}
+			/>
 		</div>
 	</section>
 </Layout>
