@@ -6,15 +6,11 @@ import Subtitle from "@/components/Subtitle.astro";
 import { Image, imageConfig } from "astro:assets";
 import grocery from "/src/assets/img/grocery.jpg";
 import arduino from "/src/assets/img/arduino.jpg";
-import board from "/src/assets/img/board.jpg";
-import cover from '/src/assets/img/dev.jpg';
-import boardI from "/src/assets/img/boardI.jpg";
 import electronics from "/src/assets/img/electronics.jpg";
 import coding from "/src/assets/img/coding.jpg";
 import coach from "/src/assets/img/coachomatic.png";
 import interestcalc from "/src/assets/img/simple_interest.png";
 import detectedvehicles from "/src/assets/img/detected_vehicles.png";
-import security from "/src/assets/img/security.jpg";
 import pdf from "/src/assets/img/pdf.jpg";
 import testing from "/src/assets/img/testing.jpg";
 import forms from "/src/assets/img/forms.jpg";
@@ -23,6 +19,11 @@ import robotI from "/src/assets/img/robotI.jpg";
 import resume from "/src/assets/img/resume.png";
 import website from "/src/assets/img/website.png";
 import filter from "/src/assets/img/filter.png";
+import buoys from "/src/assets/img/real_acuatic_markers_annotation.png"
+import buoysI from "/src/assets/img/gazebo_acuatic_markers_annotation.png"
+import boat from "/src/assets/img/boat.jpg"
+import boatI from "/src/assets/img/boatI.jpg"
+import boatII from "/src/assets/img/boatII.jpeg"
 
 import blur from "/src/assets/img/bg.svg";
 import PortfolioCard from "@/components/PortfolioCard.astro";
@@ -85,7 +86,7 @@ let title = Astro.props;
 		>
 			<Subtitle text="Iceberg ASV" />
 			<PortfolioCard
-				img={security}
+				img={boat}
 				alt={title}
 				reposite="https://github.com/IcebergASV/ros_obj_detection"
 				title="Computer Vision YOLOv5 and ROS 2nd Iteration"
@@ -102,7 +103,7 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={boatI}
 				alt={title}
 				reposite="https://github.com/IcebergASV/object_detection_pkg"
 				title="Computer Vision YOLOv5 and ROS 1st Iteration"
@@ -120,9 +121,10 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={buoys}
 				alt={title}
 				reposite="https://github.com/IcebergASV/real_world_marine_markers_custom_dataset_yolov5_training"
+				roboflowproj="https://universe.roboflow.com/icebergasv-ab2fn/roboboat-2024-marine-markers"
 				title="Real World Marine Markers Custom Dataset YOLOv5 Training"
 				badgeProps={[
 					{ text: "Roboflow" },
@@ -139,9 +141,10 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={buoysI}
 				alt={title}
 				reposite="https://github.com/IcebergASV/gazebo_simulation_marine_markers_custom_dataset_yolov5_training"
+				roboflowproj="https://universe.roboflow.com/icebergasv-ab2fn/gazebo-simulation-marine-markers"
 				title="Gazebo Simulation Marine Markers Custom Dataset YOLOv5 Training"
 				badgeProps={[
 					{ text: "Roboflow" },
@@ -158,7 +161,7 @@ let title = Astro.props;
 			/>
 
 			<PortfolioCard
-				img={security}
+				img={boatII}
 				alt={title}
 				reposite="https://github.com/IcebergASV/bag_to_video_pkg"
 				title="Bag to Video Package Util"
