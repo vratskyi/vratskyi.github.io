@@ -2,11 +2,9 @@
 import Layout from '@/layouts/Layout.astro';
 import Head from '@/components/Head.astro';
 import Title from '@/components/Title.astro';
-import Subtitle from '@/components/Subtitle.astro';
 import { Image } from 'astro:assets';
 
 import blur from '/src/assets/img/bg.svg';
-import PortfolioCard from '@/components/PortfolioCard.astro';
 
 let title = Astro.props;
 ---
@@ -27,7 +25,7 @@ let title = Astro.props;
         <div class='grid grid-rows-auto content-center gap-5 pb-10 mt-[11.1111%]' id="nasdaq">
             <!--Display Resume here-->
             <object data="/src/assets/Anton_David_Guaman_Davila_Resume.pdf" type="application/pdf" class="w-full h-screen">
-                <p>Your browser does not support PDFs. Please download the PDF to view it: <a href="/src/assets/Anton_David_Guaman_Davila_s_Resume.pdf">Download PDF</a>.</p>
+                <p>Your browser does not support PDFs. Please download the PDF to view it: <a href="/src/assets/Anton_David_Guaman_Davila_Resume.pdf">Download PDF</a>.</p>
             </object>
         </div>
     </section>
