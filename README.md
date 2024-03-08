@@ -47,7 +47,8 @@ Special thanks to [vratskyi](https://github.com/vratskyi/vratskyi.github.io) for
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is a fork of [vratskyi.github.io](https://github.com/vratskyi/vratskyi.github.io/tree/master) and is licensed under the terms provided in the LICENSE file. Please note the additional commercial restrictions that apply to the use of this software. 
+
 
 ## 🧞 Commands
 
